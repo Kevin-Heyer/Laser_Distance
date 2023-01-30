@@ -1,0 +1,10 @@
+Output: BOM
+Type  : BOM
+From  : Variant [[No Variations]] of Project [OPAMP_DEV_SOT5_6-23.PrjPcb]
+   Generated File[BOM-OPAMP_DEV_SOT5_6-23.csv]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 12:50:57 PM On 2022-12-28
