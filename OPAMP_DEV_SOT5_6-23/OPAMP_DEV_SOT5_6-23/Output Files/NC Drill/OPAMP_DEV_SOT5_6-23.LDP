@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: D:\PersonalProjects\Self-Mixing Diode\OPAMP_DEV_SOT5_6-23\OPAMP_DEV_SOT5_6-23\OPAMP_DEV_SOT5_6-23.PcbDoc
+LayersSetName=Top_Bot_Plated_Thru_Holes|DrillFile=opamp_dev_sot5_6-23-plated.txt|DrillLayers=gtl,gp1,gp2,gbl
+LayersSetName=Top_Bot_NonPlated_Thru_Holes|DrillFile=opamp_dev_sot5_6-23-nonplated.txt|DrillLayers=gtl,gp1,gp2,gbl

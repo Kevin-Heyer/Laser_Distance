@@ -1,0 +1,110 @@
+Circuit: * D:\PersonalProjects\Self-Mixing Diode\Variable_Gain_Control.asc
+
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Increasing initial diagonal Gmin to 100
+Gmin = 100
+Gmin = 10.7374
+Gmin = 1.15292
+Gmin = 0.123794
+vernier = 0.5
+vernier = 0.25
+Gmin = 0.0616133
+vernier = 0.333333
+vernier = 0.166667
+Gmin = 0.0418836
+vernier = 0.222222
+vernier = 0.111111
+vernier = 0.148148
+vernier = 0.074074
+Gmin = 0.0352171
+vernier = 0.0987653
+Gmin = 0.0284409
+vernier = 0.0493827
+vernier = 0.0658435
+Gmin = 0.0254699
+vernier = 0.0877914
+vernier = 0.0438957
+Gmin = 0.0229644
+vernier = 0.0585276
+vernier = 0.0292638
+Gmin = 0.0208937
+vernier = 0.0390184
+vernier = 0.0520245
+vernier = 0.0260122
+Gmin = 0.0194263
+vernier = 0.034683
+Gmin = 0.0180122
+vernier = 0.046244
+vernier = 0.023122
+vernier = 0.0308293
+Gmin = 0.0170857
+vernier = 0.0411057
+vernier = 0.0205529
+Gmin = 0.0162327
+vernier = 0.0274038
+vernier = 0.0365384
+vernier = 0.0182692
+Gmin = 0.0154311
+vernier = 0.0243589
+Gmin = 0.0146103
+vernier = 0.0324786
+vernier = 0.0162393
+vernier = 0.0216524
+Gmin = 0.0140873
+vernier = 0.0288698
+vernier = 0.0144349
+Gmin = 0.0136136
+vernier = 0.0192465
+vernier = 0.025662
+Gmin = 0.012893
+vernier = 0.0342161
+vernier = 0.0456214
+Gmin = 0.0118237
+vernier = 0.0608285
+Gmin = 0.0103211
+vernier = 0.0811047
+vernier = 0.10814
+Gmin = 0.00822391
+vernier = 0.144186
+vernier = 0.192248
+Gmin = 0.0057393
+vernier = 0.25633
+Gmin = 0.00327687
+vernier = 0.341774
+vernier = 0.455698
+Gmin = 0.00130134
+vernier = 0.607598
+vernier = 0.81013
+Gmin = 0.000310456
+vernier = 1
+Gmin = 3.89181e-005
+Gmin = 4.1788e-006
+Gmin = 4.48696e-007
+Gmin = 4.81783e-008
+Gmin = 5.17311e-009
+Gmin = 5.55458e-010
+Gmin = 5.96419e-011
+Gmin = 6.404e-012
+Gmin = 6.87624e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+
+Date: Sun Dec 11 16:58:50 2022
+Total elapsed time: 2.582 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 334115
+traniter = 331516
+tranpoints = 159645
+accept = 132005
+rejected = 27640
+matrix size = 22
+fillins = 40
+solver = Normal
+Matrix Compiler1:     237 opcodes  0.6/[0.2]/0.3
+Matrix Compiler2: off  [0.1]/0.2/0.2
+

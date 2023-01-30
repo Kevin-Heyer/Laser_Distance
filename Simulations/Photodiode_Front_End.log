@@ -1,0 +1,65 @@
+Circuit: * D:\PersonalProjects\Self-Mixing Diode\Photodiode_Front_End.asc
+
+WARNING: Specified period is not longer than the sum of Trise, Tfall, and Ton for i2.  Increasing period to 1.001e-005
+WARNING: Specified period is not longer than the sum of Trise, Tfall, and Ton for i1.  Increasing period to 1.001e-005
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+vernier = 0.5
+vernier = 0.25
+Gmin = 0.00422739
+vernier = 0.333333
+vernier = 0.444444
+Gmin = 0.00187641
+vernier = 0.592592
+Gmin = 0.000537415
+vernier = 0.790123
+vernier = 1
+Gmin = 7.46363e-005
+vernier = 0.5
+vernier = 0.25
+Gmin = 2.30182e-005
+vernier = 0.125
+vernier = 0.0625
+vernier = 0.03125
+vernier = 0.015625
+vernier = 0.0078125
+Gmin = 2.42672e-005
+vernier = 0.00390625
+vernier = 0.00195313
+vernier = 0.000976563
+vernier = 0.000488281
+Gmin = 0
+Gmin = 0
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Source Step = 3.0303%
+Source Step = 33.3333%
+Source Step = 63.6364%
+Source Step = 93.9394%
+Source stepping succeeded in finding the operating point.
+
+Heightened Def Con from 5.14241e-005 to 5.14241e-005
+
+Date: Sat Jul 09 18:44:11 2022
+Total elapsed time: 4.226 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 622904
+traniter = 620625
+tranpoints = 182587
+accept = 134595
+rejected = 47993
+matrix size = 40
+fillins = 137
+solver = Normal
+Thread vector: 3.6/3.1[2] 1.0/0.8[2] 0.7/0.6[1] 0.1/0.4[1]  2592/500
+Matrix Compiler1:     627 opcodes  1.6/[0.5]/0.6
+Matrix Compiler2: 6.03 KB object code size  0.3/0.4/[0.3]
+

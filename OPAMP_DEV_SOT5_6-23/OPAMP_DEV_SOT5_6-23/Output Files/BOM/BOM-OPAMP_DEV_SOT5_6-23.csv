@@ -1,0 +1,14 @@
+Quantity,Designator,Manufacturer,Manufacturer Part Number,DesignItemId
+
+"2","C2, C5","Taiyo Yuden","UMK107BJ105KA-T","CAP CER 1uF 50V X5R 0603"
+"2","C1, C4","Samsung","CL21A106KAYNNNE","CAP CER 10uF 25V X5R 0805"
+"4","C3, C6, C8, C13","Samsung","CL05A104KA5NNNC","CAP CER 100nF 25V X5R 0402"
+"5","C7, C9, C10, C11, C12","","","CAP GENERIC 0402"
+"2","J4, J6","","","CON SMA BORE SMD BRD EDGE HJ-SMA023"
+"2","J3, J5","","","CON SMA PIN SMD BRD EDGE HJ-SMA362"
+"2","J1, J8","Harwin","M22-6550442R","CONN HDR 08 FEMALE RA 2 ROW"
+"2","J2, J7","Wurth Electronics","610108249121","CONN HDR 08 MALE RA 2 ROW"
+"1","U1","","","IC OPAMP SOT5/6-23 GENERIC"
+"13","R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15","","","RES GENERIC 0402"
+"2","R1, R2","","","RES GENERIC 0603"
+"3","TP3, TP7, TP9","Hirose","U.FL-R-SMT-1(80)","TP U.FL"
