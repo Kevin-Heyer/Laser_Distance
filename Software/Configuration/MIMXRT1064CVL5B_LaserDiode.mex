@@ -27,6 +27,95 @@
             <pin_labels>
                <pin_label pin_num="N3" pin_signal="GPIO_SD_B1_05" label="NC"/>
                <pin_label pin_num="B7" pin_signal="GPIO_EMC_39" label="NC" identifier="NC"/>
+               <pin_label pin_num="J1" pin_signal="GPIO_SD_B0_02" label="IMU_MOSI"/>
+               <pin_label pin_num="K1" pin_signal="GPIO_SD_B0_03" label="IMU_MISO"/>
+               <pin_label pin_num="B1" pin_signal="GPIO_EMC_15" label="extRAM_ADDR6"/>
+               <pin_label pin_num="C1" pin_signal="GPIO_EMC_21" label="extRAM_BA0"/>
+               <pin_label pin_num="D1" pin_signal="GPIO_EMC_28" label="extRAM_WE"/>
+               <pin_label pin_num="E1" pin_signal="GPIO_EMC_29" label="extRAM_nCS"/>
+               <pin_label pin_num="F1" pin_signal="GPIO_EMC_22" label="extRAM_BA1"/>
+               <pin_label pin_num="G1" pin_signal="GPIO_EMC_10" label="extRAM_ADDR1"/>
+               <pin_label pin_num="H1" pin_signal="GPIO_EMC_12" label="extRAM_ADDR3"/>
+               <pin_label pin_num="A2" pin_signal="GPIO_EMC_27" label="extRAM_CKE"/>
+               <pin_label pin_num="B2" pin_signal="GPIO_EMC_18" label="extRAM_ADDR9"/>
+               <pin_label pin_num="C2" pin_signal="GPIO_EMC_09" label="extRAM_ADDR0"/>
+               <pin_label pin_num="D2" pin_signal="GPIO_EMC_25" label="extRAM_RAS"/>
+               <pin_label pin_num="F2" pin_signal="GPIO_EMC_04" label="extRAM_DQ4"/>
+               <pin_label pin_num="G2" pin_signal="GPIO_EMC_23" label="extRAM_ADDR10"/>
+               <pin_label pin_num="P2" pin_signal="GPIO_SD_B1_04" label="extFLASH_SCLK"/>
+               <pin_label pin_num="A3" pin_signal="GPIO_EMC_20" label="extRAM_ADDR12"/>
+               <pin_label pin_num="B3" pin_signal="GPIO_EMC_26" label="extRAM_CLK"/>
+               <pin_label pin_num="C3" pin_signal="GPIO_EMC_36" label="extRAM_DQ14"/>
+               <pin_label pin_num="D3" pin_signal="GPIO_EMC_24" label="extRAM_CAS"/>
+               <pin_label pin_num="E3" pin_signal="GPIO_EMC_00" label="extRAM_DQ0"/>
+               <pin_label pin_num="F3" pin_signal="GPIO_EMC_01" label="extRAM_DQ01"/>
+               <pin_label pin_num="G3" pin_signal="GPIO_EMC_11" label="extRAM_ADDR2"/>
+               <pin_label pin_num="H3" pin_signal="GPIO_EMC_08" label="extRAM_DM0"/>
+               <pin_label pin_num="A4" pin_signal="GPIO_EMC_17" label="extRAM_ADDR8"/>
+               <pin_label pin_num="B4" pin_signal="GPIO_EMC_19" label="extRAM_ADDR11"/>
+               <pin_label pin_num="C4" pin_signal="GPIO_EMC_33" label="extRAM_DQ11"/>
+               <pin_label pin_num="D4" pin_signal="GPIO_EMC_34" label="extRAM_DQ12"/>
+               <pin_label pin_num="E4" pin_signal="GPIO_EMC_37" label="extRAM_DQ15"/>
+               <pin_label pin_num="F4" pin_signal="GPIO_EMC_02" label="extRAM_DQ2"/>
+               <pin_label pin_num="G4" pin_signal="GPIO_EMC_03" label="extRAM_DQ3"/>
+               <pin_label pin_num="H4" pin_signal="GPIO_EMC_07" label="extRAM_DQ7"/>
+               <pin_label pin_num="J4" pin_signal="GPIO_SD_B0_00" label="IMU_SCK"/>
+               <pin_label pin_num="A5" pin_signal="GPIO_EMC_16" label="extRAM_ADDR7"/>
+               <pin_label pin_num="C5" pin_signal="GPIO_EMC_31" label="extRAM_DQ9"/>
+               <pin_label pin_num="D5" pin_signal="GPIO_EMC_32" label="extRAM_DQ10"/>
+               <pin_label pin_num="E5" pin_signal="GPIO_EMC_35" label="extRAM_DQ13"/>
+               <pin_label pin_num="G5" pin_signal="GPIO_EMC_05" label="extRAM_DQ5"/>
+               <pin_label pin_num="H5" pin_signal="GPIO_EMC_06" label="extRAM_DQ6"/>
+               <pin_label pin_num="A6" pin_signal="GPIO_EMC_13" label="extRAM_ADDR4"/>
+               <pin_label pin_num="B6" pin_signal="GPIO_EMC_14" label="extRAM_ADDR5"/>
+               <pin_label pin_num="C6" pin_signal="GPIO_EMC_30" label="extRAM_DQ8"/>
+               <pin_label pin_num="D6" pin_signal="GPIO_EMC_38" label="extRAM_DM1"/>
+               <pin_label pin_num="D7" pin_signal="GPIO_B0_00" label="ETH_MDC"/>
+               <pin_label pin_num="E7" pin_signal="GPIO_B0_01" label="ETH_MDIO"/>
+               <pin_label pin_num="A8" pin_signal="GPIO_B0_06" label="ETH_RX_CLK"/>
+               <pin_label pin_num="A9" pin_signal="GPIO_B0_07" label="ETH_TX_ER"/>
+               <pin_label pin_num="D9" pin_signal="GPIO_B0_10" label="ETH_CRS"/>
+               <pin_label pin_num="A10" pin_signal="GPIO_B0_11" label="ETH_COL"/>
+               <pin_label pin_num="C10" pin_signal="GPIO_B0_12" label="ETH_TX0"/>
+               <pin_label pin_num="D10" pin_signal="GPIO_B0_13" label="ETH_TX1"/>
+               <pin_label pin_num="E10" pin_signal="GPIO_B0_14" label="ETH_TX_EN"/>
+               <pin_label pin_num="A11" pin_signal="GPIO_B1_00" label="ETH_RX_ER"/>
+               <pin_label pin_num="B11" pin_signal="GPIO_B1_01" label="ETH_RX0"/>
+               <pin_label pin_num="C11" pin_signal="GPIO_B1_02" label="ETH_RX1"/>
+               <pin_label pin_num="D11" pin_signal="GPIO_B1_03" label="ETH_RX_EN"/>
+               <pin_label pin_num="E11" pin_signal="GPIO_B0_15" label="ETH_REF_CLK"/>
+               <pin_label pin_num="H14" pin_signal="GPIO_AD_B0_14" label="CAN_FD_TX"/>
+               <pin_label pin_num="F14" pin_signal="GPIO_AD_B0_09" label="JTAG_TDI"/>
+               <pin_label pin_num="E14" pin_signal="GPIO_AD_B0_06" label="JTAG_TMS"/>
+               <pin_label pin_num="G13" pin_signal="GPIO_AD_B0_10" label="JTAG_TDO"/>
+               <pin_label pin_num="F13" pin_signal="GPIO_AD_B0_08" label="JTAG_MOD"/>
+               <pin_label pin_num="A13" pin_signal="GPIO_B1_09" label="CAN2_RX"/>
+               <pin_label pin_num="A12" pin_signal="GPIO_B1_08" label="CAN2_TX"/>
+               <pin_label pin_num="F12" pin_signal="GPIO_AD_B0_07" label="JTAG_TCK"/>
+               <pin_label pin_num="L10" pin_signal="GPIO_AD_B0_15" label="CAN_FD_RX"/>
+               <pin_label pin_num="G10" pin_signal="GPIO_AD_B0_11" label="JTAG_TRST"/>
+               <pin_label pin_num="N9" pin_signal="RTC_XTALI" label="RTC_XTALI"/>
+               <pin_label pin_num="P9" pin_signal="RTC_XTALO" label="RTC_XTALO"/>
+               <pin_label pin_num="L8" pin_signal="USB_OTG1_DP" label="USB_DP"/>
+               <pin_label pin_num="M8" pin_signal="USB_OTG1_DN" label="USP_DN"/>
+               <pin_label pin_num="J3" pin_signal="GPIO_SD_B0_01" label="extFLASH_nCS"/>
+               <pin_label pin_num="L5" pin_signal="GPIO_SD_B1_00" label="extFLASH_DIO3"/>
+               <pin_label pin_num="M5" pin_signal="GPIO_SD_B1_01" label="extFLASH_DIO2"/>
+               <pin_label pin_num="K10" pin_signal="GPIO_AD_B1_07" label="extFLASH_DIO0"/>
+               <pin_label pin_num="J12" pin_signal="GPIO_AD_B1_06" label="extFLASH_DIO1"/>
+               <pin_label pin_num="N11" pin_signal="XTALO" label="XTAL0"/>
+               <pin_label pin_num="P11" pin_signal="XTALI" label="XTALI"/>
+               <pin_label pin_num="L3" pin_signal="GPIO_SD_B1_06" label="ADC_nCS"/>
+               <pin_label pin_num="P3" pin_signal="GPIO_SD_B1_08" label="ADC_DIO0"/>
+               <pin_label pin_num="L4" pin_signal="GPIO_SD_B1_07" label="ADC_SCLK"/>
+               <pin_label pin_num="N4" pin_signal="GPIO_SD_B1_09" label="ADC_DIO1"/>
+               <pin_label pin_num="P4" pin_signal="GPIO_SD_B1_10" label="ADC_DIO2"/>
+               <pin_label pin_num="M4" pin_signal="GPIO_SD_B1_03" label="CAN1_RX"/>
+               <pin_label pin_num="M3" pin_signal="GPIO_SD_B1_02" label="CAN1_TX"/>
+               <pin_label pin_num="P5" pin_signal="GPIO_SD_B1_11" label="ADC_DIO3"/>
+               <pin_label pin_num="H2" pin_signal="GPIO_SD_B0_04" label="USB_INTB"/>
+               <pin_label pin_num="K11" pin_signal="GPIO_AD_B1_01" label="USB_SDA"/>
+               <pin_label pin_num="J11" pin_signal="GPIO_AD_B1_00" label="USB_SCL"/>
             </pin_labels>
             <power_domains>
                <power_domain name="DCDC_IN" value="3.3"/>
@@ -108,6 +197,21 @@
                         <data>true</data>
                      </feature>
                   </dependency>
+                  <dependency resourceType="Peripheral" resourceId="CAN3" description="Peripheral CAN3 is not initialized" problem_level="1" source="Pins:BOARD_InitPins">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="Peripheral" resourceId="CAN2" description="Peripheral CAN2 is not initialized" problem_level="1" source="Pins:BOARD_InitPins">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="Peripheral" resourceId="LPI2C1" description="Peripheral LPI2C1 is not initialized" problem_level="1" source="Pins:BOARD_InitPins">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
                   <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_InitPins">
                      <feature name="enabled" evaluation="equal" configuration="core0">
                         <data>true</data>
@@ -118,9 +222,13 @@
                         <data>true</data>
                      </feature>
                   </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.xbara" description="Pins initialization requires the XBARA Driver in the project." problem_level="2" source="Pins:BOARD_InitPins">
+                     <feature name="enabled" evaluation="equal" configuration="core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
                </dependencies>
                <pins>
-                  <pin peripheral="USB1" signal="usb_otg1_chd_b" pin_num="N12" pin_signal="USB_OTG1_CHD_B"/>
                   <pin peripheral="USB1" signal="usb_otg1_dn" pin_num="M8" pin_signal="USB_OTG1_DN"/>
                   <pin peripheral="USB1" signal="usb_otg1_dp" pin_num="L8" pin_signal="USB_OTG1_DP"/>
                   <pin peripheral="SEMC" signal="ADDR, 00" pin_num="C2" pin_signal="GPIO_EMC_09"/>
@@ -174,7 +282,6 @@
                   <pin peripheral="FLEXSPI" signal="FLEXSPI_B_SCLK" pin_num="P2" pin_signal="GPIO_SD_B1_04"/>
                   <pin peripheral="FLEXSPI" signal="FLEXSPI_A_SS0_B" pin_num="L3" pin_signal="GPIO_SD_B1_06"/>
                   <pin peripheral="FLEXSPI" signal="FLEXSPI_B_SS1_B" pin_num="J3" pin_signal="GPIO_SD_B0_01"/>
-                  <pin peripheral="FLEXSPI" signal="FLEXSPI_B_SS0_B" pin_num="H2" pin_signal="GPIO_SD_B0_04"/>
                   <pin peripheral="LPSPI1" signal="SCK" pin_num="J4" pin_signal="GPIO_SD_B0_00"/>
                   <pin peripheral="LPSPI1" signal="SDI" pin_num="K1" pin_signal="GPIO_SD_B0_03"/>
                   <pin peripheral="LPSPI1" signal="SDO" pin_num="J1" pin_signal="GPIO_SD_B0_02"/>
@@ -262,6 +369,13 @@
                   <pin peripheral="JTAG" signal="TRSTB" pin_num="G10" pin_signal="GPIO_AD_B0_11"/>
                   <pin peripheral="SRC" signal="POR_B" pin_num="M7" pin_signal="POR_B"/>
                   <pin peripheral="SRC" signal="RESET_B" pin_num="M6" pin_signal="ONOFF"/>
+                  <pin peripheral="CAN3" signal="RX" pin_num="L10" pin_signal="GPIO_AD_B0_15"/>
+                  <pin peripheral="CAN3" signal="TX" pin_num="H14" pin_signal="GPIO_AD_B0_14"/>
+                  <pin peripheral="CAN2" signal="RX" pin_num="A13" pin_signal="GPIO_B1_09"/>
+                  <pin peripheral="CAN2" signal="TX" pin_num="A12" pin_signal="GPIO_B1_08"/>
+                  <pin peripheral="LPI2C1" signal="SCL" pin_num="J11" pin_signal="GPIO_AD_B1_00"/>
+                  <pin peripheral="LPI2C1" signal="SDA" pin_num="K11" pin_signal="GPIO_AD_B1_01"/>
+                  <pin peripheral="LPI2C1" signal="TRG" pin_num="H2" pin_signal="GPIO_SD_B0_04"/>
                </pins>
             </function>
          </functions_list>
