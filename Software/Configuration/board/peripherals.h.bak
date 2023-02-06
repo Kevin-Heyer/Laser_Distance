@@ -18,19 +18,6 @@
 #include "fsl_flexio_spi.h"
 #include "usb_device_composite.h"
 #include "fsl_debug_console.h"
-#include "lwip/opt.h"
-#include "lwip/tcpip.h"
-#include "lwip/netifapi.h"
-#include "lwip/sys.h"
-#include "lwip/sockets.h"
-#include "lwip/api.h"
-#include "lwip/dhcp.h"
-#include "lwip/icmp.h"
-#include "lwip/errno.h"
-#include "enet_ethernetif.h"
-#include "fsl_enet.h"
-#include "fsl_enet_mdio.h"
-#include "fsl_phyksz8081.h"
 
 #if defined(__cplusplus)
 extern "C" {
@@ -77,11 +64,11 @@ extern "C" {
 #define LCDIF_LCDIF_IRQHANDLER LCDIF_IRQHandler
 /* BOARD_InitPeripherals defines for SEMC */
 /* Definition of peripheral ID. */
-#define SEMC_EXTRAM_PERIPHERAL SEMC
+#define SEMC_PERIPHERAL SEMC
 /* Definition of peripheral ID */
-#define FLEXIO1_IMU_PERIPHERAL FLEXIO1
+#define FLEXIO1_PERIPHERAL FLEXIO1
 /* Definition of the clock source frequency */
-#define FLEXIO1_IMU_CLK_FREQ 1500000UL
+#define FLEXIO1_CLK_FREQ 1500000UL
 /* Debug console is initialized in the peripheral tool */
 #define BOARD_INIT_DEBUG_CONSOLE_PERIPHERAL 
 /* Definition of serial peripheral instance */
@@ -92,60 +79,6 @@ extern "C" {
 #define DEBUGCONSOLE_BAUDRATE 115200UL
 /* Definition of the clock source frequency */
 #define DEBUGCONSOLE_CLK_FREQ 4000000UL
-/* @TEST_ANCHOR */
-/* IP address definitions */
-#ifndef LWIP_NETIF0_IPADDR0
-#define LWIP_NETIF0_IPADDR0 0U
-#endif
-#ifndef LWIP_NETIF0_IPADDR1
-#define LWIP_NETIF0_IPADDR1 0U
-#endif
-#ifndef LWIP_NETIF0_IPADDR2
-#define LWIP_NETIF0_IPADDR2 0U
-#endif
-#ifndef LWIP_NETIF0_IPADDR3
-#define LWIP_NETIF0_IPADDR3 0U
-#endif
-/* Subnet mask definitions */
-#ifndef LWIP_NETIF0_NETMASK0
-#define LWIP_NETIF0_NETMASK0 255U
-#endif
-#ifndef LWIP_NETIF0_NETMASK1
-#define LWIP_NETIF0_NETMASK1 255U
-#endif
-#ifndef LWIP_NETIF0_NETMASK2
-#define LWIP_NETIF0_NETMASK2 255U
-#endif
-#ifndef LWIP_NETIF0_NETMASK3
-#define LWIP_NETIF0_NETMASK3 0U
-#endif
-/* Default gateway definitions */
-#ifndef LWIP_NETIF0_GW0
-#define LWIP_NETIF0_GW0 0U
-#endif
-#ifndef LWIP_NETIF0_GW1
-#define LWIP_NETIF0_GW1 0U
-#endif
-#ifndef LWIP_NETIF0_GW2
-#define LWIP_NETIF0_GW2 0U
-#endif
-#ifndef LWIP_NETIF0_GW3
-#define LWIP_NETIF0_GW3 0U
-#endif
-/* MAC address definition */
-#ifndef LWIP_NETIF0_MAC_ADDRESS
-#define LWIP_NETIF0_MAC_ADDRESS {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF}
-#endif
-/* PHY address definition */
-#ifndef LWIP_NETIF0_PHY_ADDRESS
-#define LWIP_NETIF0_PHY_ADDRESS 0x0
-#endif
-/* PHY options definition */
-#define LWIP_NETIF0_PHY_OPS phyksz8081_ops
-/* MDIO options definition */
-#define LWIP_NETIF0_MDIO_OPS enet_ops
-/* MDIO resource definition */
-#define LWIP_NETIF0_MDIO_RESOURCE {ENET, 3000000UL}
 
 /***********************************************************************************************************************
  * Global variables
@@ -158,20 +91,12 @@ extern const flexcan_rx_mb_config_t CAN1_rx_mb_config_0;
 extern const elcdif_rgb_mode_config_t LCDIF_rgbConfig;
 /* RGB buffer */
 extern uint32_t LCDIF_Buffer[2][LCDIF_PANEL_HEIGHT][LCDIF_PANEL_WIDTH];
-extern semc_config_t SEMC_extRAM_config;
-extern semc_sdram_config_t SEMC_extRAM_sdram_struct;
+extern semc_config_t SEMC_config;
+extern semc_sdram_config_t SEMC_sdram_struct;
 /* FlexIO peripheral configuration */
-extern FLEXIO_SPI_Type FLEXIO1_IMU_peripheralConfig;
+extern FLEXIO_SPI_Type FLEXIO1_peripheralConfig;
 /* FlexIO SPI master configuration */
-extern flexio_spi_master_config_t FLEXIO1_IMU_config;
-/* Network interface structure */
-extern struct netif lwIP_netif0;
-/* IPv4 adress handle */
-extern ip4_addr_t lwIP_netif0_ipaddr;
-/* IPv4 netmask handle */
-extern ip4_addr_t lwIP_netif0_netmask;
-/* IPv4 gateway handle */
-extern ip4_addr_t lwIP_netif0_gw;
+extern flexio_spi_master_config_t FLEXIO1_config;
 
 /***********************************************************************************************************************
  * Initialization functions

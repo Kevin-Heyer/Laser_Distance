@@ -347,15 +347,15 @@ static void LCDIF_init(void) {
 }
 
 /***********************************************************************************************************************
- * SEMC_extRAM initialization code
+ * SEMC initialization code
  **********************************************************************************************************************/
 /* clang-format off */
 /* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
 instance:
-- name: 'SEMC_extRAM'
+- name: 'SEMC'
 - type: 'semc'
 - mode: 'general'
-- custom_name_enabled: 'true'
+- custom_name_enabled: 'false'
 - type_id: 'semc_84a769c198c91c527e11dcec2f5b4b81'
 - functional_group: 'BOARD_InitPeripherals'
 - peripheral: 'SEMC'
@@ -414,7 +414,7 @@ instance:
     - quick_selection: 'SEMC_Type'
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
-semc_config_t SEMC_extRAM_config = {
+semc_config_t SEMC_config = {
   .dqsMode = kSEMC_Loopbackdqspad,
   .cmdTimeoutCycles = 0U,
   .busTimeoutCycles = 0U,
@@ -440,7 +440,7 @@ semc_config_t SEMC_extRAM_config = {
     }
   }
 };
-semc_sdram_config_t SEMC_extRAM_sdram_struct = {
+semc_sdram_config_t SEMC_sdram_struct = {
   .csxPinMux = kSEMC_MUXCSX0,
   .address = 0x80000000UL,
   .memsize_kbytes = 32,
@@ -464,23 +464,23 @@ semc_sdram_config_t SEMC_extRAM_sdram_struct = {
   .refreshBurstLen = 1U,
 };
 
-static void SEMC_extRAM_init(void) {
+static void SEMC_init(void) {
   /* Initialize SEMC peripheral. */
-  SEMC_Init(SEMC_EXTRAM_PERIPHERAL, &SEMC_extRAM_config);
+  SEMC_Init(SEMC_PERIPHERAL, &SEMC_config);
   /* Initialize SEMC SDRAM. */
-  SEMC_ConfigureSDRAM(SEMC_EXTRAM_PERIPHERAL, kSEMC_SDRAM_CS0, &SEMC_extRAM_sdram_struct, 4000000);
+  SEMC_ConfigureSDRAM(SEMC_PERIPHERAL, kSEMC_SDRAM_CS0, &SEMC_sdram_struct, 4000000);
 }
 
 /***********************************************************************************************************************
- * FLEXIO1_IMU initialization code
+ * FLEXIO1 initialization code
  **********************************************************************************************************************/
 /* clang-format off */
 /* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
 instance:
-- name: 'FLEXIO1_IMU'
+- name: 'FLEXIO1'
 - type: 'flexio_spi'
 - mode: 'polling'
-- custom_name_enabled: 'true'
+- custom_name_enabled: 'false'
 - type_id: 'flexio_spi_d67d6584d62b130dba246fa5abb61949'
 - functional_group: 'BOARD_InitPeripherals'
 - peripheral: 'FLEXIO1'
@@ -510,8 +510,8 @@ instance:
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
 /* FlexIO access configuration */
-FLEXIO_SPI_Type FLEXIO1_IMU_peripheralConfig = {
-  .flexioBase = FLEXIO1_IMU_PERIPHERAL,
+FLEXIO_SPI_Type FLEXIO1_peripheralConfig = {
+  .flexioBase = FLEXIO1_PERIPHERAL,
   .SDOPinIndex = 14,
   .SDIPinIndex = 15,
   .SCKPinIndex = 10,
@@ -520,7 +520,7 @@ FLEXIO_SPI_Type FLEXIO1_IMU_peripheralConfig = {
   .timerIndex = {0, 1}
 };
 /* SPI master configuration */
-flexio_spi_master_config_t FLEXIO1_IMU_config = {
+flexio_spi_master_config_t FLEXIO1_config = {
   .enableMaster = true,
   .enableInDoze = false,
   .enableInDebug = true,
@@ -530,9 +530,9 @@ flexio_spi_master_config_t FLEXIO1_IMU_config = {
   .dataMode = kFLEXIO_SPI_8BitMode
 };
 
-static void FLEXIO1_IMU_init(void) {
+static void FLEXIO1_init(void) {
   /* Master initialization */
-  FLEXIO_SPI_MasterInit(&FLEXIO1_IMU_peripheralConfig, &FLEXIO1_IMU_config, FLEXIO1_IMU_CLK_FREQ);
+  FLEXIO_SPI_MasterInit(&FLEXIO1_peripheralConfig, &FLEXIO1_config, FLEXIO1_CLK_FREQ);
 }
 
 /***********************************************************************************************************************
@@ -719,165 +719,6 @@ static void DebugConsole_init(void) {
 }
 
 /***********************************************************************************************************************
- * lwIP initialization code
- **********************************************************************************************************************/
-/* clang-format off */
-/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-instance:
-- name: 'lwIP'
-- type: 'lwip'
-- mode: 'general'
-- custom_name_enabled: 'false'
-- type_id: 'lwip_e916e23135ce42147b8e9c16b7728f8a'
-- functional_group: 'BOARD_InitPeripherals'
-- config_sets:
-  - lwip_config:
-    - mode: 'freertos'
-    - LWIP_NETIF_API: 'true'
-    - LWIP_NETCONN: 'true'
-    - LWIP_SOCKET: 'true'
-    - LWIP_SO_RCVTIMEO: 'true'
-    - LWIP_TCPIP_CORE_LOCKING: 'true'
-    - MEM_SIZE: '(22 * 1024)'
-    - MEMP_NUM_PBUF: '15'
-    - MEMP_NUM_UDP_PCB: '6'
-    - MEMP_NUM_TCP_PCB: '10'
-    - MEMP_NUM_TCP_PCB_LISTEN: '6'
-    - MEMP_NUM_TCP_SEG: '22'
-    - MEMP_NUM_SYS_TIMEOUT: '10'
-    - PBUF_POOL_SIZE: '5'
-    - LWIP_SINGLE_NETIF: 'true'
-    - LWIP_IPV4: 'true'
-    - IP_FORWARD: 'false'
-    - IP_REASSEMBLY: 'true'
-    - IP_FRAG: 'true'
-    - IP_DEFAULT_TTL: '255'
-    - LWIP_ARP: 'true'
-    - LWIP_ICMP: 'true'
-    - ICMP_TTL: 'IP_DEFAULT_TTL'
-    - LWIP_BROADCAST_PING: 'false'
-    - LWIP_MULTICAST_PING: 'false'
-    - LWIP_IGMP: 'false'
-    - LWIP_DHCP: 'true'
-    - LWIP_DHCP_DOES_ACD_CHECK: 'true'
-    - LWIP_IPV6: 'false'
-    - LWIP_IPV6_NUM_ADDRESSES: '3'
-    - LWIP_IPV6_AUTOCONFIG: 'true'
-    - LWIP_IPV6_DHCP6: 'false'
-    - LWIP_RAW: 'false'
-    - RAW_TTL: 'IP_DEFAULT_TTL'
-    - LWIP_TCP: 'true'
-    - TCP_TTL: 'IP_DEFAULT_TTL'
-    - TCP_QUEUE_OOSEQ: 'false'
-    - TCP_MSS: '(1500 - 40)'
-    - TCP_SND_BUF: '(6 * TCP_MSS)'
-    - TCP_SND_QUEUELEN: '(3 * TCP_SND_BUF) / TCP_MSS'
-    - TCP_WND: '(2 * TCP_MSS)'
-    - TCP_LISTEN_BACKLOG: 'true'
-    - TCP_DEFAULT_LISTEN_BACKLOG: '0xFF'
-    - LWIP_UDP: 'true'
-    - UDP_TTL: 'IP_DEFAULT_TTL'
-    - LWIP_STATS: 'false'
-    - LWIP_PROVIDE_ERRNO: 'true'
-    - CHECKSUM_BY_HARDWARE: 'false'
-    - LWIP_DEBUG: 'true'
-    - DEFAULT_THREAD_STACKSIZE: '3000'
-    - DEFAULT_THREAD_PRIO: '3'
-    - TCPIP_MBOX_SIZE: '32'
-    - TCPIP_THREAD_STACKSIZE: '1024'
-    - TCPIP_THREAD_PRIO: '8'
-    - DEFAULT_UDP_RECVMBOX_SIZE: '12'
-    - DEFAULT_TCP_RECVMBOX_SIZE: '12'
-    - DEFAULT_ACCEPTMBOX_SIZE: '12'
-    - custom_opts: ''
-    - modules_include: ''
-    - mpu_init:
-      - mpu_init_component: 'MPU'
-    - user_preinit: 'false'
-    - user_init:
-      - initFunctionID: 'lwIP_interface_init'
-    - lwip_init: 'true'
-    - enableCallback: 'false'
-    - initFnCallback:
-      - callbackFunction: 'tcpip_init_done'
-      - arg_ptr: ''
-    - ifConfig:
-      - 0:
-        - ethernetif_config_struct: []
-        - phy_handle_struct: []
-        - mdio_handle_struct: []
-        - mdio_resource_struct: []
-        - netif_id: 'netif0'
-        - interface: 'enet'
-        - netif_mode: 'ipv4'
-        - ip_assignment: 'static'
-        - ipv4Config:
-          - ip_addr:
-            - addr: '0.0.0.0'
-          - netmask:
-            - addr: '255.255.255.0'
-          - gateway:
-            - addr: '0.0.0.0'
-        - netif_function_name: 'defaultFn'
-        - netif_input_function_name: 'defaultInputFn'
-        - mac_address:
-          - useSiliconId: 'false'
-          - addr: 'FF-FF-FF-FF-FF-FF'
-        - phyConfig:
-          - phy_driver: 'phyksz8081'
-          - phy_addr: '0x0'
-          - mdioConfig:
-            - enetConfig:
-              - peripheralSelect: 'ENET'
-              - timing:
-                - globalClockConfig:
-                  - clockSource: 'GlobalClock'
-                  - clockSourceFreq: 'BOARD_BootClockRUN'
-              - enet_config:
-                - phyTiming:
-                  - refClockConfig:
-                    - clockSource: 'EnetRefClock'
-                    - clockSourceFreq: 'BOARD_BootClockRUN'
-              - quick_selection: 'QuickSelection1'
-    - lwip_codegenerator: []
- * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
-/* clang-format on */
-/* IPv4 adress, netmask and gateway handle */
-ip4_addr_t lwIP_netif0_ipaddr, lwIP_netif0_netmask, lwIP_netif0_gw;
-/* Network interface structure */
-struct netif lwIP_netif0;
-static mdio_handle_t lwIP_netif0_mdio_handle = {
-  .resource = LWIP_NETIF0_MDIO_RESOURCE,
-  .ops = &LWIP_NETIF0_MDIO_OPS
-};
-static phy_handle_t lwIP_netif0_phy_handle = {
-  .phyAddr = LWIP_NETIF0_PHY_ADDRESS,
-  .mdioHandle = &lwIP_netif0_mdio_handle,
-  .ops = &LWIP_NETIF0_PHY_OPS
-};
-ethernetif_config_t lwIP_netif0_enet_config = {
-  .phyHandle = &lwIP_netif0_phy_handle,
-#ifdef LWIP_NETIF0_MAC_ADDRESS
-  .macAddress = LWIP_NETIF0_MAC_ADDRESS,
-#endif
-};
-
-static void lwIP_init(void) {
-  /* lwIP IP address initialization */
-  IP4_ADDR(&lwIP_netif0_ipaddr, LWIP_NETIF0_IPADDR0, LWIP_NETIF0_IPADDR1, LWIP_NETIF0_IPADDR2, LWIP_NETIF0_IPADDR3);
-  /* lwIP netmask initialization */
-  IP4_ADDR(&lwIP_netif0_netmask, LWIP_NETIF0_NETMASK0, LWIP_NETIF0_NETMASK1, LWIP_NETIF0_NETMASK2, LWIP_NETIF0_NETMASK3);
-  /* lwIP gateway initialization */
-  IP4_ADDR(&lwIP_netif0_gw, LWIP_NETIF0_GW0, LWIP_NETIF0_GW1, LWIP_NETIF0_GW2, LWIP_NETIF0_GW3);
-  /* lwIP module initialization */
-  tcpip_init(NULL, NULL);
-  /* lwIP network interface initialization */
-  netifapi_netif_add(&lwIP_netif0, &lwIP_netif0_ipaddr, &lwIP_netif0_netmask, &lwIP_netif0_gw, &lwIP_netif0_enet_config, ethernetif0_init, tcpip_input);
-  netifapi_netif_set_default(&lwIP_netif0);
-  netifapi_netif_set_up(&lwIP_netif0);
-}
-
-/***********************************************************************************************************************
  * Initialization functions
  **********************************************************************************************************************/
 void BOARD_InitPeripherals(void)
@@ -889,11 +730,10 @@ void BOARD_InitPeripherals(void)
   ADC1_init();
   CAN1_init();
   LCDIF_init();
-  SEMC_extRAM_init();
-  FLEXIO1_IMU_init();
+  SEMC_init();
+  FLEXIO1_init();
   USB1_init();
   DebugConsole_init();
-  lwIP_init();
 }
 
 /***********************************************************************************************************************
