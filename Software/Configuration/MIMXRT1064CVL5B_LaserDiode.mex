@@ -138,10 +138,18 @@
                <pin_label pin_num="H12" pin_signal="GPIO_AD_B1_12" label="ADC2_1"/>
                <pin_label pin_num="H11" pin_signal="GPIO_AD_B1_13" label="ADC2_2"/>
                <pin_label pin_num="G12" pin_signal="GPIO_AD_B1_14" label="ADC2_3"/>
+               <pin_label pin_num="E12" pin_signal="GPIO_B1_04" label="IO1" identifier="IO1"/>
+               <pin_label pin_num="D12" pin_signal="GPIO_B1_05" label="IO2" identifier="IO2"/>
+               <pin_label pin_num="C12" pin_signal="GPIO_B1_06" label="IO3" identifier="IO3"/>
+               <pin_label pin_num="B12" pin_signal="GPIO_B1_07" label="IMU_nCS" identifier="IMU_nCS"/>
             </pin_labels>
+            <external_user_signals>
+               <properties/>
+            </external_user_signals>
             <power_domains>
                <power_domain name="DCDC_IN" value="3.3"/>
-               <power_domain name="NVCC_EMC" value="1.8"/>
+               <power_domain name="DCDC_IN_Q" value="3.3"/>
+               <power_domain name="NVCC_EMC" value="3.3"/>
                <power_domain name="NVCC_GPIO" value="3.3"/>
                <power_domain name="NVCC_PLL" value="1.1"/>
                <power_domain name="NVCC_SD0" value="3.3"/>
@@ -465,7 +473,6 @@
                   <pin peripheral="JTAG" signal="TRSTB" pin_num="G10" pin_signal="GPIO_AD_B0_11"/>
                   <pin peripheral="PWM4" signal="A, 3" pin_num="B14" pin_signal="GPIO_B1_15"/>
                   <pin peripheral="ENET2" signal="1588_EVENT0_IN" pin_num="D8" pin_signal="GPIO_B0_03"/>
-                  <pin peripheral="ENET2" signal="1588_EVENT0_OUT" pin_num="E8" pin_signal="GPIO_B0_02"/>
                   <pin peripheral="JTAG" signal="TDI" pin_num="F14" pin_signal="GPIO_AD_B0_09"/>
                   <pin peripheral="GPIO1" signal="gpio_io, 00" pin_num="M14" pin_signal="GPIO_AD_B0_00">
                      <pin_features>
@@ -483,6 +490,10 @@
                   <pin peripheral="LPSPI2" signal="PCS0" pin_num="L3" pin_signal="GPIO_SD_B1_06"/>
                   <pin peripheral="LPSPI2" signal="SCK" pin_num="L4" pin_signal="GPIO_SD_B1_07"/>
                   <pin peripheral="LPSPI2" signal="SDO" pin_num="P3" pin_signal="GPIO_SD_B1_08"/>
+                  <pin peripheral="GPIO2" signal="gpio_io, 20" pin_num="E12" pin_signal="GPIO_B1_04"/>
+                  <pin peripheral="GPIO2" signal="gpio_io, 21" pin_num="D12" pin_signal="GPIO_B1_05"/>
+                  <pin peripheral="GPIO2" signal="gpio_io, 22" pin_num="C12" pin_signal="GPIO_B1_06"/>
+                  <pin peripheral="GPIO2" signal="gpio_io, 23" pin_num="B12" pin_signal="GPIO_B1_07"/>
                </pins>
             </function>
          </functions_list>
@@ -1888,7 +1899,7 @@
                         <struct name="edma_channels">
                            <setting name="enable_rx_edma_channel" value="true"/>
                            <struct name="edma_rx_channel">
-                              <setting name="uid" value="1675569580986"/>
+                              <setting name="uid" value="1676223054970"/>
                               <setting name="eDMAn" value="0"/>
                               <setting name="eDMA_source" value="kDmaRequestMuxFlexSPI2Rx"/>
                               <setting name="enableTriggerPIT" value="false"/>
@@ -1902,7 +1913,7 @@
                            </struct>
                            <setting name="enable_tx_edma_channel" value="true"/>
                            <struct name="edma_tx_channel">
-                              <setting name="uid" value="1675569580990"/>
+                              <setting name="uid" value="1676223054974"/>
                               <setting name="eDMAn" value="1"/>
                               <setting name="eDMA_source" value="kDmaRequestMuxFlexSPI2Tx"/>
                               <setting name="enableTriggerPIT" value="false"/>
