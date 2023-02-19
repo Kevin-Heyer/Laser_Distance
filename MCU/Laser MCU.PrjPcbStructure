@@ -1,1 +1,5 @@
-Record=TopLevelDocument|FileName=LaserDiode_Driver.SchDoc|SheetNumber=1
+Record=TopLevelDocument|FileName=Top_Level.SchDoc|SheetNumber=1
+Record=SheetSymbol|SourceDocument=Top_Level.SchDoc|Designator=U_Communication|SchDesignator=U_Communication|FileName=Communication.SchDoc|SheetNumber=5|SymbolType=Normal|RawFileName=Communication.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=Top_Level.SchDoc|Designator=U_External Memory|SchDesignator=U_External Memory|FileName=External Memory.SchDoc|SheetNumber=3|SymbolType=Normal|RawFileName=External Memory.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=Top_Level.SchDoc|Designator=U_MCU|SchDesignator=U_MCU|FileName=MCU.SchDoc|SheetNumber=4|SymbolType=Normal|RawFileName=MCU.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=Top_Level.SchDoc|Designator=U_USB_AND_POWER|SchDesignator=U_USB_AND_POWER|FileName=USB_AND_POWER.SchDoc|SheetNumber=2|SymbolType=Normal|RawFileName=USB_AND_POWER.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
