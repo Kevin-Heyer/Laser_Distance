@@ -1,0 +1,17 @@
+Added Rule: Name=Schematic Matched Net Lengths_3
+Added Rule: Name=Schematic Matched Net Lengths_9
+Added Rule: Name=Schematic Matched Net Lengths_10
+Added Rule: Name=Schematic Matched Net Lengths_11
+Added Rule: Name=Schematic Matched Net Lengths_12
+Added Rule: Name=Schematic Matched Net Lengths_13
+Added Rule: Name=Schematic Matched Net Lengths_14
+Added Rule: Name=Schematic Matched Net Lengths_15
+Added Rule: Name=Schematic Matched Net Lengths_16
+Added Rule: Name=Schematic Matched Net Lengths_17
+Added Rule: Name=Schematic Matched Net Lengths_18
+Added Rule: Name=Schematic Matched Net Lengths_19
+Added Rule: Name=Schematic Matched Net Lengths_20
+Added Rule: Name=Schematic Matched Net Lengths_21
+Added Rule: Name=Schematic Matched Net Lengths_22
+Added Rule: Name=Schematic Matched Net Lengths_23
+Change Rule Scope 1 : Old Scope=InNetClass('50R extRAM') New Scope=InNet('extRAM_nRAS')
