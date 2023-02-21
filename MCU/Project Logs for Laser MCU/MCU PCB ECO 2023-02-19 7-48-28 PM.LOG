@@ -1,0 +1,1 @@
+Change Rule Scope 1 : Old Scope=InNet('extRAM_nRAS') New Scope=InNetClass('50R extRAM')
