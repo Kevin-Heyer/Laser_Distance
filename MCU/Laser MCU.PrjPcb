@@ -208,16 +208,20 @@ Description=V0.0.0
 AllowFabrication=0
 ParameterCount=0
 VariationCount=6
-Variation1=Designator=C11|UniqueId=\BSZTAYAC|Kind=1|AlternatePart= 
-Variation2=Designator=C12|UniqueId=\ZPRKARNN|Kind=1|AlternatePart= 
-Variation3=Designator=C15|UniqueId=\JAEZNYBP|Kind=1|AlternatePart= 
-Variation4=Designator=R?|UniqueId=\PATTPQZK\LRNUJWCD|Kind=1|AlternatePart= 
-Variation5=Designator=SW?|UniqueId=\PATTPQZK\NWNDEVOE|Kind=1|AlternatePart= 
+Variation1=Designator=C99|UniqueId=\NSZBMZSE\YCRYQTXB|Kind=1|AlternatePart= 
+Variation2=Designator=C100|UniqueId=\NSZBMZSE\MGXJXCTJ|Kind=1|AlternatePart= 
+Variation3=Designator=C11|UniqueId=\NSZBMZSE\JUHCBXDH|Kind=1|AlternatePart= 
+Variation4=Designator=R9|UniqueId=\PATTPQZK\LRNUJWCD|Kind=1|AlternatePart= 
+Variation5=Designator=SW1|UniqueId=\PATTPQZK\NWNDEVOE|Kind=1|AlternatePart= 
 Variation6=Designator=C14|UniqueId=\NSZBMZSE\ZHHYJBAB|Kind=1|AlternatePart= 
 ParamVariationCount=0
 
 [GeneratedDocument1]
 DocumentPath=Project Outputs for Laser MCU\Design Rule Check - MCU.html
+DItemRevisionGUID=
+
+[GeneratedDocument2]
+DocumentPath=MCU 2023-03-05 3-10-33 PM.WAS
 DItemRevisionGUID=
 
 [Configuration1]
@@ -1262,18 +1266,32 @@ Net59=NetName=IMU_MOSI|NetColor=$000033CC
 Net60=NetName=IMU_nCS|NetColor=$000033CC
 Net61=NetName=IMU_SCLK|NetColor=$000033CC
 Net62=NetName=nRST|NetColor=$00FFCC33
-Net63=NetName=SWCLK|NetColor=$00FFCC33
-Net64=NetName=SWDIO|NetColor=$00FFCC33
-Net65=NetName=SWO|NetColor=$00FFCC33
-Net66=NetName=TRACE_CLK|NetColor=$00FFCC33
-Net67=NetName=TRACE0|NetColor=$00FFCC33
-Net68=NetName=TRACE1|NetColor=$00FFCC33
-Net69=NetName=USB_MCU_N|NetColor=$00003366
-Net70=NetName=USB_MCU_P|NetColor=$00003366
-Net71=NetName=USB_N|NetColor=$00003366
-Net72=NetName=USB_P|NetColor=$00003366
-Net73=NetName=Vin|NetColor=$00330066
-Net74=NetName=VUSB|NetColor=$00663399
+Net63=NetName=NVCC_EMC|NetColor=$000078F7
+Net64=NetName=NVCC_GPIO0|NetColor=$000078F7
+Net65=NetName=NVCC_GPIO1|NetColor=$000078F7
+Net66=NetName=NVCC_GPIO2|NetColor=$000078F7
+Net67=NetName=NVCC_PLL|NetColor=$000078F7
+Net68=NetName=NVCC_SD0|NetColor=$000078F7
+Net69=NetName=NVCC_SD1|NetColor=$000078F7
+Net70=NetName=SWCLK|NetColor=$00FFCC33
+Net71=NetName=SWDIO|NetColor=$00FFCC33
+Net72=NetName=SWO|NetColor=$00FFCC33
+Net73=NetName=TRACE_CLK|NetColor=$00FFCC33
+Net74=NetName=TRACE0|NetColor=$00FFCC33
+Net75=NetName=TRACE1|NetColor=$00FFCC33
+Net76=NetName=USB_MCU_N|NetColor=$00003366
+Net77=NetName=USB_MCU_P|NetColor=$00003366
+Net78=NetName=USB_N|NetColor=$00003366
+Net79=NetName=USB_P|NetColor=$00003366
+Net80=NetName=VDD_HIGH_CAP|NetColor=$000078F7
+Net81=NetName=VDD_HIGH_IN|NetColor=$000078F7
+Net82=NetName=VDD_SNVS_CAP|NetColor=$000078F7
+Net83=NetName=VDD_SNVS_IN|NetColor=$000078F7
+Net84=NetName=VDD_SOC_IN|NetColor=$000078F7
+Net85=NetName=VDD_USB_CAP|NetColor=$000078F7
+Net86=NetName=VDDA_ADC_3P3|NetColor=$000078F7
+Net87=NetName=Vin|NetColor=$00330066
+Net88=NetName=VUSB|NetColor=$00663399
 
 [Comparison Options]
 ComparisonOptions0=Kind=Net|MinPercent=75|MinMatch=3|ShowMatch=0|UseName=-1|InclAllRules=0
