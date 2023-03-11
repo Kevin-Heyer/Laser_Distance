@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: D:\PersonalProjects\Self-Mixing Diode\MCU\MCU.PcbDoc
+LayersSetName=Top_Bot_Plated_Thru_Holes|DrillFile=mcu-plated.txt|DrillLayers=gtl,gp1,g1,g2,gp2,gbl
+LayersSetName=Top_Bot_NonPlated_Thru_Holes|DrillFile=mcu-nonplated.txt|DrillLayers=gtl,gp1,g1,g2,gp2,gbl
