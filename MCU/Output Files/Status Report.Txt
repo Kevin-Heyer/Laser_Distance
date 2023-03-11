@@ -1,0 +1,10 @@
+Output: BOM
+Type  : BOM
+From  : Variant [V0.0.0] of Project [Laser MCU.PrjPcb]
+   Generated File[BOM-Laser MCU(V0.0.0).csv]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 11:05:58 AM On 2023-03-11
