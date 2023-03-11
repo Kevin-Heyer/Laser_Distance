@@ -142,6 +142,10 @@ D162  ROUNDED            11.811      11.811       0.000  LINE       0.000
 D163  ROUNDED             4.000       4.000       0.000  LINE       0.000
 D164  RECTANGULAR        37.402      55.118       0.000 FLASH       0.000
 D165  RECTANGULAR        41.339      59.055       0.000 FLASH       0.000
-D166  ROUNDED             2.000       2.000       0.000  LINE       0.000
-D167  ROUNDED             2.665       2.665       0.000  LINE       0.000
-D168  ROUNDED             1.335       1.335       0.000  LINE       0.000
+D166  ROUNDED             9.055       9.055       0.000 FLASH       0.000
+D167  ROUNDED             7.008       7.008       0.000 FLASH       0.000
+D168  ROUNDED             7.874       7.874       0.000 FLASH       0.000
+D169  ROUNDED             2.000       2.000       0.000  LINE       0.000
+D170  ROUNDED             2.665       2.665       0.000  LINE       0.000
+D171  ROUNDED             1.335       1.335       0.000  LINE       0.000
+D172  ROUNDED             1.000       1.000       0.000  LINE       0.000
