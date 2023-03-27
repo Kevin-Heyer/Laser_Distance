@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : D:\PersonalProjects\Self-Mixing Diode\MCU\MCU.PcbDoc
-Date     : 2023-03-11
-Time     : 11:02:30 AM
+Date     : 2023-03-13
+Time     : 6:52:34 AM
 
 WARNING: Unplated multi-layer pad(s) detected
    Pad J6-0(5.066mm,22.165mm) on Multi-Layer on Net NetJ6_0
@@ -78,7 +78,7 @@ Rule Violations :2
 Processing Rule : Parallel Segment Constraint (Gap=0.508mm ) (Limit=0.025mm) (InNet('extRAM_CLK')),(All)
    Violation between Parallel Segment Constraint: (0.786mm > 0.025mm) Between Net extRAM_A8 And Net extRAM_CLK Gap < 0.508mm; Actual Parallel Span = 0.786mm
    Violation between Parallel Segment Constraint: (1.966mm > 0.025mm) Between Net extRAM_A9 And Net extRAM_CLK Gap < 0.508mm; Actual Parallel Span = 1.966mm
-   Violation between Parallel Segment Constraint: (5.963mm > 0.025mm) Between Net extRAM_CKE And Net extRAM_CLK Gap < 0.508mm; Actual Parallel Span = 5.963mm
+   Violation between Parallel Segment Constraint: (6.178mm > 0.025mm) Between Net extRAM_CKE And Net extRAM_CLK Gap < 0.508mm; Actual Parallel Span = 6.178mm
    Violation between Parallel Segment Constraint: (3.018mm > 0.025mm) Between Net extRAM_CLK And Net extRAM_DQ14 Gap < 0.508mm; Actual Parallel Span = 3.018mm
 Rule Violations :4
 

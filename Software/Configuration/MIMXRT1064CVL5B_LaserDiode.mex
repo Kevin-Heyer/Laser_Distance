@@ -1811,11 +1811,11 @@
                      </config_set>
                   </instance>
                   <instance name="USB_I2C" uuid="47294c05-6e9d-4597-98f6-3e3ad4bef906" type="lpi2c_cmsis" type_id="lpi2c_cmsis_79043f5f3bed8339a47810c2601e050a" mode="interrupt" peripheral="LPI2C1" enabled="true" comment="" custom_name_enabled="true" editing_lock="false">
-                     <config_set name="fsl_i2c_cmsis" quick_selection="qs_default">
+                     <config_set name="fsl_i2c_cmsis">
                         <setting name="mode" value="kMaster"/>
                         <setting name="clockSource" value="Lpi2cClock"/>
                         <setting name="clockSourceFreq" value="ClocksTool_DefaultInit"/>
-                        <setting name="ARM_I2C_BUS_SPEED" value="ARM_I2C_BUS_SPEED_STANDARD"/>
+                        <setting name="ARM_I2C_BUS_SPEED" value="ARM_I2C_BUS_SPEED_FAST_PLUS"/>
                         <setting name="signalEventFunctionId" value="LPI2C1_SignalEvent"/>
                         <setting name="enableGetFreqFnCustomName" value="false"/>
                         <setting name="getFreqFunctionCustomID" value="LPI2C1_GetFreq"/>
@@ -1899,7 +1899,7 @@
                         <struct name="edma_channels">
                            <setting name="enable_rx_edma_channel" value="true"/>
                            <struct name="edma_rx_channel">
-                              <setting name="uid" value="1676223054970"/>
+                              <setting name="uid" value="1679756088667"/>
                               <setting name="eDMAn" value="0"/>
                               <setting name="eDMA_source" value="kDmaRequestMuxFlexSPI2Rx"/>
                               <setting name="enableTriggerPIT" value="false"/>
@@ -1913,7 +1913,7 @@
                            </struct>
                            <setting name="enable_tx_edma_channel" value="true"/>
                            <struct name="edma_tx_channel">
-                              <setting name="uid" value="1676223054974"/>
+                              <setting name="uid" value="1679756088693"/>
                               <setting name="eDMAn" value="1"/>
                               <setting name="eDMA_source" value="kDmaRequestMuxFlexSPI2Tx"/>
                               <setting name="enableTriggerPIT" value="false"/>

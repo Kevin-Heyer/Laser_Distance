@@ -1,0 +1,10 @@
+Output: BOM
+Type  : BOM
+From  : Variant [[No Variations]] of Project [Adapter_XDS_110.PrjPcb]
+   Generated File[BOM-Adapter_XDS_110.csv]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 1:36:02 PM On 2023-03-19

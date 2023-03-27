@@ -1,0 +1,62 @@
+Protel Design System Design Rule Check
+PCB File : D:\PersonalProjects\Self-Mixing Diode\Adapter_XDS_110\Adapter_XDS_110.PcbDoc
+Date     : 2023-03-19
+Time     : 1:32:16 PM
+
+Processing Rule : Clearance Constraint (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.127mm) (Max=1816.048mm) (Preferred=0.254mm) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Minimum Annular Ring (Minimum=0.13mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.2mm) (Max=6.3mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=0.5mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.05mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=0mm) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=0mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
+Rule Violations :0
+
+Processing Rule : Board Clearance Constraint (Gap=0mm) (IsComponent)
+Rule Violations :0
+
+Processing Rule : Board Clearance Constraint (Gap=0mm) (All)
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.254mm) Between Board Edge And Region (0 hole(s)) Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.4mm) Between Board Edge And Track (37.687mm,31.941mm)(47.137mm,31.941mm) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.4mm) Between Board Edge And Track (37.687mm,52.641mm)(47.137mm,52.641mm) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.4mm) Between Board Edge And Track (47.137mm,31.941mm)(47.137mm,46.016mm) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.4mm) Between Board Edge And Track (47.137mm,46.016mm)(47.137mm,52.641mm) on Top Overlay 
+Rule Violations :5
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+
+Violations Detected : 5
+Waived Violations : 0
+Time Elapsed        : 00:00:01

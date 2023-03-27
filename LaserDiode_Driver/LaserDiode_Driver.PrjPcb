@@ -24,16 +24,25 @@ ReorderDocumentsOnCompile=1
 NameNetsHierarchically=0
 PowerPortNamesTakePriority=0
 AutoSheetNumbering=1
+AutoCrossReferences=0
+NewIndexingOfSheetSymbols=0
 PushECOToAnnotationFile=1
 DItemRevisionGUID=
 ReportSuppressedErrorsInMessages=0
 FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
 IsProjectConflictPreventionWarningsEnabled=0
+IsVirtualBomDocumentRemoved=0
 OutputPath=
 LogFolderPath=
 ManagedProjectGUID=
 IncludeDesignInRelease=0
+CrossRefSheetStyle=1
+CrossRefLocationStyle=1
+CrossRefPorts=3
+CrossRefCrossSheets=1
+CrossRefSheetEntries=0
+CrossRefFollowFromMainSettings=1
 
 [Preferences]
 PrefsVaultGUID=
@@ -136,7 +145,95 @@ Variation3=Designator=C15|UniqueId=\JAEZNYBP|Kind=1|AlternatePart=
 ParamVariationCount=0
 
 [GeneratedDocument1]
+DocumentPath=.\Output Files\BOM\BOM-LaserDiode_Driver.csv
+DItemRevisionGUID=
+
+[GeneratedDocument2]
 DocumentPath=Project Outputs for LaserDiode_Driver\Design Rule Check - LaserDiode_Driver.html
+DItemRevisionGUID=
+
+[GeneratedDocument3]
+DocumentPath=.\Output Files\NC Drill\LaserDiode_Driver-NonPlated.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument4]
+DocumentPath=.\Output Files\NC Drill\LaserDiode_Driver-Plated.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument5]
+DocumentPath=.\Output Files\NC Drill\LaserDiode_Driver.DRR
+DItemRevisionGUID=
+
+[GeneratedDocument6]
+DocumentPath=.\Output Files\Gerber\LaserDiode_Driver.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument7]
+DocumentPath=.\Output Files\Gerber\LaserDiode_Driver.GBL
+DItemRevisionGUID=
+
+[GeneratedDocument8]
+DocumentPath=.\Output Files\Gerber\LaserDiode_Driver.GBO
+DItemRevisionGUID=
+
+[GeneratedDocument9]
+DocumentPath=.\Output Files\Gerber\LaserDiode_Driver.GBP
+DItemRevisionGUID=
+
+[GeneratedDocument10]
+DocumentPath=.\Output Files\Gerber\LaserDiode_Driver.GBS
+DItemRevisionGUID=
+
+[GeneratedDocument11]
+DocumentPath=.\Output Files\Gerber\LaserDiode_Driver.GD1
+DItemRevisionGUID=
+
+[GeneratedDocument12]
+DocumentPath=.\Output Files\Gerber\LaserDiode_Driver.GM1
+DItemRevisionGUID=
+
+[GeneratedDocument13]
+DocumentPath=.\Output Files\Gerber\LaserDiode_Driver.GM2
+DItemRevisionGUID=
+
+[GeneratedDocument14]
+DocumentPath=.\Output Files\Gerber\LaserDiode_Driver.GP1
+DItemRevisionGUID=
+
+[GeneratedDocument15]
+DocumentPath=.\Output Files\Gerber\LaserDiode_Driver.GP2
+DItemRevisionGUID=
+
+[GeneratedDocument16]
+DocumentPath=.\Output Files\Gerber\LaserDiode_Driver.GTL
+DItemRevisionGUID=
+
+[GeneratedDocument17]
+DocumentPath=.\Output Files\Gerber\LaserDiode_Driver.GTO
+DItemRevisionGUID=
+
+[GeneratedDocument18]
+DocumentPath=.\Output Files\Gerber\LaserDiode_Driver.GTP
+DItemRevisionGUID=
+
+[GeneratedDocument19]
+DocumentPath=.\Output Files\Gerber\LaserDiode_Driver.GTS
+DItemRevisionGUID=
+
+[GeneratedDocument20]
+DocumentPath=.\Output Files\NC Drill\LaserDiode_Driver.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument21]
+DocumentPath=.\Output Files\Gerber\LaserDiode_Driver.REP
+DItemRevisionGUID=
+
+[GeneratedDocument22]
+DocumentPath=.\Output Files\Gerber\LaserDiode_Driver.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument23]
+DocumentPath=.\Output Files\Pick Place\Pick Place for LaserDiode_Driver.csv
 DItemRevisionGUID=
 
 [Configuration1]
@@ -239,36 +336,26 @@ OutputName17=SciCards Netlist
 OutputDocumentPath17=
 OutputVariantName17=
 OutputDefault17=0
-OutputType18=SIMetrixNetlist
-OutputName18=SIMetrix
+OutputType18=TangoNetlist
+OutputName18=Tango Netlist
 OutputDocumentPath18=
 OutputVariantName18=
 OutputDefault18=0
-OutputType19=SIMPLISNetlist
-OutputName19=SIMPLIS
+OutputType19=TelesisNetlist
+OutputName19=Telesis Netlist
 OutputDocumentPath19=
 OutputVariantName19=
 OutputDefault19=0
-OutputType20=TangoNetlist
-OutputName20=Tango Netlist
+OutputType20=WireListNetlist
+OutputName20=WireList Netlist
 OutputDocumentPath20=
 OutputVariantName20=
 OutputDefault20=0
-OutputType21=TelesisNetlist
-OutputName21=Telesis Netlist
+OutputType21=XSpiceNetlist
+OutputName21=XSpice Netlist
 OutputDocumentPath21=
 OutputVariantName21=
 OutputDefault21=0
-OutputType22=WireListNetlist
-OutputName22=WireList Netlist
-OutputDocumentPath22=
-OutputVariantName22=
-OutputDefault22=0
-OutputType23=XSpiceNetlist
-OutputName23=XSpice Netlist
-OutputDocumentPath23=
-OutputVariantName23=
-OutputDefault23=0
 
 [OutputGroup2]
 Name=Simulator Outputs
@@ -280,16 +367,6 @@ OutputName1=Mixed Sim
 OutputDocumentPath1=
 OutputVariantName1=
 OutputDefault1=0
-OutputType2=SIMetrixSimulation
-OutputName2=SIMetrix
-OutputDocumentPath2=
-OutputVariantName2=
-OutputDefault2=0
-OutputType3=SIMPLISSimulation
-OutputName3=SIMPLIS
-OutputDocumentPath3=
-OutputVariantName3=
-OutputDefault3=0
 
 [OutputGroup3]
 Name=Documentation Outputs
@@ -299,7 +376,7 @@ PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate
 OutputType1=Composite
 OutputName1=Composite Drawing
 OutputDocumentPath1=
-OutputVariantName1=
+OutputVariantName1=[No Variations]
 OutputDefault1=0
 PageOptions1=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
 OutputType2=PCB 3D Print
@@ -317,7 +394,7 @@ PageOptions3=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintS
 OutputType4=PCB Print
 OutputName4=PCB Prints
 OutputDocumentPath4=
-OutputVariantName4=
+OutputVariantName4=[No Variations]
 OutputDefault4=0
 PageOptions4=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
 OutputType5=PCBDrawing
@@ -329,7 +406,7 @@ PageOptions5=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintS
 OutputType6=PCBLIB Print
 OutputName6=PCBLIB Prints
 OutputDocumentPath6=
-OutputVariantName6=
+OutputVariantName6=[No Variations]
 OutputDefault6=0
 PageOptions6=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
 OutputType7=PDF3D
@@ -362,6 +439,18 @@ OutputDocumentPath11=
 OutputVariantName11=
 OutputDefault11=0
 PageOptions11=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
+OutputType12=Harness Layout Drawing Print
+OutputName12=Harness Layout Drawing Prints
+OutputDocumentPath12=
+OutputVariantName12=
+OutputDefault12=0
+PageOptions12=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
+OutputType13=Harness Wiring Diagram Print
+OutputName13=Harness Wiring Diagram Prints
+OutputDocumentPath13=
+OutputVariantName13=
+OutputDefault13=0
+PageOptions13=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
 
 [OutputGroup4]
 Name=Assembly Outputs
@@ -399,13 +488,13 @@ PageOptions1=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintS
 OutputType2=CompositeDrill
 OutputName2=Composite Drill Drawing
 OutputDocumentPath2=
-OutputVariantName2=
+OutputVariantName2=[No Variations]
 OutputDefault2=0
 PageOptions2=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
 OutputType3=Drill
 OutputName3=Drill Drawing/Guides
 OutputDocumentPath3=
-OutputVariantName3=
+OutputVariantName3=[No Variations]
 OutputDefault3=0
 PageOptions3=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
 OutputType4=Final
@@ -422,17 +511,17 @@ OutputDefault5=0
 OutputType6=Gerber X2
 OutputName6=Gerber X2 Files
 OutputDocumentPath6=
-OutputVariantName6=
+OutputVariantName6=[No Variations]
 OutputDefault6=0
 OutputType7=IPC2581
 OutputName7=IPC-2581 Files
 OutputDocumentPath7=
-OutputVariantName7=
+OutputVariantName7=[No Variations]
 OutputDefault7=0
 OutputType8=Mask
 OutputName8=Solder/Paste Mask Prints
 OutputDocumentPath8=
-OutputVariantName8=
+OutputVariantName8=[No Variations]
 OutputDefault8=0
 PageOptions8=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
 OutputType9=NC Drill
@@ -448,7 +537,7 @@ OutputDefault10=0
 OutputType11=Plane
 OutputName11=Power-Plane Prints
 OutputDocumentPath11=
-OutputVariantName11=
+OutputVariantName11=[No Variations]
 OutputDefault11=0
 PageOptions11=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
 OutputType12=Test Points
@@ -493,6 +582,24 @@ OutputName6=Report Single Pin Nets
 OutputDocumentPath6=
 OutputVariantName6=[No Variations]
 OutputDefault6=0
+OutputType7=BOM_ReportCompare
+OutputName7=BOM Compare
+OutputDocumentPath7=
+OutputVariantName7=[No Variations]
+OutputDefault7=0
+PageOptions7=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
+OutputType8=Export Comments
+OutputName8=Export Comments
+OutputDocumentPath8=
+OutputVariantName8=[No Variations]
+OutputDefault8=0
+PageOptions8=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
+OutputType9=Project History
+OutputName9=Project History
+OutputDocumentPath9=
+OutputVariantName9=[No Variations]
+OutputDefault9=0
+PageOptions9=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
 
 [OutputGroup7]
 Name=Other Outputs
@@ -706,6 +813,41 @@ OutputName11=Specctra Design PCB
 OutputDocumentPath11=
 OutputVariantName11=
 OutputDefault11=0
+OutputType12=Ansoft Neutral
+OutputName12=Ansoft Neutral (AutoPCB)
+OutputDocumentPath12=
+OutputVariantName12=
+OutputDefault12=0
+OutputType13=HyperLynx
+OutputName13=HyperLynx (AutoPCB)
+OutputDocumentPath13=
+OutputVariantName13=
+OutputDefault13=0
+OutputType14=Orcad v7 Capture Design
+OutputName14=Orcad v7 Capture Design (AutoSCH)
+OutputDocumentPath14=
+OutputVariantName14=
+OutputDefault14=0
+OutputType15=P-CAD ASCII
+OutputName15=P-CAD ASCII (AutoPCB)
+OutputDocumentPath15=
+OutputVariantName15=
+OutputDefault15=0
+OutputType16=P-CAD V16 Schematic Design
+OutputName16=P-CAD V16 Schematic Design (AutoSCH)
+OutputDocumentPath16=
+OutputVariantName16=
+OutputDefault16=0
+OutputType17=SiSoft
+OutputName17=SiSoft (AutoPCB)
+OutputDocumentPath17=
+OutputVariantName17=
+OutputDefault17=0
+OutputType18=Web ReviewOutputName
+OutputName18=Web Review Data
+OutputDocumentPath18=
+OutputVariantName18=
+OutputDefault18=0
 
 [OutputGroup10]
 Name=PostProcess Outputs
@@ -838,6 +980,7 @@ Type116=1
 Type117=1
 Type118=1
 Type119=1
+Type120=1
 
 [Difference Levels]
 Type1=1
@@ -1029,12 +1172,13 @@ Type116=2
 Type117=3
 Type118=3
 Type119=3
-MultiChannelAlternate=2
 AlternateItemFail=3
 Type122=2
 Type123=1
 Type124=1
 Type125=1
+Type126=1
+Type127=1
 
 [ERC Connection Matrix]
 L1=NNNNNNNNNNNWNNNWW

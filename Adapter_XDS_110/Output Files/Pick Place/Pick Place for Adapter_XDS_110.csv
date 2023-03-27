@@ -1,0 +1,25 @@
+Altium Designer Pick and Place Locations
+D:\PersonalProjects\Self-Mixing Diode\Adapter_XDS_110\.\Output Files\Pick Place\Pick Place for Adapter_XDS_110.csv
+
+========================================================================================================================
+File Design Information:
+
+Date:       19-03-23
+Time:       13:36
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mm
+
+"Designator","Comment","Layer","Footprint","Center-X(mm)","Center-Y(mm)","Rotation","Description"
+"J3","20021311-00014T4LF","BottomLayer","CONN_HDR_PLUG_14_1.27_TH_XDS110_AUX","29.9720","19.2163","0","1.27mm (0.05in.) pitch, Receptacle Top entry, 14 contacts"
+"TP9","1mm","TopLayer","TESTPOINT_SMT","32.0000","30.0000","270","SMT testpoint"
+"TP8","1mm","TopLayer","TESTPOINT_SMT","29.9425","33.1273","270","SMT testpoint"
+"TP7","1mm","TopLayer","TESTPOINT_SMT","36.1436","51.7658","270","SMT testpoint"
+"TP6","1mm","TopLayer","TESTPOINT_SMT","31.8891","51.7658","90","SMT testpoint"
+"TP5","1mm","TopLayer","TESTPOINT_SMT","27.6346","51.7658","90","SMT testpoint"
+"TP4","1mm","TopLayer","TESTPOINT_SMT","35.3140","48.8950","90","SMT testpoint"
+"TP3","1mm","TopLayer","TESTPOINT_SMT","35.5600","45.5850","90","SMT testpoint"
+"TP2","1mm","TopLayer","TESTPOINT_SMT","34.1710","41.7830","90","SMT testpoint"
+"TP1","1mm","TopLayer","TESTPOINT_SMT","33.6326","35.0520","90","SMT testpoint"
+"J1","TAG CONN 10","TopLayer","CONN_HDR_RECPT_20_2.54_TH_TAG_CONNECT_10","42.4120","42.2910","180","Conn Shrouded Header HDR 10 POS 2.54mm Solder ST Thru-Hole"
+"J2","20021311-00020T4LF","BottomLayer","CONN_HDR_PLUG_20_1.27_TH_XDS110_DEBUG","29.9720","42.2913","0","Dual Row 20 Position 1.27 mm Board to Board Through Hole Female Socket Connector"

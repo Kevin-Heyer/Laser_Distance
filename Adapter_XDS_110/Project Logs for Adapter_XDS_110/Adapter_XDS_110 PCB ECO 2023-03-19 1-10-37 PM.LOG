@@ -1,0 +1,116 @@
+Removed Pin From Net: NetName=3V3 Pin=J2-1
+Removed Pin From Net: NetName=SWDIO Pin=J2-2
+Removed Pin From Net: NetName=GND Pin=J2-3
+Removed Pin From Net: NetName=SWCLK Pin=J2-4
+Removed Pin From Net: NetName=GND Pin=J2-5
+Removed Pin From Net: NetName=SWO Pin=J2-6
+Removed Pin From Net: NetName=nRST Pin=J2-10
+Change Component Footprint: Designator=J2 Old Footprint=CONN HDR PLUG 10 1.27mm JLink EDU New Footprint=CONN HDR PLUG 20 1.27 TH XDS110 DEBUG
+Change Component Comment : Designator=J2 Old Comment=20021311-00010T4LF New Comment=20021311-00020T4LF
+Change component parameters: Designator = "J2" ("J2"); Footprint = "CONN HDR PLUG 10 1.27mm JLink EDU"; UniqueID = "\OSADNQFB" ("\OSADNQFB")
+Change component parameters (AddParameter): Name = "Category 1"; Value = "Connectors"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Color"; Value = "Black"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.alliedelec.com/m/d/a3245b736a91ce97db4107bcd031e553.pdf?src-supplier=Allied+Electronics"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.alliedelec.com/m/d/a3245b736a91ce97db4107bcd031e553.pdf?src-supplier=Allied+Electronics"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "https://www.verical.com/server-webapp/html/getDatasheet?partID=356979&src-supplier=Verical"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "https://www.verical.com/server-webapp/html/getDatasheet?partID=356979&src-supplier=Verical"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3Description"; Value = "http://portal.fciconnect.com/Comergent/fci/drawing/20021311.pdf?src-supplier=Avnet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3URL"; Value = "http://portal.fciconnect.com/Comergent/fci/drawing/20021311.pdf?src-supplier=Avnet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink4Description"; Value = "http://portal.fciconnect.com/Comergent//fci/drawing/20021311.pdf?src-supplier=Mouser"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink4URL"; Value = "http://portal.fciconnect.com/Comergent//fci/drawing/20021311.pdf?src-supplier=Mouser"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink5Description"; Value = "http://www.farnell.com/cad/1750102.pdf?src-supplier=Element14"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink5URL"; Value = "http://www.farnell.com/cad/1750102.pdf?src-supplier=Element14"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink6Description"; Value = "http://components.arrow.com/part/dataview/48963304S8522655N8314?src-supplier=Arrow+Electronics"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink6URL"; Value = "http://components.arrow.com/part/dataview/48963304S8522655N8314?src-supplier=Arrow+Electronics"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink7Description"; Value = "http://www.farnell.com/datasheets/2374175.pdf?src-supplier=Farnell"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink7URL"; Value = "http://www.farnell.com/datasheets/2374175.pdf?src-supplier=Farnell"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink8Description"; Value = "https://media.digikey.com/pdf/Data%20Sheets/FCI%20PDFs/Minitek%20127_Catalog.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink8URL"; Value = "https://media.digikey.com/pdf/Data%20Sheets/FCI%20PDFs/Minitek%20127_Catalog.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Connector Type"; Value = "Receptacle"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Material"; Value = "Copper Alloy,Copper"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Plating"; Value = "Gold"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Resistance"; Value = "30mR"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Type"; Value = "Female Socket"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Current Rating"; Value = "1A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Depth"; Value = "3mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Description 1"; Value = "Dual Row 20 Position 1.27 mm Board to Board Through Hole Female Socket Connector"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Gender"; Value = "Receptacle"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Housing Material"; Value = "Plastic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Length"; Value = "11.43mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "Amphenol ICC / FCI"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "20021311-00020T4LF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Voltage Rating (AC)"; Value = "125V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Min Operating Temperature"; Value = "-40°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = "Through Hole"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Contacts"; Value = "20"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Positions"; Value = "20"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Rows"; Value = "2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Orientation"; Value = "Straight"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Quantity"; Value = "45"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packaging"; Value = "Rail/Tube"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pitch"; Value = "1.27mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Reach SVHC Compliant"; Value = "Yes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RoHS 1"; Value = "Yes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Row Spacing"; Value = "0.05inch"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Series"; Value = "Minitek 127® 20021311"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Newark"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "82R8663"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Termination"; Value = "Solder"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Rating"; Value = "125V"; VariantName = "[No Variations]"
+Added Component: Designator=J3(CONN HDR PLUG 14 1.27 TH XDS110 AUX)
+Add component (AddParameter): Name = "Category 1"; Value = "Connectors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Color"; Value = "Black"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "https://datasheet.ciiva.com/411/20021311-411141.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://datasheet.ciiva.com/411/20021311-411141.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "https://datasheet.ciiva.com/13874/20021311-13874918.pdf?src-supplier=Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "https://datasheet.ciiva.com/13874/20021311-13874918.pdf?src-supplier=Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "https://datasheet.ciiva.com/10135/20021311-10135351.pdf?src-supplier=Avnet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "https://datasheet.ciiva.com/10135/20021311-10135351.pdf?src-supplier=Avnet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Connector Type"; Value = "Receptacle"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Material"; Value = "Copper Alloy"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Gold"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Resistance"; Value = "30mR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Type"; Value = "Female Socket"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current Rating"; Value = "1A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Depth"; Value = "3mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Description 1"; Value = "1.27mm (0.05in.) pitch, Receptacle Top entry, 14 contacts"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Gender"; Value = "Female"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Housing Material"; Value = "Plastic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "7.62mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer 1"; Value = "Amphenol ICC / FCI"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number 1"; Value = "20021311-00014T4LF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Voltage Rating (AC)"; Value = "125V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-40°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Contacts"; Value = "14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Positions"; Value = "14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Rows"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Orientation"; Value = "Straight"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "63"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Rail/Tube"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "1.27mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS 1"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS Compliant"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Row Spacing"; Value = "0.05inch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "Minitek 127® 20021311"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Newark"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "39AJ1937"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "Solder"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "125V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=SWDIO Pin=J2-1
+Added Pin To Net: NetName=3V3 Pin=J2-5
+Added Pin To Net: NetName=SWO Pin=J2-7
+Added Pin To Net: NetName=GND Pin=J2-8
+Added Pin To Net: NetName=GND Pin=J2-10
+Added Pin To Net: NetName=SWCLK Pin=J2-11
+Added Pin To Net: NetName=GND Pin=J2-12
+Added Pin To Net: NetName=nRST Pin=J2-15
+Added Pin To Net: NetName=GND Pin=J2-16
+Added Pin To Net: NetName=GND Pin=J2-20
+Added Pin To Net: NetName=GND Pin=J3-5
+Added Pin To Net: NetName=GND Pin=J3-13
+Change Class Name : Old Net Name=Adapter_JLink_EDU New Net Name=Adapter_XDS_110
+Added Member To Class: ClassName=Adapter_XDS_110 Member=Component J3 20021311-00014T4LF

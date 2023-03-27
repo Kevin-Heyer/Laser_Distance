@@ -1,0 +1,102 @@
+Protel Design System Design Rule Check
+PCB File : D:\PersonalProjects\Self-Mixing Diode\LaserDiode_Analog\LaserDiode_Analog.PcbDoc
+Date     : 2023-03-26
+Time     : 7:14:55 PM
+
+Processing Rule : Clearance Constraint (Gap=0.254mm) (InNetClass('HS_NET')),(IsCopperRegion and not InNet('4V0'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.508mm) (InNetClass('HS_NET')),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.3mm) (IsThruPin and InAnyNet),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.254mm) (HasFootprint('TSSOP50P490X110-10N')),(not IsThruPin)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.2mm) (Max=999mm) (Preferred=0.254mm) (WithinRoom('FINEPITCH_ROOM') or WithinRoom('FINEPITCH_ROOM2'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.345mm) (Max=0.345mm) (Preferred=0.345mm) (InNetClass('HS_NET'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.102mm) (Max=50mm) (Preferred=0.254mm) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Minimum Annular Ring (Minimum=0.05mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.2mm) (Max=6.3mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=0.1mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=0mm) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=0mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
+Rule Violations :0
+
+Processing Rule : Board Clearance Constraint (Gap=0mm) (OnCopper)
+Rule Violations :0
+
+Processing Rule : Board Clearance Constraint (Gap=0mm) (InComponent('J3', 'J4','J5','J6'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=1.1mm) (InxSignalClass('xSignals_J2_U5_MatchLengthsClass'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U5_J2_MatchLengthsClass'))
+Rule Violations :0
+
+Processing Rule : Room DAC (Bounding Region = (51.896mm, 49.608mm, 101.604mm, 88.441mm) (InComponentClass('DAC'))
+Rule Violations :0
+
+Processing Rule : Room LaserDiode_Analog (Bounding Region = (22.7mm, 26.325mm, 125.25mm, 105.825mm) (InComponentClass('LaserDiode_Analog'))
+Rule Violations :0
+
+Processing Rule : Room AIN3 (Bounding Region = (42.575mm, 43.908mm, 88.504mm, 77.771mm) (InComponentClass('AIN3'))
+Rule Violations :0
+
+Processing Rule : Room FINEPITCH_ROOM2 (Bounding Region = (79.675mm, 70.887mm, 83.85mm, 73.187mm) (Disabled)(False)
+Rule Violations :0
+
+Processing Rule : Room FINEPITCH_ROOM (Bounding Region = (56.561mm, 79.137mm, 59.05mm, 82.54mm) (Disabled)(False)
+Rule Violations :0
+
+Processing Rule : Room CLOCK (Bounding Region = (62.65mm, 45.9mm, 100.825mm, 83.175mm) (InComponentClass('CLOCK'))
+Rule Violations :0
+
+Processing Rule : Room AIN1 (Bounding Region = (35.845mm, 35.683mm, 56.329mm, 49.295mm) (InComponentClass('AIN1'))
+Rule Violations :0
+
+Processing Rule : Room AIN2 (Bounding Region = (53.521mm, 42.827mm, 83.254mm, 75.752mm) (InComponentClass('AIN2'))
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+
+Violations Detected : 0
+Waived Violations : 0
+Time Elapsed        : 00:00:02
