@@ -43,6 +43,7 @@ CrossRefPorts=3
 CrossRefCrossSheets=1
 CrossRefSheetEntries=0
 CrossRefFollowFromMainSettings=1
+CurrentVariant=V0.0.0
 
 [Preferences]
 PrefsVaultGUID=
@@ -189,14 +190,322 @@ UniqueID=58935628-FB52-4A97-BD00-F4D466DD49A4
 Description=V0.0.0
 AllowFabrication=0
 ParameterCount=0
-VariationCount=3
+VariationCount=25
 Variation1=Designator=C11|UniqueId=\BSZTAYAC|Kind=1|AlternatePart= 
 Variation2=Designator=C12|UniqueId=\ZPRKARNN|Kind=1|AlternatePart= 
 Variation3=Designator=C15|UniqueId=\JAEZNYBP|Kind=1|AlternatePart= 
-ParamVariationCount=0
+Variation4=Designator=C26|UniqueId=\GJYYJGWG|Kind=1|AlternatePart= 
+Variation5=Designator=C27|UniqueId=\BAOXUQNY|Kind=1|AlternatePart= 
+Variation6=Designator=R17|UniqueId=\BSUMAINW|Kind=1|AlternatePart= 
+Variation7=Designator=C21|UniqueId=\EAAAJPVR|Kind=1|AlternatePart= 
+Variation8=Designator=R21A|UniqueId=\1KWVXMAWY\OSTBJFIE|Kind=1|AlternatePart= 
+Variation9=Designator=R31A|UniqueId=\1KWVXMAWY\ASNKVDDN|Kind=1|AlternatePart= 
+Variation10=Designator=R15A|UniqueId=\1KWVXMAWY\KJVUYGDA|Kind=2|AlternatePart=0R|AltLibLink_LibIdentifierKind=Library Full Path|AltLibLink_LibraryIdentifier=D:\PersonalProjects\Self-Mixing Diode\LaserDiode_Analog\LaserDiode_Analog.SchLib|AltLibLink_SymbolReference= |AltLibLink_DesignItemID=RES 0R 63mW 0402|AltLibLink_UseLibraryName=True|AltLibLink_SourceLibraryName=LaserDiode_Analog.SchLib|AltLibLink_UseDBTableName=False|AltLibLink_DatabaseTableName= |AltLibLink_VaultGUID= |AltLibLink_ItemGUID= |AltLibLink_RevisionGUID= |AltLibLink_Footprint=R0402|AltLibLink_IsSameFootprint=True
+ParamVariation1=ParameterName=Case/Package|VariantValue=0402
+ParamDesignator1=R15A
+ParamVariation2=ParameterName=Case Code (Imperial)|VariantValue=0402
+ParamDesignator2=R15A
+ParamVariation3=ParameterName=Case Code (Metric)|VariantValue=1005
+ParamDesignator3=R15A
+ParamVariation4=ParameterName=Category|VariantValue=Chip SMD Resistors
+ParamDesignator4=R15A
+ParamVariation5=ParameterName=Comment|VariantValue=0R
+ParamDesignator5=R15A
+ParamVariation6=ParameterName=Component Kind|VariantValue=Standard
+ParamDesignator6=R15A
+ParamVariation7=ParameterName=ComponentLink1Description|VariantValue=https://datasheet.ciiva.com/26835/getdatasheetpartid-409751-26835612.pdf?src-supplier=Verical
+ParamDesignator7=R15A
+ParamVariation8=ParameterName=ComponentLink1URL|VariantValue=https://datasheet.ciiva.com/26835/getdatasheetpartid-409751-26835612.pdf?src-supplier=Verical
+ParamDesignator8=R15A
+ParamVariation9=ParameterName=Construction|VariantValue=Rectangular
+ParamDesignator9=R15A
+ParamVariation10=ParameterName=Contact Plating|VariantValue=Tin,Matte
+ParamDesignator10=R15A
+ParamVariation11=ParameterName=Current Rating|VariantValue=1A
+ParamDesignator11=R15A
+ParamVariation12=ParameterName=Depth|VariantValue=0.5mm
+ParamDesignator12=R15A
+ParamVariation13=ParameterName=Description|VariantValue=GLOVE, POLYAMIDE, L/FREE, PU, SIZE 6 - More Details
+ParamDesignator13=R15A
+ParamVariation14=ParameterName=Features|VariantValue=Automotive AEC-Q200
+ParamDesignator14=R15A
+ParamVariation15=ParameterName=Footprint|VariantValue=R0402
+ParamDesignator15=R15A
+ParamVariation16=ParameterName=Height|VariantValue=0.016inch
+ParamDesignator16=R15A
+ParamVariation17=ParameterName=Ibis Model|VariantValue= 
+ParamDesignator17=R15A
+ParamVariation18=ParameterName=Lead Free|VariantValue=Lead Free
+ParamDesignator18=R15A
+ParamVariation19=ParameterName=Length|VariantValue=0.039inch
+ParamDesignator19=R15A
+ParamVariation20=ParameterName=Library Reference|VariantValue=RES 0R 63mW 0402
+ParamDesignator20=R15A
+ParamVariation21=ParameterName=Manufacturer|VariantValue=Stackpole Electronics
+ParamDesignator21=R15A
+ParamVariation22=ParameterName=Manufacturer Part Number|VariantValue=RMCF0402ZT0R00
+ParamDesignator22=R15A
+ParamVariation23=ParameterName=Max Operating Temperature|VariantValue=155°C
+ParamDesignator23=R15A
+ParamVariation24=ParameterName=Max Power Dissipation|VariantValue=63mW
+ParamDesignator24=R15A
+ParamVariation25=ParameterName=Military Standard|VariantValue=Not
+ParamDesignator25=R15A
+ParamVariation26=ParameterName=Min Operating Temperature|VariantValue=-55°C
+ParamDesignator26=R15A
+ParamVariation27=ParameterName=Mount|VariantValue=Surface Mount
+ParamDesignator27=R15A
+ParamVariation28=ParameterName=Number of Terminations|VariantValue=2
+ParamDesignator28=R15A
+ParamVariation29=ParameterName=Packaging|VariantValue=Tape and Reel
+ParamDesignator29=R15A
+ParamVariation30=ParameterName=PCB3D|VariantValue= 
+ParamDesignator30=R15A
+ParamVariation31=ParameterName=Pin Info|VariantValue= 
+ParamDesignator31=R15A
+ParamVariation32=ParameterName=Power Rating|VariantValue=63mW
+ParamDesignator32=R15A
+ParamVariation33=ParameterName=Pricing 1|VariantValue=1=0.10000, 10=0.01000, 25=0.00720, 50=0.00560, 100=0.00410, 250=0.00316, 500=0.00252, 1000=0.00186, 5000=0.00133 (USD)
+ParamDesignator33=R15A
+ParamVariation34=ParameterName=Radiation Hardening|VariantValue=No
+ParamDesignator34=R15A
+ParamVariation35=ParameterName=Resistance|VariantValue=0R
+ParamDesignator35=R15A
+ParamVariation36=ParameterName=Resistor Type|VariantValue=Thick Film
+ParamDesignator36=R15A
+ParamVariation37=ParameterName=RoHS|VariantValue=Yes
+ParamDesignator37=R15A
+ParamVariation38=ParameterName=RoHS Compliant|VariantValue=Yes
+ParamDesignator38=R15A
+ParamVariation39=ParameterName=Series|VariantValue=RMCF
+ParamDesignator39=R15A
+ParamVariation40=ParameterName=Signal Integrity|VariantValue= 
+ParamDesignator40=R15A
+ParamVariation41=ParameterName=Simulation|VariantValue= 
+ParamDesignator41=R15A
+ParamVariation42=ParameterName=Stock 1|VariantValue=5203223
+ParamDesignator42=R15A
+ParamVariation43=ParameterName=Supplier 1|VariantValue=Digi-Key
+ParamDesignator43=R15A
+ParamVariation44=ParameterName=Supplier Part Number 1|VariantValue=RMCF0402ZT0R00CT-ND
+ParamDesignator44=R15A
+ParamVariation45=ParameterName=Technology|VariantValue=THICK FILM
+ParamDesignator45=R15A
+ParamVariation46=ParameterName=Width|VariantValue=0.02inch
+ParamDesignator46=R15A
+ParamVariation47=ParameterName=Working Voltage|VariantValue=50V
+ParamDesignator47=R15A
+Variation11=Designator=C16A|UniqueId=\1KWVXMAWY\NCHMHWPL|Kind=1|AlternatePart= 
+Variation12=Designator=R20A|UniqueId=\1KWVXMAWY\GICURSLB|Kind=1|AlternatePart= 
+Variation13=Designator=R21B|UniqueId=\2KWVXMAWY\OSTBJFIE|Kind=1|AlternatePart= 
+Variation14=Designator=R15B|UniqueId=\2KWVXMAWY\KJVUYGDA|Kind=2|AlternatePart=0R|AltLibLink_LibIdentifierKind=Library Full Path|AltLibLink_LibraryIdentifier=D:\PersonalProjects\Self-Mixing Diode\LaserDiode_Analog\LaserDiode_Analog.SchLib|AltLibLink_SymbolReference= |AltLibLink_DesignItemID=RES 0R 63mW 0402|AltLibLink_UseLibraryName=True|AltLibLink_SourceLibraryName=LaserDiode_Analog.SchLib|AltLibLink_UseDBTableName=False|AltLibLink_DatabaseTableName= |AltLibLink_VaultGUID= |AltLibLink_ItemGUID= |AltLibLink_RevisionGUID= |AltLibLink_Footprint=R0402|AltLibLink_IsSameFootprint=True
+ParamVariation48=ParameterName=Case/Package|VariantValue=0402
+ParamDesignator48=R15B
+ParamVariation49=ParameterName=Case Code (Imperial)|VariantValue=0402
+ParamDesignator49=R15B
+ParamVariation50=ParameterName=Case Code (Metric)|VariantValue=1005
+ParamDesignator50=R15B
+ParamVariation51=ParameterName=Category|VariantValue=Chip SMD Resistors
+ParamDesignator51=R15B
+ParamVariation52=ParameterName=Comment|VariantValue=0R
+ParamDesignator52=R15B
+ParamVariation53=ParameterName=Component Kind|VariantValue=Standard
+ParamDesignator53=R15B
+ParamVariation54=ParameterName=ComponentLink1Description|VariantValue=https://datasheet.ciiva.com/26835/getdatasheetpartid-409751-26835612.pdf?src-supplier=Verical
+ParamDesignator54=R15B
+ParamVariation55=ParameterName=ComponentLink1URL|VariantValue=https://datasheet.ciiva.com/26835/getdatasheetpartid-409751-26835612.pdf?src-supplier=Verical
+ParamDesignator55=R15B
+ParamVariation56=ParameterName=Construction|VariantValue=Rectangular
+ParamDesignator56=R15B
+ParamVariation57=ParameterName=Contact Plating|VariantValue=Tin,Matte
+ParamDesignator57=R15B
+ParamVariation58=ParameterName=Current Rating|VariantValue=1A
+ParamDesignator58=R15B
+ParamVariation59=ParameterName=Depth|VariantValue=0.5mm
+ParamDesignator59=R15B
+ParamVariation60=ParameterName=Description|VariantValue=GLOVE, POLYAMIDE, L/FREE, PU, SIZE 6 - More Details
+ParamDesignator60=R15B
+ParamVariation61=ParameterName=Features|VariantValue=Automotive AEC-Q200
+ParamDesignator61=R15B
+ParamVariation62=ParameterName=Footprint|VariantValue=R0402
+ParamDesignator62=R15B
+ParamVariation63=ParameterName=Height|VariantValue=0.016inch
+ParamDesignator63=R15B
+ParamVariation64=ParameterName=Ibis Model|VariantValue= 
+ParamDesignator64=R15B
+ParamVariation65=ParameterName=Lead Free|VariantValue=Lead Free
+ParamDesignator65=R15B
+ParamVariation66=ParameterName=Length|VariantValue=0.039inch
+ParamDesignator66=R15B
+ParamVariation67=ParameterName=Library Reference|VariantValue=RES 0R 63mW 0402
+ParamDesignator67=R15B
+ParamVariation68=ParameterName=Manufacturer|VariantValue=Stackpole Electronics
+ParamDesignator68=R15B
+ParamVariation69=ParameterName=Manufacturer Part Number|VariantValue=RMCF0402ZT0R00
+ParamDesignator69=R15B
+ParamVariation70=ParameterName=Max Operating Temperature|VariantValue=155°C
+ParamDesignator70=R15B
+ParamVariation71=ParameterName=Max Power Dissipation|VariantValue=63mW
+ParamDesignator71=R15B
+ParamVariation72=ParameterName=Military Standard|VariantValue=Not
+ParamDesignator72=R15B
+ParamVariation73=ParameterName=Min Operating Temperature|VariantValue=-55°C
+ParamDesignator73=R15B
+ParamVariation74=ParameterName=Mount|VariantValue=Surface Mount
+ParamDesignator74=R15B
+ParamVariation75=ParameterName=Number of Terminations|VariantValue=2
+ParamDesignator75=R15B
+ParamVariation76=ParameterName=Packaging|VariantValue=Tape and Reel
+ParamDesignator76=R15B
+ParamVariation77=ParameterName=PCB3D|VariantValue= 
+ParamDesignator77=R15B
+ParamVariation78=ParameterName=Pin Info|VariantValue= 
+ParamDesignator78=R15B
+ParamVariation79=ParameterName=Power Rating|VariantValue=63mW
+ParamDesignator79=R15B
+ParamVariation80=ParameterName=Pricing 1|VariantValue=1=0.10000, 10=0.01000, 25=0.00720, 50=0.00560, 100=0.00410, 250=0.00316, 500=0.00252, 1000=0.00186, 5000=0.00133 (USD)
+ParamDesignator80=R15B
+ParamVariation81=ParameterName=Radiation Hardening|VariantValue=No
+ParamDesignator81=R15B
+ParamVariation82=ParameterName=Resistance|VariantValue=0R
+ParamDesignator82=R15B
+ParamVariation83=ParameterName=Resistor Type|VariantValue=Thick Film
+ParamDesignator83=R15B
+ParamVariation84=ParameterName=RoHS|VariantValue=Yes
+ParamDesignator84=R15B
+ParamVariation85=ParameterName=RoHS Compliant|VariantValue=Yes
+ParamDesignator85=R15B
+ParamVariation86=ParameterName=Series|VariantValue=RMCF
+ParamDesignator86=R15B
+ParamVariation87=ParameterName=Signal Integrity|VariantValue= 
+ParamDesignator87=R15B
+ParamVariation88=ParameterName=Simulation|VariantValue= 
+ParamDesignator88=R15B
+ParamVariation89=ParameterName=Stock 1|VariantValue=5203223
+ParamDesignator89=R15B
+ParamVariation90=ParameterName=Supplier 1|VariantValue=Digi-Key
+ParamDesignator90=R15B
+ParamVariation91=ParameterName=Supplier Part Number 1|VariantValue=RMCF0402ZT0R00CT-ND
+ParamDesignator91=R15B
+ParamVariation92=ParameterName=Technology|VariantValue=THICK FILM
+ParamDesignator92=R15B
+ParamVariation93=ParameterName=Width|VariantValue=0.02inch
+ParamDesignator93=R15B
+ParamVariation94=ParameterName=Working Voltage|VariantValue=50V
+ParamDesignator94=R15B
+Variation15=Designator=C16B|UniqueId=\2KWVXMAWY\NCHMHWPL|Kind=1|AlternatePart= 
+Variation16=Designator=R31B|UniqueId=\2KWVXMAWY\ASNKVDDN|Kind=1|AlternatePart= 
+Variation17=Designator=R31C|UniqueId=\3KWVXMAWY\ASNKVDDN|Kind=1|AlternatePart= 
+Variation18=Designator=R21C|UniqueId=\3KWVXMAWY\OSTBJFIE|Kind=1|AlternatePart= 
+Variation19=Designator=R15C|UniqueId=\3KWVXMAWY\KJVUYGDA|Kind=2|AlternatePart=0R|AltLibLink_LibIdentifierKind=Library Full Path|AltLibLink_LibraryIdentifier=D:\PersonalProjects\Self-Mixing Diode\LaserDiode_Analog\LaserDiode_Analog.SchLib|AltLibLink_SymbolReference= |AltLibLink_DesignItemID=RES 0R 63mW 0402|AltLibLink_UseLibraryName=True|AltLibLink_SourceLibraryName=LaserDiode_Analog.SchLib|AltLibLink_UseDBTableName=False|AltLibLink_DatabaseTableName= |AltLibLink_VaultGUID= |AltLibLink_ItemGUID= |AltLibLink_RevisionGUID= |AltLibLink_Footprint=R0402|AltLibLink_IsSameFootprint=True
+ParamVariation95=ParameterName=Case/Package|VariantValue=0402
+ParamDesignator95=R15C
+ParamVariation96=ParameterName=Case Code (Imperial)|VariantValue=0402
+ParamDesignator96=R15C
+ParamVariation97=ParameterName=Case Code (Metric)|VariantValue=1005
+ParamDesignator97=R15C
+ParamVariation98=ParameterName=Category|VariantValue=Chip SMD Resistors
+ParamDesignator98=R15C
+ParamVariation99=ParameterName=Comment|VariantValue=0R
+ParamDesignator99=R15C
+ParamVariation100=ParameterName=Component Kind|VariantValue=Standard
+ParamDesignator100=R15C
+ParamVariation101=ParameterName=ComponentLink1Description|VariantValue=https://datasheet.ciiva.com/26835/getdatasheetpartid-409751-26835612.pdf?src-supplier=Verical
+ParamDesignator101=R15C
+ParamVariation102=ParameterName=ComponentLink1URL|VariantValue=https://datasheet.ciiva.com/26835/getdatasheetpartid-409751-26835612.pdf?src-supplier=Verical
+ParamDesignator102=R15C
+ParamVariation103=ParameterName=Construction|VariantValue=Rectangular
+ParamDesignator103=R15C
+ParamVariation104=ParameterName=Contact Plating|VariantValue=Tin,Matte
+ParamDesignator104=R15C
+ParamVariation105=ParameterName=Current Rating|VariantValue=1A
+ParamDesignator105=R15C
+ParamVariation106=ParameterName=Depth|VariantValue=0.5mm
+ParamDesignator106=R15C
+ParamVariation107=ParameterName=Description|VariantValue=GLOVE, POLYAMIDE, L/FREE, PU, SIZE 6 - More Details
+ParamDesignator107=R15C
+ParamVariation108=ParameterName=Features|VariantValue=Automotive AEC-Q200
+ParamDesignator108=R15C
+ParamVariation109=ParameterName=Footprint|VariantValue=R0402
+ParamDesignator109=R15C
+ParamVariation110=ParameterName=Height|VariantValue=0.016inch
+ParamDesignator110=R15C
+ParamVariation111=ParameterName=Ibis Model|VariantValue= 
+ParamDesignator111=R15C
+ParamVariation112=ParameterName=Lead Free|VariantValue=Lead Free
+ParamDesignator112=R15C
+ParamVariation113=ParameterName=Length|VariantValue=0.039inch
+ParamDesignator113=R15C
+ParamVariation114=ParameterName=Library Reference|VariantValue=RES 0R 63mW 0402
+ParamDesignator114=R15C
+ParamVariation115=ParameterName=Manufacturer|VariantValue=Stackpole Electronics
+ParamDesignator115=R15C
+ParamVariation116=ParameterName=Manufacturer Part Number|VariantValue=RMCF0402ZT0R00
+ParamDesignator116=R15C
+ParamVariation117=ParameterName=Max Operating Temperature|VariantValue=155°C
+ParamDesignator117=R15C
+ParamVariation118=ParameterName=Max Power Dissipation|VariantValue=63mW
+ParamDesignator118=R15C
+ParamVariation119=ParameterName=Military Standard|VariantValue=Not
+ParamDesignator119=R15C
+ParamVariation120=ParameterName=Min Operating Temperature|VariantValue=-55°C
+ParamDesignator120=R15C
+ParamVariation121=ParameterName=Mount|VariantValue=Surface Mount
+ParamDesignator121=R15C
+ParamVariation122=ParameterName=Number of Terminations|VariantValue=2
+ParamDesignator122=R15C
+ParamVariation123=ParameterName=Packaging|VariantValue=Tape and Reel
+ParamDesignator123=R15C
+ParamVariation124=ParameterName=PCB3D|VariantValue= 
+ParamDesignator124=R15C
+ParamVariation125=ParameterName=Pin Info|VariantValue= 
+ParamDesignator125=R15C
+ParamVariation126=ParameterName=Power Rating|VariantValue=63mW
+ParamDesignator126=R15C
+ParamVariation127=ParameterName=Pricing 1|VariantValue=1=0.10000, 10=0.01000, 25=0.00720, 50=0.00560, 100=0.00410, 250=0.00316, 500=0.00252, 1000=0.00186, 5000=0.00133 (USD)
+ParamDesignator127=R15C
+ParamVariation128=ParameterName=Radiation Hardening|VariantValue=No
+ParamDesignator128=R15C
+ParamVariation129=ParameterName=Resistance|VariantValue=0R
+ParamDesignator129=R15C
+ParamVariation130=ParameterName=Resistor Type|VariantValue=Thick Film
+ParamDesignator130=R15C
+ParamVariation131=ParameterName=RoHS|VariantValue=Yes
+ParamDesignator131=R15C
+ParamVariation132=ParameterName=RoHS Compliant|VariantValue=Yes
+ParamDesignator132=R15C
+ParamVariation133=ParameterName=Series|VariantValue=RMCF
+ParamDesignator133=R15C
+ParamVariation134=ParameterName=Signal Integrity|VariantValue= 
+ParamDesignator134=R15C
+ParamVariation135=ParameterName=Simulation|VariantValue= 
+ParamDesignator135=R15C
+ParamVariation136=ParameterName=Stock 1|VariantValue=5203223
+ParamDesignator136=R15C
+ParamVariation137=ParameterName=Supplier 1|VariantValue=Digi-Key
+ParamDesignator137=R15C
+ParamVariation138=ParameterName=Supplier Part Number 1|VariantValue=RMCF0402ZT0R00CT-ND
+ParamDesignator138=R15C
+ParamVariation139=ParameterName=Technology|VariantValue=THICK FILM
+ParamDesignator139=R15C
+ParamVariation140=ParameterName=Width|VariantValue=0.02inch
+ParamDesignator140=R15C
+ParamVariation141=ParameterName=Working Voltage|VariantValue=50V
+ParamDesignator141=R15C
+Variation20=Designator=C16C|UniqueId=\3KWVXMAWY\NCHMHWPL|Kind=1|AlternatePart= 
+Variation21=Designator=C17C|UniqueId=\3KWVXMAWY\BJFAQFDP|Kind=1|AlternatePart= 
+Variation22=Designator=C17B|UniqueId=\2KWVXMAWY\BJFAQFDP|Kind=1|AlternatePart= 
+Variation23=Designator=R20C|UniqueId=\3KWVXMAWY\GICURSLB|Kind=1|AlternatePart= 
+Variation24=Designator=R20B|UniqueId=\2KWVXMAWY\GICURSLB|Kind=1|AlternatePart= 
+Variation25=Designator=C17A|UniqueId=\1KWVXMAWY\BJFAQFDP|Kind=1|AlternatePart= 
+ParamVariationCount=141
 
 [GeneratedDocument1]
 DocumentPath=Project Outputs for LaserDiode_Analog\Design Rule Check - LaserDiode_Analog.html
+DItemRevisionGUID=
+
+[GeneratedDocument2]
+DocumentPath=LaserDiode_Analog 2023-03-26 6-50-03 PM.WAS
 DItemRevisionGUID=
 
 [Configuration1]
