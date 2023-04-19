@@ -1,10 +1,14 @@
-Output: BOM
-Type  : BOM
-From  : Variant [[No Variations]] of Project [Laser MCU.PrjPcb]
-   Generated File[BOM-Laser MCU.csv]
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 10:36:55 AM On 2023-03-28
+
+Output: Export STEP
+Type  : ExportSTEP
+From  : Variant [[No Variations]] of PCB Document [MCU.PcbDoc]
+   Generated File[MCU.step]
 
 
 Files Generated   : 1
 Documents Printed : 0
 
-Finished Output Generation At 8:11:03 AM On 2023-03-12
+Finished Output Generation At 10:37:03 AM On 2023-03-28

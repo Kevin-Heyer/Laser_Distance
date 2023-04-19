@@ -2,20 +2,6 @@
 FileName = OPAMP_DEV_SOT5_6-23.GBR
 AutoAperture = True
 *************************************************************
-Generating : Bottom Paste
-      File : OPAMP_DEV_SOT5_6-23.GBP
-
-    Adding Layer      : Bottom Paste
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-*************************************************************
-
-*************************************************************
 Generating : Bottom Solder
       File : OPAMP_DEV_SOT5_6-23.GBS
 
@@ -90,29 +76,38 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Top 3D Body Top/3D Body Bot
-      File : OPAMP_DEV_SOT5_6-23.GM1
+Generating : Top Overlay
+      File : OPAMP_DEV_SOT5_6-23.GTO
 
-    Adding Layer      : Top 3D Body Top/3D Body Bot
-
-
-Used DCodes :
-*************************************************************
-
-*************************************************************
-Generating : Layer 2
-      File : OPAMP_DEV_SOT5_6-23.GP2
-
-    Adding Layer      : Layer 2
-
-    Adding Layer      : Multi-Layer
+    Adding Layer      : Top Overlay
 
 
 Used DCodes :
-    D53
-    D54
-    D55
-    D56
+    D10
+    D11
+    D12
+    D13
+*************************************************************
+
+*************************************************************
+Generating : Board
+      File : OPAMP_DEV_SOT5_6-23.GM8
+
+    Adding Layer      : Board
+
+
+Used DCodes :
+    D12
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : OPAMP_DEV_SOT5_6-23.GBO
+
+    Adding Layer      : Bottom Overlay
+
+
+Used DCodes :
 *************************************************************
 
 *************************************************************
@@ -147,58 +142,20 @@ Used DCodes :
     D49
     D50
     D51
-    D52
 *************************************************************
 
 *************************************************************
-Generating : Layer 1
-      File : OPAMP_DEV_SOT5_6-23.GP1
+Generating : Bottom Paste
+      File : OPAMP_DEV_SOT5_6-23.GBP
 
-    Adding Layer      : Layer 1
+    Adding Layer      : Bottom Paste
+
+    Adding Layer      : Bottom Layer
 
     Adding Layer      : Multi-Layer
 
 
 Used DCodes :
-    D53
-    D54
-    D55
-    D56
-*************************************************************
-
-*************************************************************
-Generating : Bottom 3D Body Top/3D Body Bot
-      File : OPAMP_DEV_SOT5_6-23.GM2
-
-    Adding Layer      : Bottom 3D Body Top/3D Body Bot
-
-
-Used DCodes :
-    D12
-*************************************************************
-
-*************************************************************
-Generating : Bottom Overlay
-      File : OPAMP_DEV_SOT5_6-23.GBO
-
-    Adding Layer      : Bottom Overlay
-
-
-Used DCodes :
-*************************************************************
-
-*************************************************************
-Generating : Top Overlay
-      File : OPAMP_DEV_SOT5_6-23.GTO
-
-    Adding Layer      : Top Overlay
-
-
-Used DCodes :
-    D10
-    D11
-    D12
-    D13
 *************************************************************
 
 *************************************************************
@@ -216,7 +173,38 @@ Used DCodes :
     D49
     D50
     D51
+*************************************************************
+
+*************************************************************
+Generating : Layer 2
+      File : OPAMP_DEV_SOT5_6-23.GP2
+
+    Adding Layer      : Layer 2
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
     D52
+    D53
+    D54
+    D55
+*************************************************************
+
+*************************************************************
+Generating : Layer 1
+      File : OPAMP_DEV_SOT5_6-23.GP1
+
+    Adding Layer      : Layer 1
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D52
+    D53
+    D54
+    D55
 *************************************************************
 
 *************************************************************
@@ -229,7 +217,6 @@ Generating : Drill Drawing
 
 
 Used DCodes :
-    D57
-    D58
+    D56
 *************************************************************
 

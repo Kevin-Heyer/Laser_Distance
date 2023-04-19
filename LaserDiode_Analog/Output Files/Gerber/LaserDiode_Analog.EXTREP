@@ -1,0 +1,23 @@
+------------------------------------------------------------------------------------------
+Gerber File Extension Report For: LaserDiode_Analog.GBR   2023-04-02  4:13:40 PM
+------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------
+Layer Extension     Layer Description                      
+------------------------------------------------------------------------------------------
+.GTO                Top Overlay                             
+.GTP                Top Paste                               
+.GTS                Top Solder                              
+.GTL                Top Layer                               
+.GP1                Layer 1                                 
+.GP2                Layer 2                                 
+.GBL                Bottom Layer                            
+.GBS                Bottom Solder                           
+.GBP                Bottom Paste                            
+.GBO                Bottom Overlay                          
+.GM1                Top 3D Body Top/3D Body Bot             
+.GM2                Bottom 3D Body Top/3D Body Bot          
+.GM8                Board                                   
+.GD1                Drill Drawing                           
+------------------------------------------------------------------------------------------

@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------------------------------------------------------
-NCDrill File Report For: OPAMP_DEV_SOT5_6-23.PcbDoc   2022-12-28  12:50:56 PM
+NCDrill File Report For: OPAMP_DEV_SOT5_6-23.PcbDoc   2023-04-02  4:30:21 PM
 ----------------------------------------------------------------------------------------------------------------------------------
 
 Layer Pair : Top Layer to Bottom Layer
@@ -8,9 +8,9 @@ ASCII Non-Plated RoundHoles File : OPAMP_DEV_SOT5_6-23-NonPlated.TXT
 
 Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
 ----------------------------------------------------------------------------------------------------------------------------------
-T1      0.2mm (8mil)                                              Round             362       PTH        0.00mm (0.00inch)
-T2      1.73mm (68mil)                                            Round             4         NPTH       0.00mm (0.00inch)
-T3      2.6mm (102mil)                                            Round             4         NPTH       0.00mm (0.00inch)
+T1      0.3mm (12mil)                                             Round             362       PTH        1032.16mm (40.64inch)
+T2      1.73mm (68mil)                                            Round             4         NPTH       45.08mm (1.77inch)
+T3      2.6mm (102mil)                                            Round             4         NPTH       162.35mm (6.39inch)
 ----------------------------------------------------------------------------------------------------------------------------------
 Totals                                                                              370
 

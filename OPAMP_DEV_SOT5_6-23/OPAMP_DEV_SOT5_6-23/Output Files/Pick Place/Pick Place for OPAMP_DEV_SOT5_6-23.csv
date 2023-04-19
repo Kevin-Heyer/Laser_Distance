@@ -4,9 +4,9 @@ D:\PersonalProjects\Self-Mixing Diode\OPAMP_DEV_SOT5_6-23\OPAMP_DEV_SOT5_6-23\.\
 ========================================================================================================================
 File Design Information:
 
-Date:       28-12-22
-Time:       12:50
-Revision:   Not in VersionControl
+Date:       02-04-23
+Time:       16:30
+Revision:   c0f79e95a291dc5fac5925cdf4f562661d0e62ba
 Variant:    No variations
 Units used: mm
 
@@ -66,6 +66,6 @@ Units used: mm
 "C6","100nF","TopLayer","C0402","78.1250","64.0750","180","Cap Ceramic 0.1uF 25V X5R 10% Pad SMD 0402 85°„C T/R / Multi Layer Ceramic Capacitor (MLCC)"
 "C5","1uF","TopLayer","c0603","78.5000","62.6500","180","Multilayer Ceramic Capacitors (High dielectric type), 50V, 1 uF, ± 10 %, 0603, X5R, RoHS"
 "C4","10uF","TopLayer","c0805","78.1544","66.8168","90","Cap Ceramic 10uF 25V X5R 10% SMD 0805 85∞C Embossed T/R"
-"C3","100nF","TopLayer","C0402","68.6500","62.0250","360","Cap Ceramic 0.1uF 25V X5R 10% Pad SMD 0402 85°„C T/R / Multi Layer Ceramic Capacitor (MLCC)"
-"C2","1uF","TopLayer","c0603","68.4500","60.6250","360","Multilayer Ceramic Capacitors (High dielectric type), 50V, 1 uF, ± 10 %, 0603, X5R, RoHS"
+"C3","100nF","TopLayer","C0402","68.6500","62.0250","0","Cap Ceramic 0.1uF 25V X5R 10% Pad SMD 0402 85°„C T/R / Multi Layer Ceramic Capacitor (MLCC)"
+"C2","1uF","TopLayer","c0603","68.4500","60.6250","0","Multilayer Ceramic Capacitors (High dielectric type), 50V, 1 uF, ± 10 %, 0603, X5R, RoHS"
 "C1","10uF","TopLayer","c0805","67.6157","64.3750","90","Cap Ceramic 10uF 25V X5R 10% SMD 0805 85∞C Embossed T/R"

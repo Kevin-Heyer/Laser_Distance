@@ -207,13 +207,21 @@ UniqueID=58935628-FB52-4A97-BD00-F4D466DD49A4
 Description=V0.0.0
 AllowFabrication=0
 ParameterCount=0
-VariationCount=6
+VariationCount=14
 Variation1=Designator=C99|UniqueId=\NSZBMZSE\YCRYQTXB|Kind=1|AlternatePart= 
 Variation2=Designator=C100|UniqueId=\NSZBMZSE\MGXJXCTJ|Kind=1|AlternatePart= 
 Variation3=Designator=C11|UniqueId=\NSZBMZSE\JUHCBXDH|Kind=1|AlternatePart= 
 Variation4=Designator=R9|UniqueId=\PATTPQZK\LRNUJWCD|Kind=1|AlternatePart= 
 Variation5=Designator=SW1|UniqueId=\PATTPQZK\NWNDEVOE|Kind=1|AlternatePart= 
 Variation6=Designator=C14|UniqueId=\NSZBMZSE\ZHHYJBAB|Kind=1|AlternatePart= 
+Variation7=Designator=FB10|UniqueId=\PATTPQZK\YFWIUPBV|Kind=1|AlternatePart= 
+Variation8=Designator=FB12|UniqueId=\PATTPQZK\ZUFICUJX|Kind=1|AlternatePart= 
+Variation9=Designator=FB14|UniqueId=\PATTPQZK\JPGQRNMX|Kind=1|AlternatePart= 
+Variation10=Designator=FB6|UniqueId=\PATTPQZK\GVMSFUNY|Kind=1|AlternatePart= 
+Variation11=Designator=R12|UniqueId=\PATTPQZK\TLIEGXIA|Kind=1|AlternatePart= 
+Variation12=Designator=R13|UniqueId=\PATTPQZK\SBLXFZDA|Kind=1|AlternatePart= 
+Variation13=Designator=R15|UniqueId=\PATTPQZK\YIMKBGTQ|Kind=1|AlternatePart= 
+Variation14=Designator=R14|UniqueId=\PATTPQZK\MQWTMSMZ|Kind=1|AlternatePart= 
 ParamVariationCount=0
 
 [GeneratedDocument1]
@@ -221,7 +229,7 @@ DocumentPath=Output Files\BOM\BOM-Laser MCU(V0.0.0).csv
 DItemRevisionGUID=
 
 [GeneratedDocument2]
-DocumentPath=.\Output Files\BOM\BOM-Laser MCU.csv
+DocumentPath=Output Files\BOM\BOM-Laser MCU.csv
 DItemRevisionGUID=
 
 [GeneratedDocument3]
@@ -233,207 +241,119 @@ DocumentPath=MCU 2023-03-05 3-10-33 PM.WAS
 DItemRevisionGUID=
 
 [GeneratedDocument5]
-DocumentPath=.\Output Files\NC Drill\MCU-NonPlated.TXT
-DItemRevisionGUID=
-
-[GeneratedDocument6]
 DocumentPath=Output Files\NC Drill\MCU-NonPlated.TXT
 DItemRevisionGUID=
 
-[GeneratedDocument7]
-DocumentPath=.\Output Files\NC Drill\MCU-Plated.TXT
-DItemRevisionGUID=
-
-[GeneratedDocument8]
+[GeneratedDocument6]
 DocumentPath=Output Files\NC Drill\MCU-Plated.TXT
 DItemRevisionGUID=
 
-[GeneratedDocument9]
-DocumentPath=.\Output Files\NC Drill\MCU.DRR
-DItemRevisionGUID=
-
-[GeneratedDocument10]
+[GeneratedDocument7]
 DocumentPath=Output Files\NC Drill\MCU.DRR
 DItemRevisionGUID=
 
-[GeneratedDocument11]
-DocumentPath=.\Output Files\Gerber\MCU.EXTREP
-DItemRevisionGUID=
-
-[GeneratedDocument12]
+[GeneratedDocument8]
 DocumentPath=Output Files\Gerber\MCU.EXTREP
 DItemRevisionGUID=
 
-[GeneratedDocument13]
-DocumentPath=.\Output Files\Gerber\MCU.G1
-DItemRevisionGUID=
-
-[GeneratedDocument14]
+[GeneratedDocument9]
 DocumentPath=Output Files\Gerber\MCU.G1
 DItemRevisionGUID=
 
-[GeneratedDocument15]
-DocumentPath=.\Output Files\Gerber\MCU.G2
-DItemRevisionGUID=
-
-[GeneratedDocument16]
+[GeneratedDocument10]
 DocumentPath=Output Files\Gerber\MCU.G2
 DItemRevisionGUID=
 
-[GeneratedDocument17]
-DocumentPath=.\Output Files\Gerber\MCU.GBL
-DItemRevisionGUID=
-
-[GeneratedDocument18]
+[GeneratedDocument11]
 DocumentPath=Output Files\Gerber\MCU.GBL
 DItemRevisionGUID=
 
-[GeneratedDocument19]
-DocumentPath=.\Output Files\Gerber\MCU.GBO
-DItemRevisionGUID=
-
-[GeneratedDocument20]
+[GeneratedDocument12]
 DocumentPath=Output Files\Gerber\MCU.GBO
 DItemRevisionGUID=
 
-[GeneratedDocument21]
-DocumentPath=.\Output Files\Gerber\MCU.GBP
-DItemRevisionGUID=
-
-[GeneratedDocument22]
+[GeneratedDocument13]
 DocumentPath=Output Files\Gerber\MCU.GBP
 DItemRevisionGUID=
 
-[GeneratedDocument23]
-DocumentPath=.\Output Files\Gerber\MCU.GBS
-DItemRevisionGUID=
-
-[GeneratedDocument24]
+[GeneratedDocument14]
 DocumentPath=Output Files\Gerber\MCU.GBS
 DItemRevisionGUID=
 
-[GeneratedDocument25]
-DocumentPath=.\Output Files\Gerber\MCU.GD1
-DItemRevisionGUID=
-
-[GeneratedDocument26]
+[GeneratedDocument15]
 DocumentPath=Output Files\Gerber\MCU.GD1
 DItemRevisionGUID=
 
-[GeneratedDocument27]
-DocumentPath=.\Output Files\Gerber\MCU.GM
+[GeneratedDocument16]
+DocumentPath=Output Files\Gerber\MCU.GM
 DItemRevisionGUID=
 
-[GeneratedDocument28]
-DocumentPath=.\Output Files\Gerber\MCU.GM1
-DItemRevisionGUID=
-
-[GeneratedDocument29]
+[GeneratedDocument17]
 DocumentPath=Output Files\Gerber\MCU.GM1
 DItemRevisionGUID=
 
-[GeneratedDocument30]
-DocumentPath=.\Output Files\Gerber\MCU.GM2
-DItemRevisionGUID=
-
-[GeneratedDocument31]
+[GeneratedDocument18]
 DocumentPath=Output Files\Gerber\MCU.GM2
 DItemRevisionGUID=
 
-[GeneratedDocument32]
-DocumentPath=.\Output Files\Gerber\MCU.GM9
+[GeneratedDocument19]
+DocumentPath=Output Files\Gerber\MCU.GM9
 DItemRevisionGUID=
 
-[GeneratedDocument33]
-DocumentPath=.\Output Files\Gerber\MCU.GM10
+[GeneratedDocument20]
+DocumentPath=Output Files\Gerber\MCU.GM10
 DItemRevisionGUID=
 
-[GeneratedDocument34]
-DocumentPath=.\Output Files\Gerber\MCU.GM11
+[GeneratedDocument21]
+DocumentPath=Output Files\Gerber\MCU.GM11
 DItemRevisionGUID=
 
-[GeneratedDocument35]
-DocumentPath=.\Output Files\Gerber\MCU.GM12
+[GeneratedDocument22]
+DocumentPath=Output Files\Gerber\MCU.GM12
 DItemRevisionGUID=
 
-[GeneratedDocument36]
-DocumentPath=.\Output Files\Gerber\MCU.GP1
-DItemRevisionGUID=
-
-[GeneratedDocument37]
+[GeneratedDocument23]
 DocumentPath=Output Files\Gerber\MCU.GP1
 DItemRevisionGUID=
 
-[GeneratedDocument38]
-DocumentPath=.\Output Files\Gerber\MCU.GP2
-DItemRevisionGUID=
-
-[GeneratedDocument39]
+[GeneratedDocument24]
 DocumentPath=Output Files\Gerber\MCU.GP2
 DItemRevisionGUID=
 
-[GeneratedDocument40]
-DocumentPath=.\Output Files\Gerber\MCU.GTL
-DItemRevisionGUID=
-
-[GeneratedDocument41]
+[GeneratedDocument25]
 DocumentPath=Output Files\Gerber\MCU.GTL
 DItemRevisionGUID=
 
-[GeneratedDocument42]
-DocumentPath=.\Output Files\Gerber\MCU.GTO
-DItemRevisionGUID=
-
-[GeneratedDocument43]
+[GeneratedDocument26]
 DocumentPath=Output Files\Gerber\MCU.GTO
 DItemRevisionGUID=
 
-[GeneratedDocument44]
-DocumentPath=.\Output Files\Gerber\MCU.GTP
-DItemRevisionGUID=
-
-[GeneratedDocument45]
+[GeneratedDocument27]
 DocumentPath=Output Files\Gerber\MCU.GTP
 DItemRevisionGUID=
 
-[GeneratedDocument46]
-DocumentPath=.\Output Files\Gerber\MCU.GTS
-DItemRevisionGUID=
-
-[GeneratedDocument47]
+[GeneratedDocument28]
 DocumentPath=Output Files\Gerber\MCU.GTS
 DItemRevisionGUID=
 
-[GeneratedDocument48]
-DocumentPath=.\Output Files\NC Drill\MCU.LDP
-DItemRevisionGUID=
-
-[GeneratedDocument49]
+[GeneratedDocument29]
 DocumentPath=Output Files\NC Drill\MCU.LDP
 DItemRevisionGUID=
 
-[GeneratedDocument50]
-DocumentPath=.\Output Files\Gerber\MCU.REP
-DItemRevisionGUID=
-
-[GeneratedDocument51]
+[GeneratedDocument30]
 DocumentPath=Output Files\Gerber\MCU.REP
 DItemRevisionGUID=
 
-[GeneratedDocument52]
-DocumentPath=.\Output Files\Gerber\MCU.RUL
-DItemRevisionGUID=
-
-[GeneratedDocument53]
+[GeneratedDocument31]
 DocumentPath=Output Files\Gerber\MCU.RUL
 DItemRevisionGUID=
 
-[GeneratedDocument54]
+[GeneratedDocument32]
 DocumentPath=Output Files\Pick Place\Pick Place for MCU(V0.0.0).csv
 DItemRevisionGUID=
 
-[GeneratedDocument55]
-DocumentPath=.\Output Files\Pick Place\Pick Place for MCU.csv
+[GeneratedDocument33]
+DocumentPath=Output Files\Pick Place\Pick Place for MCU.csv
 DItemRevisionGUID=
 
 [Configuration1]

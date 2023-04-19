@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : D:\PersonalProjects\Self-Mixing Diode\LaserDiode_Analog\LaserDiode_Analog.PcbDoc
-Date     : 2023-03-26
-Time     : 7:14:55 PM
+Date     : 2023-04-02
+Time     : 4:12:00 PM
 
 Processing Rule : Clearance Constraint (Gap=0.254mm) (InNetClass('HS_NET')),(IsCopperRegion and not InNet('4V0'))
 Rule Violations :0
@@ -69,13 +69,13 @@ Rule Violations :0
 Processing Rule : Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U5_J2_MatchLengthsClass'))
 Rule Violations :0
 
-Processing Rule : Room DAC (Bounding Region = (51.896mm, 49.608mm, 101.604mm, 88.441mm) (InComponentClass('DAC'))
+Processing Rule : Room DAC (Bounding Region = (51.896mm, 49.608mm, 101.604mm, 88.441mm) (Disabled)(InComponentClass('DAC'))
 Rule Violations :0
 
-Processing Rule : Room LaserDiode_Analog (Bounding Region = (22.7mm, 26.325mm, 125.25mm, 105.825mm) (InComponentClass('LaserDiode_Analog'))
+Processing Rule : Room LaserDiode_Analog (Bounding Region = (22.703mm, 26.342mm, 114.693mm, 105.807mm) (Disabled)(InComponentClass('LaserDiode_Analog'))
 Rule Violations :0
 
-Processing Rule : Room AIN3 (Bounding Region = (42.575mm, 43.908mm, 88.504mm, 77.771mm) (InComponentClass('AIN3'))
+Processing Rule : Room AIN3 (Bounding Region = (42.575mm, 43.908mm, 88.504mm, 77.771mm) (Disabled)(InComponentClass('AIN3'))
 Rule Violations :0
 
 Processing Rule : Room FINEPITCH_ROOM2 (Bounding Region = (79.675mm, 70.887mm, 83.85mm, 73.187mm) (Disabled)(False)
@@ -84,13 +84,13 @@ Rule Violations :0
 Processing Rule : Room FINEPITCH_ROOM (Bounding Region = (56.561mm, 79.137mm, 59.05mm, 82.54mm) (Disabled)(False)
 Rule Violations :0
 
-Processing Rule : Room CLOCK (Bounding Region = (62.65mm, 45.9mm, 100.825mm, 83.175mm) (InComponentClass('CLOCK'))
+Processing Rule : Room CLOCK (Bounding Region = (62.661mm, 45.908mm, 100.808mm, 83.151mm) (Disabled)(InComponentClass('CLOCK'))
 Rule Violations :0
 
-Processing Rule : Room AIN1 (Bounding Region = (35.845mm, 35.683mm, 56.329mm, 49.295mm) (InComponentClass('AIN1'))
+Processing Rule : Room AIN1 (Bounding Region = (35.845mm, 35.683mm, 56.329mm, 49.295mm) (Disabled)(InComponentClass('AIN1'))
 Rule Violations :0
 
-Processing Rule : Room AIN2 (Bounding Region = (53.521mm, 42.827mm, 83.254mm, 75.752mm) (InComponentClass('AIN2'))
+Processing Rule : Room AIN2 (Bounding Region = (47.85mm, 42.827mm, 87.83mm, 83.512mm) (Disabled)(InComponentClass('AIN2'))
 Rule Violations :0
 
 Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)

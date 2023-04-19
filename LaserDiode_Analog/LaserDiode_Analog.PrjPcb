@@ -201,15 +201,15 @@ Variation7=Designator=C21|UniqueId=\EAAAJPVR|Kind=1|AlternatePart=
 Variation8=Designator=R21A|UniqueId=\1KWVXMAWY\OSTBJFIE|Kind=1|AlternatePart= 
 Variation9=Designator=R31A|UniqueId=\1KWVXMAWY\ASNKVDDN|Kind=1|AlternatePart= 
 Variation10=Designator=R15A|UniqueId=\1KWVXMAWY\KJVUYGDA|Kind=2|AlternatePart=0R|AltLibLink_LibIdentifierKind=Library Full Path|AltLibLink_LibraryIdentifier=D:\PersonalProjects\Self-Mixing Diode\LaserDiode_Analog\LaserDiode_Analog.SchLib|AltLibLink_SymbolReference= |AltLibLink_DesignItemID=RES 0R 63mW 0402|AltLibLink_UseLibraryName=True|AltLibLink_SourceLibraryName=LaserDiode_Analog.SchLib|AltLibLink_UseDBTableName=False|AltLibLink_DatabaseTableName= |AltLibLink_VaultGUID= |AltLibLink_ItemGUID= |AltLibLink_RevisionGUID= |AltLibLink_Footprint=R0402|AltLibLink_IsSameFootprint=True
-ParamVariation1=ParameterName=Case/Package|VariantValue=0402
+ParamVariation1=ParameterName=Comment|VariantValue=0R
 ParamDesignator1=R15A
-ParamVariation2=ParameterName=Case Code (Imperial)|VariantValue=0402
+ParamVariation2=ParameterName=Case/Package|VariantValue=0402
 ParamDesignator2=R15A
-ParamVariation3=ParameterName=Case Code (Metric)|VariantValue=1005
+ParamVariation3=ParameterName=Case Code (Imperial)|VariantValue=0402
 ParamDesignator3=R15A
-ParamVariation4=ParameterName=Category|VariantValue=Chip SMD Resistors
+ParamVariation4=ParameterName=Case Code (Metric)|VariantValue=1005
 ParamDesignator4=R15A
-ParamVariation5=ParameterName=Comment|VariantValue=0R
+ParamVariation5=ParameterName=Category|VariantValue=Chip SMD Resistors
 ParamDesignator5=R15A
 ParamVariation6=ParameterName=Component Kind|VariantValue=Standard
 ParamDesignator6=R15A
@@ -299,15 +299,15 @@ Variation11=Designator=C16A|UniqueId=\1KWVXMAWY\NCHMHWPL|Kind=1|AlternatePart=
 Variation12=Designator=R20A|UniqueId=\1KWVXMAWY\GICURSLB|Kind=1|AlternatePart= 
 Variation13=Designator=R21B|UniqueId=\2KWVXMAWY\OSTBJFIE|Kind=1|AlternatePart= 
 Variation14=Designator=R15B|UniqueId=\2KWVXMAWY\KJVUYGDA|Kind=2|AlternatePart=0R|AltLibLink_LibIdentifierKind=Library Full Path|AltLibLink_LibraryIdentifier=D:\PersonalProjects\Self-Mixing Diode\LaserDiode_Analog\LaserDiode_Analog.SchLib|AltLibLink_SymbolReference= |AltLibLink_DesignItemID=RES 0R 63mW 0402|AltLibLink_UseLibraryName=True|AltLibLink_SourceLibraryName=LaserDiode_Analog.SchLib|AltLibLink_UseDBTableName=False|AltLibLink_DatabaseTableName= |AltLibLink_VaultGUID= |AltLibLink_ItemGUID= |AltLibLink_RevisionGUID= |AltLibLink_Footprint=R0402|AltLibLink_IsSameFootprint=True
-ParamVariation48=ParameterName=Case/Package|VariantValue=0402
+ParamVariation48=ParameterName=Comment|VariantValue=0R
 ParamDesignator48=R15B
-ParamVariation49=ParameterName=Case Code (Imperial)|VariantValue=0402
+ParamVariation49=ParameterName=Case/Package|VariantValue=0402
 ParamDesignator49=R15B
-ParamVariation50=ParameterName=Case Code (Metric)|VariantValue=1005
+ParamVariation50=ParameterName=Case Code (Imperial)|VariantValue=0402
 ParamDesignator50=R15B
-ParamVariation51=ParameterName=Category|VariantValue=Chip SMD Resistors
+ParamVariation51=ParameterName=Case Code (Metric)|VariantValue=1005
 ParamDesignator51=R15B
-ParamVariation52=ParameterName=Comment|VariantValue=0R
+ParamVariation52=ParameterName=Category|VariantValue=Chip SMD Resistors
 ParamDesignator52=R15B
 ParamVariation53=ParameterName=Component Kind|VariantValue=Standard
 ParamDesignator53=R15B
@@ -398,15 +398,15 @@ Variation16=Designator=R31B|UniqueId=\2KWVXMAWY\ASNKVDDN|Kind=1|AlternatePart=
 Variation17=Designator=R31C|UniqueId=\3KWVXMAWY\ASNKVDDN|Kind=1|AlternatePart= 
 Variation18=Designator=R21C|UniqueId=\3KWVXMAWY\OSTBJFIE|Kind=1|AlternatePart= 
 Variation19=Designator=R15C|UniqueId=\3KWVXMAWY\KJVUYGDA|Kind=2|AlternatePart=0R|AltLibLink_LibIdentifierKind=Library Full Path|AltLibLink_LibraryIdentifier=D:\PersonalProjects\Self-Mixing Diode\LaserDiode_Analog\LaserDiode_Analog.SchLib|AltLibLink_SymbolReference= |AltLibLink_DesignItemID=RES 0R 63mW 0402|AltLibLink_UseLibraryName=True|AltLibLink_SourceLibraryName=LaserDiode_Analog.SchLib|AltLibLink_UseDBTableName=False|AltLibLink_DatabaseTableName= |AltLibLink_VaultGUID= |AltLibLink_ItemGUID= |AltLibLink_RevisionGUID= |AltLibLink_Footprint=R0402|AltLibLink_IsSameFootprint=True
-ParamVariation95=ParameterName=Case/Package|VariantValue=0402
+ParamVariation95=ParameterName=Comment|VariantValue=0R
 ParamDesignator95=R15C
-ParamVariation96=ParameterName=Case Code (Imperial)|VariantValue=0402
+ParamVariation96=ParameterName=Case/Package|VariantValue=0402
 ParamDesignator96=R15C
-ParamVariation97=ParameterName=Case Code (Metric)|VariantValue=1005
+ParamVariation97=ParameterName=Case Code (Imperial)|VariantValue=0402
 ParamDesignator97=R15C
-ParamVariation98=ParameterName=Category|VariantValue=Chip SMD Resistors
+ParamVariation98=ParameterName=Case Code (Metric)|VariantValue=1005
 ParamDesignator98=R15C
-ParamVariation99=ParameterName=Comment|VariantValue=0R
+ParamVariation99=ParameterName=Category|VariantValue=Chip SMD Resistors
 ParamDesignator99=R15C
 ParamVariation100=ParameterName=Component Kind|VariantValue=Standard
 ParamDesignator100=R15C
@@ -1085,41 +1085,11 @@ OutputName11=Specctra Design PCB
 OutputDocumentPath11=
 OutputVariantName11=
 OutputDefault11=0
-OutputType12=Ansoft Neutral
-OutputName12=Ansoft Neutral (AutoPCB)
+OutputType12=Web ReviewOutputName
+OutputName12=Web Review Data
 OutputDocumentPath12=
 OutputVariantName12=
 OutputDefault12=0
-OutputType13=HyperLynx
-OutputName13=HyperLynx (AutoPCB)
-OutputDocumentPath13=
-OutputVariantName13=
-OutputDefault13=0
-OutputType14=Orcad v7 Capture Design
-OutputName14=Orcad v7 Capture Design (AutoSCH)
-OutputDocumentPath14=
-OutputVariantName14=
-OutputDefault14=0
-OutputType15=P-CAD ASCII
-OutputName15=P-CAD ASCII (AutoPCB)
-OutputDocumentPath15=
-OutputVariantName15=
-OutputDefault15=0
-OutputType16=P-CAD V16 Schematic Design
-OutputName16=P-CAD V16 Schematic Design (AutoSCH)
-OutputDocumentPath16=
-OutputVariantName16=
-OutputDefault16=0
-OutputType17=SiSoft
-OutputName17=SiSoft (AutoPCB)
-OutputDocumentPath17=
-OutputVariantName17=
-OutputDefault17=0
-OutputType18=Web ReviewOutputName
-OutputName18=Web Review Data
-OutputDocumentPath18=
-OutputVariantName18=
-OutputDefault18=0
 
 [OutputGroup10]
 Name=PostProcess Outputs
