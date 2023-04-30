@@ -27,14 +27,14 @@ extern "C" {
     #error DEBUG_CONSOLE_TRANSFER_NON_BLOCKING should not be defined. Remove DEBUG_CONSOLE_TRANSFER_NON_BLOCKING from the project setting or defines.
 #endif
 
-#if ((defined(SERIAL_PORT_TYPE_UART) && (SERIAL_PORT_TYPE_UART != 0)))
-    #error SERIAL_PORT_TYPE_UART define value is not 0 as value in the DebugConsole component instance setting.
+#if ((defined(SERIAL_PORT_TYPE_UART) && (SERIAL_PORT_TYPE_UART != 1)))
+    #error SERIAL_PORT_TYPE_UART define value is not 1 as value in the DebugConsole component instance setting.
+#elif (!defined(SERIAL_PORT_TYPE_UART))
+    #error SERIAL_PORT_TYPE_UART is not defined. Define SERIAL_PORT_TYPE_UART=1 at the project setting.
 #endif
 
-#if ((defined(SERIAL_PORT_TYPE_SWO) && (SERIAL_PORT_TYPE_SWO != 1)))
-    #error The SERIAL_PORT_TYPE_SWO define value is not 1 as value in the DebugConsole component instance setting.
-#elif (!defined(SERIAL_PORT_TYPE_SWO))
-    #error SERIAL_PORT_TYPE_SWO is not defined. Define SERIAL_PORT_TYPE_SWO=1 at the project setting.
+#if ((defined(SERIAL_PORT_TYPE_SWO) && (SERIAL_PORT_TYPE_SWO != 0)))
+    #error The SERIAL_PORT_TYPE_SWO define value is not 0 as value in the DebugConsole component instance setting.
 #endif
 
 /*! @brief If Non-blocking mode is needed, please define it at project setting,

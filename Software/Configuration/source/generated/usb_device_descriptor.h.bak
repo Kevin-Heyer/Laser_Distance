@@ -6,7 +6,6 @@
 #ifndef __USB_DEVICE_DESCRIPTOR_H__
 #define __USB_DEVICE_DESCRIPTOR_H__
 
-
 /*******************************************************************************
  * Definitions
  ******************************************************************************/
@@ -18,7 +17,7 @@
 #define USB_DEVICE_SUBCLASS (0x00U)
 #define USB_DEVICE_PROTOCOL (0x00U)
 /*! @brief Maximum current USB device can draw from bus in milliamperes.*/
-#define USB_DEVICE_MAX_POWER (0x064U)	
+#define USB_DEVICE_MAX_POWER (0x64U)	
 
 #define USB_DEVICE_CONFIGURATION_COUNT (1U)
 #define USB_DEVICE_STRING_COUNT (3U)

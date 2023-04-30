@@ -13,9 +13,11 @@
 #include "fsl_adc.h"
 #include "fsl_flexcan.h"
 #include "fsl_clock.h"
-#include "fsl_elcdif.h"
 #include "fsl_semc.h"
-#include "fsl_flexio_spi.h"
+#include "fsl_lpspi_cmsis.h"
+#include "fsl_lpi2c_cmsis.h"
+#include "fsl_flexspi.h"
+#include "fsl_pwm.h"
 #include "usb_device_composite.h"
 #include "fsl_debug_console.h"
 #include "lwip/opt.h"
@@ -49,49 +51,72 @@ extern "C" {
 #define CAN1_PERIPHERAL CAN1
 /* Definition of the clock source frequency */
 #define CAN1_CLOCK_SOURCE 2000000UL
-/* Definition of peripheral ID */
-#define LCDIF_PERIPHERAL LCDIF
-/* Definition of the expected display clock frequency */
-#define LCDIF_EXPECTED_DCLK_FREQ 9210240UL
-/* Definition of the panel width */
-#define LCDIF_PANEL_WIDTH 480
-/* Definition of the panel height */
-#define LCDIF_PANEL_HEIGHT 272
-/* Definition of the RGB buffer alignment */
-#define LCDIF_RGB_BUFFER_ALIGN 64
-/* Definition of number of pixel at HSYNC pulse. */
-#define LCDIF_HSW 41U
-/* Definition of number of pixel at horizontal back porch. */
-#define LCDIF_HBP 8U
-/* Definition of number of pixel at horizontal front porch. */
-#define LCDIF_HFP 4U
-/* Definition of number of lines at VSYNC pulse. */
-#define LCDIF_VSW 10U
-/* Definition of number of lines at vertical back porch. */
-#define LCDIF_VBP 2U
-/* Definition of number of lines at vertical front porch. */
-#define LCDIF_VFP 4U
-/* LCDIF interrupt vector ID (number). */
-#define LCDIF_LCDIF_IRQN LCDIF_IRQn
-/* LCDIF interrupt handler identifier. */
-#define LCDIF_LCDIF_IRQHANDLER LCDIF_IRQHandler
 /* BOARD_InitPeripherals defines for SEMC */
 /* Definition of peripheral ID. */
 #define SEMC_EXTRAM_PERIPHERAL SEMC
 /* Definition of peripheral ID */
-#define FLEXIO1_IMU_PERIPHERAL FLEXIO1
+#define CAN2_PERIPHERAL CAN2
 /* Definition of the clock source frequency */
-#define FLEXIO1_IMU_CLK_FREQ 1500000UL
+#define CAN2_CLOCK_SOURCE 2000000UL
+/* Definition of peripheral ID */
+#define CAN3_PERIPHERAL CAN3
+/* Definition of the clock source frequency */
+#define CAN3_CLOCK_SOURCE 2000000UL
+/* Definition of peripheral ID */
+#define IMU_SPI_PERIPHERAL Driver_SPI1
+/* Definition of the clock source frequency */
+#define IMU_SPI_CLOCK_SOURCE_FREQ 6000000UL
+/* LPI2C1 defines */
+/* Definition of peripheral driver */
+#define USB_I2C_CMSIS_DRIVER Driver_I2C1
+/* Definition of the clock source frequency */
+#define USB_I2C_CLOCK_SOURCE_FREQ 3000000UL
+/* Definition of peripheral ID */
+#define QSPI_EXTFLASH_PERIPHERAL FLEXSPI2
+/* QSPI_extFlash interrupt vector ID (number). */
+#define QSPI_EXTFLASH_IRQN FLEXSPI2_IRQn
+/* QSPI_extFlash interrupt handler identifier. */
+#define QSPI_EXTFLASH_IRQHANDLER FLEXSPI2_IRQHandler
+/* Definition of peripheral ID */
+#define QSPI_ADC_PERIPHERAL FLEXSPI
+/* QSPI_ADC interrupt vector ID (number). */
+#define QSPI_ADC_IRQN FLEXSPI_IRQn
+/* QSPI_ADC interrupt handler identifier. */
+#define QSPI_ADC_IRQHANDLER FLEXSPI_IRQHandler
+/* Definition of peripheral ID */
+#define RGB_PWM4_PERIPHERAL PWM4
+/* Definition of submodule 0 ID */
+#define RGB_PWM4_SM0 kPWM_Module_0
+/* Definition of clock source of submodule 0 frequency in Hertz */
+#define RGB_PWM4_SM0_SM_CLK_SOURCE_FREQ_HZ 3000000U
+/* Definition of submodule 0 counter clock source frequency in Hertz - RGB_PWM4_SM0_SM_CLK_SOURCE_FREQ_HZ divided by prescaler */
+#define RGB_PWM4_SM0_COUNTER_CLK_SOURCE_FREQ_HZ 3000000U
+/* Definition of submodule 0 counter (PWM) frequency in Hertz */
+#define RGB_PWM4_SM0_COUNTER_FREQ_HZ 20000U
+/* Definition of submodule 0 channel A ID */
+#define RGB_PWM4_SM0_A kPWM_PwmA
+/* Definition of submodule 0 channel B ID */
+#define RGB_PWM4_SM0_B kPWM_PwmB
+/* Definition of submodule 0 channel X ID */
+#define RGB_PWM4_SM0_X kPWM_PwmX
+/* Definition of fault Fault0 ID */
+#define RGB_PWM4_F0_FAULT0 kPWM_Fault_0
+/* Definition of fault Fault1 ID */
+#define RGB_PWM4_F0_FAULT1 kPWM_Fault_1
+/* Definition of fault Fault2 ID */
+#define RGB_PWM4_F0_FAULT2 kPWM_Fault_2
+/* Definition of fault Fault3 ID */
+#define RGB_PWM4_F0_FAULT3 kPWM_Fault_3
 /* Debug console is initialized in the peripheral tool */
 #define BOARD_INIT_DEBUG_CONSOLE_PERIPHERAL 
 /* Definition of serial peripheral instance */
-#define DEBUGCONSOLE_INSTANCE 1U
+#define DEBUGCONSOLE_INSTANCE 0U
 /* Definition of serial peripheral type */
-#define DEBUGCONSOLE_TYPE kSerialPort_Uart
+#define DEBUGCONSOLE_TYPE kSerialPort_Swo
 /* Definition of the Baud rate */
-#define DEBUGCONSOLE_BAUDRATE 115200UL
+#define DEBUGCONSOLE_BAUDRATE 1000000UL
 /* Definition of the clock source frequency */
-#define DEBUGCONSOLE_CLK_FREQ 4000000UL
+#define DEBUGCONSOLE_CLK_FREQ 6000000UL
 /* @TEST_ANCHOR */
 /* IP address definitions */
 #ifndef LWIP_NETIF0_IPADDR0
@@ -145,7 +170,7 @@ extern "C" {
 /* MDIO options definition */
 #define LWIP_NETIF0_MDIO_OPS enet_ops
 /* MDIO resource definition */
-#define LWIP_NETIF0_MDIO_RESOURCE {ENET, 3000000UL}
+#define LWIP_NETIF0_MDIO_RESOURCE {ENET2, 3000000UL}
 
 /***********************************************************************************************************************
  * Global variables
@@ -154,16 +179,25 @@ extern const adc_config_t ADC1_config;
 extern const flexcan_config_t CAN1_config;
 /* Message buffer 0 configuration structure */
 extern const flexcan_rx_mb_config_t CAN1_rx_mb_config_0;
-/* RGB mode configuration */
-extern const elcdif_rgb_mode_config_t LCDIF_rgbConfig;
-/* RGB buffer */
-extern uint32_t LCDIF_Buffer[2][LCDIF_PANEL_HEIGHT][LCDIF_PANEL_WIDTH];
 extern semc_config_t SEMC_extRAM_config;
 extern semc_sdram_config_t SEMC_extRAM_sdram_struct;
-/* FlexIO peripheral configuration */
-extern FLEXIO_SPI_Type FLEXIO1_IMU_peripheralConfig;
-/* FlexIO SPI master configuration */
-extern flexio_spi_master_config_t FLEXIO1_IMU_config;
+extern const flexcan_config_t CAN2_config;
+/* Message buffer 0 configuration structure */
+extern const flexcan_rx_mb_config_t CAN2_rx_mb_config_0;
+extern const flexcan_config_t CAN3_config;
+/* Message buffer 0 configuration structure */
+extern const flexcan_rx_mb_config_t CAN3_rx_mb_config_0;
+extern const flexspi_config_t QSPI_extFlash_config;
+extern flexspi_handle_t QSPI_extFlash_handle;
+extern const flexspi_config_t QSPI_ADC_config;
+extern pwm_config_t RGB_PWM4_SM0_config;
+
+extern pwm_signal_param_t RGB_PWM4_SM0_pwm_function_config[1];
+extern const pwm_fault_input_filter_param_t RGB_PWM4_faultInputFilter_config;
+extern const pwm_fault_param_t RGB_PWM4_Fault0_fault_config;
+extern const pwm_fault_param_t RGB_PWM4_Fault1_fault_config;
+extern const pwm_fault_param_t RGB_PWM4_Fault2_fault_config;
+extern const pwm_fault_param_t RGB_PWM4_Fault3_fault_config;
 /* Network interface structure */
 extern struct netif lwIP_netif0;
 /* IPv4 adress handle */
@@ -172,6 +206,18 @@ extern ip4_addr_t lwIP_netif0_ipaddr;
 extern ip4_addr_t lwIP_netif0_netmask;
 /* IPv4 gateway handle */
 extern ip4_addr_t lwIP_netif0_gw;
+
+/***********************************************************************************************************************
+ * Global functions
+ **********************************************************************************************************************/
+/* Signal event function for component IMU_SPI*/
+extern void LPSPI1_SignalEvent(uint32_t event);
+/* Get clock source frequency function for component IMU_SPI */
+uint32_t LPSPI1_GetFreq(void);
+/* Signal event function for component USB_I2C*/
+extern void LPI2C1_SignalEvent(uint32_t event);
+/* Get clock source frequency function for component USB_I2C */
+uint32_t LPI2C1_GetFreq(void);
 
 /***********************************************************************************************************************
  * Initialization functions

@@ -15,11 +15,11 @@
 
 /* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
 !!GlobalInfo
-product: Clocks v10.0
+product: Clocks v11.0
 processor: MIMXRT1064xxxxA
 package_id: MIMXRT1064DVL6A
 mcu_data: ksdk2_0
-processor_version: 12.0.1
+processor_version: 13.0.1
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 
 #include "clock_config.h"
@@ -54,12 +54,14 @@ outputs:
 - {id: CKIL_SYNC_CLK_ROOT.outFreq, value: 32.768 kHz}
 - {id: CLK_24M.outFreq, value: 24 MHz}
 - {id: CSI_CLK_ROOT.outFreq, value: 12 MHz}
-- {id: ENET2_125M_CLK.outFreq, value: 1.2 MHz}
-- {id: ENET_125M_CLK.outFreq, value: 2.4 MHz}
-- {id: ENET_25M_REF_CLK.outFreq, value: 1.2 MHz}
+- {id: ENET2_125M_CLK.outFreq, value: 50 MHz}
+- {id: ENET2_REF_CLK.outFreq, value: 50 MHz}
+- {id: ENET_125M_CLK.outFreq, value: 50 MHz}
+- {id: ENET_25M_REF_CLK.outFreq, value: 25 MHz}
+- {id: ENET_REF_CLK.outFreq, value: 50 MHz}
 - {id: FLEXIO1_CLK_ROOT.outFreq, value: 1.5 MHz}
 - {id: FLEXIO2_CLK_ROOT.outFreq, value: 1.5 MHz}
-- {id: FLEXSPI2_CLK_ROOT.outFreq, value: 12 MHz}
+- {id: FLEXSPI2_CLK_ROOT.outFreq, value: 24 MHz}
 - {id: FLEXSPI_CLK_ROOT.outFreq, value: 2 MHz}
 - {id: GPT1_ipg_clk_highfreq.outFreq, value: 3 MHz}
 - {id: GPT2_ipg_clk_highfreq.outFreq, value: 3 MHz}
@@ -89,16 +91,22 @@ outputs:
 - {id: USDHC1_CLK_ROOT.outFreq, value: 12 MHz}
 - {id: USDHC2_CLK_ROOT.outFreq, value: 12 MHz}
 settings:
+- {id: CCM.FLEXSPI2_PODF.scale, value: '1', locked: true}
+- {id: CCM_ANALOG.ENET2_DIV.scale, value: '10', locked: true}
 - {id: CCM_ANALOG.PLL2.denom, value: '1'}
 - {id: CCM_ANALOG.PLL2.num, value: '0'}
+- {id: CCM_ANALOG.PLL6_BYPASS.sel, value: CCM_ANALOG.PLL6}
 - {id: CCM_ANALOG_MISC1_LVDSCLK1_IBEN_CFG, value: Inputs}
 - {id: CCM_ANALOG_MISC1_LVDSCLK1_OBEN_CFG, value: Inputs}
 - {id: CCM_ANALOG_PLL_USB1_EN_USB_CLKS_CFG, value: Enabled}
 - {id: CCM_ANALOG_PLL_USB1_EN_USB_CLKS_OUT_CFG, value: Enabled}
+- {id: IOMUXC_GPR.ENET2_REF_CLK_SEL.sel, value: CCM_ANALOG.ENET2_125M_CLK}
+- {id: IOMUXC_GPR.ENET_REF_CLK_SEL.sel, value: CCM_ANALOG.ENET_125M_CLK}
 - {id: XTALOSC24M_LOWPWR_CTRL_OSC_SEL_CFG, value: External_clock}
 - {id: XTALOSC24M_OSC_CONFIG2_ENABLE_1M_CFG, value: Disabled}
 sources:
 - {id: CCM_ANALOG.CLK1.outFreq, value: 24 MHz, enabled: true}
+- {id: IOMUXC_GPR.ENET2_REF_CLK_EXT.outFreq, value: 50 MHz, enabled: true}
 - {id: XTALOSC24M.RTC_OSC.outFreq, value: 32.768 kHz, enabled: true}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 
@@ -122,8 +130,8 @@ const clock_enet_pll_config_t enetPllConfig_BOARD_BootClockRUN =
         .enableClkOutput = true,                  /* Enable the PLL providing the ENET 125MHz reference clock */
         .enableClkOutput1 = true,                 /* Enable the PLL providing the ENET2 125MHz reference clock */
         .enableClkOutput25M = true,               /* Enable the PLL providing the ENET 25MHz reference clock */
-        .loopDivider = 1,                         /* Set frequency of ethernet reference clock to 2.4 MHz */
-        .loopDivider1 = 0,                        /* Set frequency of ethernet reference clock to 1.2 MHz */
+        .loopDivider = 1,                         /* Set frequency of ethernet reference clock to 50 MHz */
+        .loopDivider1 = 1,                        /* Set frequency of ethernet reference clock to 50 MHz */
         .src = 0,                                 /* Bypass clock source, 0 - OSC 24M, 1 - CLK1_P and CLK1_N */
     };
 /*******************************************************************************
@@ -211,7 +219,7 @@ void BOARD_BootClockRUN(void)
     /* Disable Flexspi2 clock gate. */
     CLOCK_DisableClock(kCLOCK_FlexSpi2);
     /* Set FLEXSPI2_PODF. */
-    CLOCK_SetDiv(kCLOCK_Flexspi2Div, 1);
+    CLOCK_SetDiv(kCLOCK_Flexspi2Div, 0);
     /* Set Flexspi2 clock source. */
     CLOCK_SetMux(kCLOCK_Flexspi2Mux, 3);
 #endif
@@ -382,8 +390,6 @@ void BOARD_BootClockRUN(void)
     CCM_ANALOG->PLL_VIDEO |= CCM_ANALOG_PLL_VIDEO_ENABLE_MASK;
     /* Init Enet PLL. */
     CLOCK_InitEnetPll(&enetPllConfig_BOARD_BootClockRUN);
-    /* Bypass Enet PLL. */
-    CLOCK_SetPllBypass(CCM_ANALOG, kCLOCK_PllEnet, 1);
     /* DeInit Usb2 PLL. */
     CLOCK_DeinitUsb2Pll();
     /* Bypass Usb2 PLL. */
@@ -427,9 +433,9 @@ void BOARD_BootClockRUN(void)
     /* Set MQS configuration. */
     IOMUXC_MQSConfig(IOMUXC_GPR,kIOMUXC_MqsPwmOverSampleRate32, 0);
     /* Set ENET Ref clock source. */
-    IOMUXC_GPR->GPR1 &= ~IOMUXC_GPR_GPR1_ENET1_TX_CLK_DIR_MASK;
+    IOMUXC_GPR->GPR1 |= IOMUXC_GPR_GPR1_ENET1_TX_CLK_DIR_MASK;
     /* Set ENET2 Ref clock source. */
-    IOMUXC_GPR->GPR1 &= ~IOMUXC_GPR_GPR1_ENET2_TX_CLK_DIR_MASK;
+    IOMUXC_GPR->GPR1 |= IOMUXC_GPR_GPR1_ENET2_TX_CLK_DIR_MASK;
     /* Set GPT1 High frequency reference clock source. */
     IOMUXC_GPR->GPR5 &= ~IOMUXC_GPR_GPR5_VREF_1M_CLK_GPT1_MASK;
     /* Set GPT2 High frequency reference clock source. */

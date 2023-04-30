@@ -6,11 +6,11 @@
 /* clang-format off */
 /* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
 !!GlobalInfo
-product: Peripherals v11.0
+product: Peripherals v12.0
 processor: MIMXRT1064xxxxA
 package_id: MIMXRT1064DVL6A
 mcu_data: ksdk2_0
-processor_version: 12.0.1
+processor_version: 13.0.2
 functionalGroups:
 - name: BOARD_InitPeripherals
   UUID: 82322bba-3bfe-49e9-a5b1-c80657b3b666
@@ -92,6 +92,7 @@ instance:
   - nvic:
     - interrupt_table:
       - 0: []
+      - 1: []
     - interrupts: []
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
@@ -271,82 +272,6 @@ static void CAN1_init(void) {
 }
 
 /***********************************************************************************************************************
- * LCDIF initialization code
- **********************************************************************************************************************/
-/* clang-format off */
-/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-instance:
-- name: 'LCDIF'
-- type: 'elcdif'
-- mode: 'rgbMode'
-- custom_name_enabled: 'false'
-- type_id: 'elcdif_1c39bcb43ed1a24bc8980672c7378576'
-- functional_group: 'BOARD_InitPeripherals'
-- peripheral: 'LCDIF'
-- config_sets:
-  - fsl_elcdif:
-    - config:
-      - panelWidthInt: '480'
-      - panelHeightInt: '272'
-      - hsw: '41'
-      - hfp: '4'
-      - hbp: '8'
-      - vsw: '10'
-      - vfp: '4'
-      - vbp: '2'
-      - frameRate: '60 Hz'
-      - clockSource: 'LcdIfClock'
-      - clockSourceFreq: 'BOARD_BootClockRUN'
-      - polarityFlags_st:
-        - vSyncActive: 'kELCDIF_VsyncActiveLow'
-        - hSyncActive: 'kELCDIF_HsyncActiveLow'
-        - dataEnableActive: 'kELCDIF_DataEnableActiveLow'
-        - driveDataClkEdge: 'kELCDIF_DriveDataOnFallingClkEdge'
-      - bufferName: 'defaultBuffer'
-      - bufferAlign: '64'
-      - pixelFormat: 'kELCDIF_PixelFormatRGB888'
-      - dataBus: 'kELCDIF_DataBus24Bit'
-      - enablePxpHandShake: 'false'
-      - start: 'false'
-    - isInterruptEnabled: 'true'
-    - elcdifInterruptSources: 'kELCDIF_CurFrameDoneInterruptEnable'
-    - interrupt:
-      - IRQn: 'LCDIF_IRQn'
-      - enable_interrrupt: 'enabled'
-      - enable_priority: 'false'
-      - priority: '0'
-      - enable_custom_name: 'false'
-    - quick_selection: 'rgb'
- * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
-/* clang-format on */
-/* RGB mode configuration */
-const elcdif_rgb_mode_config_t LCDIF_rgbConfig = {
-  .panelWidth = LCDIF_PANEL_WIDTH,
-  .panelHeight = LCDIF_PANEL_HEIGHT,
-  .hsw = 41U,
-  .hfp = 4U,
-  .hbp = 8U,
-  .vsw = 10U,
-  .vfp = 4U,
-  .vbp = 2U,
-  .polarityFlags = (kELCDIF_VsyncActiveLow | kELCDIF_HsyncActiveLow | kELCDIF_DataEnableActiveLow | kELCDIF_DriveDataOnFallingClkEdge),
-  .bufferAddr = (uint32_t) LCDIF_Buffer[0],
-  .pixelFormat = kELCDIF_PixelFormatRGB888,
-  .dataBus = kELCDIF_DataBus24Bit
-};
-/* RGB buffer */
-AT_NONCACHEABLE_SECTION_ALIGN(uint32_t LCDIF_Buffer[2][LCDIF_PANEL_HEIGHT][LCDIF_PANEL_WIDTH], LCDIF_RGB_BUFFER_ALIGN);
-
-static void LCDIF_init(void) {
-  /* RGB mode initialization */
-  ELCDIF_RgbModeInit(LCDIF_PERIPHERAL, &LCDIF_rgbConfig);
-  /* Enable interrupts */
-  ELCDIF_EnableInterrupts(LCDIF_PERIPHERAL, (kELCDIF_CurFrameDoneInterruptEnable));
-  /* Enable interrupt LCDIF_IRQn request in the NVIC. */
-  EnableIRQ(LCDIF_LCDIF_IRQN);
-}
-
-/***********************************************************************************************************************
  * SEMC_extRAM initialization code
  **********************************************************************************************************************/
 /* clang-format off */
@@ -411,7 +336,6 @@ instance:
       - refreshUrgThreshold: '64'
       - refreshBurstLen: '1'
     - sdramArray: []
-    - quick_selection: 'SEMC_Type'
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
 semc_config_t SEMC_extRAM_config = {
@@ -472,67 +396,784 @@ static void SEMC_extRAM_init(void) {
 }
 
 /***********************************************************************************************************************
- * FLEXIO1_IMU initialization code
+ * CAN2 initialization code
  **********************************************************************************************************************/
 /* clang-format off */
 /* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
 instance:
-- name: 'FLEXIO1_IMU'
-- type: 'flexio_spi'
-- mode: 'polling'
-- custom_name_enabled: 'true'
-- type_id: 'flexio_spi_d67d6584d62b130dba246fa5abb61949'
+- name: 'CAN2'
+- type: 'flexcan'
+- mode: 'interrupts'
+- custom_name_enabled: 'false'
+- type_id: 'flexcan_a98f4e39f821600f664c89f66f55b020'
 - functional_group: 'BOARD_InitPeripherals'
-- peripheral: 'FLEXIO1'
+- peripheral: 'CAN2'
 - config_sets:
-  - fsl_flexio_spi:
-    - spi_mode: 'kSPI_Master'
-    - clockSource: 'FlexIoClock'
-    - clockSourceFreq: 'BOARD_BootClockRUN'
-    - peripheralConfig:
-      - SDOPinIndex: '14'
-      - SDIPinIndex: '15'
-      - SCKPinIndex: '10'
-      - CSnPinIndex: '13'
-      - shifterIndex_0: '0'
-      - shifterIndex_1: '2'
-      - timerIndex_0: '0'
-      - timerIndex_1: '1'
-    - master_config:
-      - enableMaster: 'true'
-      - enableInDoze: 'false'
-      - enableInDebug: 'true'
-      - enableFastAccess: 'false'
-      - baudRate_Bps: '500000'
-      - phase: 'kFLEXIO_SPI_ClockPhaseFirstEdge'
-      - dataMode: 'kFLEXIO_SPI_8BitMode'
-    - quick_selection: 'QuickSelection1'
+  - interruptsCfg:
+    - messageBufferIrqs: '0'
+    - messageBufferIrqs2: '0'
+    - interruptsEnable: ''
+    - enable_irq: 'false'
+    - interrupt_shared:
+      - IRQn: 'CAN2_IRQn'
+      - enable_interrrupt: 'enabled'
+      - enable_priority: 'false'
+      - priority: '0'
+      - enable_custom_name: 'false'
+  - fsl_flexcan:
+    - can_config:
+      - clockSource: 'kFLEXCAN_ClkSrcOsc'
+      - clockSourceFreq: 'BOARD_BootClockRUN'
+      - wakeupSrc: 'kFLEXCAN_WakeupSrcUnfiltered'
+      - baudRate: '100000'
+      - maxMbNum: '16'
+      - enableLoopBack: 'false'
+      - enableTimerSync: 'true'
+      - enableSelfWakeup: 'false'
+      - enableIndividMask: 'false'
+      - disableSelfReception: 'false'
+      - enableListenOnlyMode: 'false'
+      - enableSupervisorMode: 'false'
+      - timingConfig:
+        - propSeg: '2'
+        - phaseSeg1: '4'
+        - phaseSeg2: '3'
+        - rJumpwidth: '2'
+        - bitTime: []
+    - enableRxFIFO: 'false'
+    - rxFIFO:
+      - idFilterTable: ''
+      - idFilterNum: 'num0'
+      - idFilterType: 'kFLEXCAN_RxFifoFilterTypeA'
+      - priority: 'kFLEXCAN_RxFifoPrioLow'
+    - channels:
+      - 0:
+        - mbID: '0'
+        - mbType: 'mbRx'
+        - rxMb:
+          - id: '0'
+          - format: 'kFLEXCAN_FrameFormatStandard'
+          - type: 'kFLEXCAN_FrameTypeData'
+      - 1:
+        - mbID: '1'
+        - mbType: 'mbTx'
+        - rxMb:
+          - id: '0'
+          - format: 'kFLEXCAN_FrameFormatStandard'
+          - type: 'kFLEXCAN_FrameTypeData'
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
-/* FlexIO access configuration */
-FLEXIO_SPI_Type FLEXIO1_IMU_peripheralConfig = {
-  .flexioBase = FLEXIO1_IMU_PERIPHERAL,
-  .SDOPinIndex = 14,
-  .SDIPinIndex = 15,
-  .SCKPinIndex = 10,
-  .CSnPinIndex = 13,
-  .shifterIndex = {0, 2},
-  .timerIndex = {0, 1}
+const flexcan_config_t CAN2_config = {
+  .wakeupSrc = kFLEXCAN_WakeupSrcUnfiltered,
+  .bitRate = 100000UL,
+  .maxMbNum = 16U,
+  .enableLoopBack = false,
+  .enableTimerSync = true,
+  .enableSelfWakeup = false,
+  .enableIndividMask = false,
+  .disableSelfReception = false,
+  .enableListenOnlyMode = false,
+  .enableSupervisorMode = false,
+  .timingConfig = {
+    .preDivider = 1,
+    .propSeg = 1,
+    .phaseSeg1 = 3,
+    .phaseSeg2 = 2,
+    .rJumpwidth = 1
+  }
 };
-/* SPI master configuration */
-flexio_spi_master_config_t FLEXIO1_IMU_config = {
-  .enableMaster = true,
-  .enableInDoze = false,
-  .enableInDebug = true,
-  .enableFastAccess = false,
-  .baudRate_Bps = 500000UL,
-  .phase = kFLEXIO_SPI_ClockPhaseFirstEdge,
-  .dataMode = kFLEXIO_SPI_8BitMode
+/* Message buffer 0 configuration structure */
+const flexcan_rx_mb_config_t CAN2_rx_mb_config_0 = {
+  .id = FLEXCAN_ID_STD(0UL),
+  .format = kFLEXCAN_FrameFormatStandard,
+  .type = kFLEXCAN_FrameTypeData
 };
 
-static void FLEXIO1_IMU_init(void) {
-  /* Master initialization */
-  FLEXIO_SPI_MasterInit(&FLEXIO1_IMU_peripheralConfig, &FLEXIO1_IMU_config, FLEXIO1_IMU_CLK_FREQ);
+static void CAN2_init(void) {
+  FLEXCAN_Init(CAN2_PERIPHERAL, &CAN2_config, CAN2_CLOCK_SOURCE);
+  /* Message buffer 0 initialization */
+  FLEXCAN_SetRxMbConfig(CAN2_PERIPHERAL, 0, &CAN2_rx_mb_config_0, true);
+  /* Message buffer 1 initialization */
+  FLEXCAN_SetTxMbConfig(CAN2_PERIPHERAL, 1, true);
+}
+
+/***********************************************************************************************************************
+ * CAN3 initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+instance:
+- name: 'CAN3'
+- type: 'flexcan'
+- mode: 'interrupts'
+- custom_name_enabled: 'false'
+- type_id: 'flexcan_a98f4e39f821600f664c89f66f55b020'
+- functional_group: 'BOARD_InitPeripherals'
+- peripheral: 'CAN3'
+- config_sets:
+  - interruptsCfg:
+    - messageBufferIrqs: '0'
+    - messageBufferIrqs2: '0'
+    - interruptsEnable: ''
+    - enable_irq: 'false'
+    - interrupt_shared:
+      - IRQn: 'CAN3_IRQn'
+      - enable_interrrupt: 'enabled'
+      - enable_priority: 'false'
+      - priority: '0'
+      - enable_custom_name: 'false'
+  - fsl_flexcan:
+    - can_config:
+      - clockSource: 'kFLEXCAN_ClkSrcOsc'
+      - clockSourceFreq: 'BOARD_BootClockRUN'
+      - wakeupSrc: 'kFLEXCAN_WakeupSrcUnfiltered'
+      - flexibleDataRate: 'false'
+      - baudRate: '100000'
+      - baudRateFD: '2000000'
+      - enableBRS: 'false'
+      - dataSize: 'kFLEXCAN_8BperMB'
+      - maxMbNum: '16'
+      - enableLoopBack: 'false'
+      - enableTimerSync: 'true'
+      - enableSelfWakeup: 'false'
+      - enableIndividMask: 'false'
+      - disableSelfReception: 'false'
+      - enableListenOnlyMode: 'false'
+      - enableSupervisorMode: 'false'
+      - enableDoze: 'false'
+      - timingConfig:
+        - propSeg: '2'
+        - phaseSeg1: '4'
+        - phaseSeg2: '3'
+        - rJumpwidth: '2'
+        - bitTime: []
+        - fpropSeg: '2'
+        - fphaseSeg1: '4'
+        - fphaseSeg2: '4'
+        - frJumpwidth: '2'
+        - fbitTime: []
+    - enableRxFifoDMA: 'false'
+    - enableRxFIFO: 'false'
+    - rxFIFO:
+      - idFilterTable: ''
+      - idFilterNum: 'num0'
+      - idFilterType: 'kFLEXCAN_RxFifoFilterTypeA'
+      - priority: 'kFLEXCAN_RxFifoPrioLow'
+    - channels:
+      - 0:
+        - mbID: '0'
+        - mbType: 'mbRx'
+        - rxMb:
+          - id: '0'
+          - format: 'kFLEXCAN_FrameFormatStandard'
+          - type: 'kFLEXCAN_FrameTypeData'
+      - 1:
+        - mbID: '1'
+        - mbType: 'mbTx'
+        - rxMb:
+          - id: '0'
+          - format: 'kFLEXCAN_FrameFormatStandard'
+          - type: 'kFLEXCAN_FrameTypeData'
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+const flexcan_config_t CAN3_config = {
+  .wakeupSrc = kFLEXCAN_WakeupSrcUnfiltered,
+  .bitRate = 100000UL,
+  .bitRateFD = 2000000UL,
+  .maxMbNum = 16U,
+  .enableLoopBack = false,
+  .enableTimerSync = true,
+  .enableSelfWakeup = false,
+  .enableIndividMask = false,
+  .disableSelfReception = false,
+  .enableListenOnlyMode = false,
+  .enableSupervisorMode = false,
+  .enableDoze = false,
+  .timingConfig = {
+    .preDivider = 1,
+    .propSeg = 1,
+    .phaseSeg1 = 3,
+    .phaseSeg2 = 2,
+    .rJumpwidth = 1
+  }
+};
+/* Message buffer 0 configuration structure */
+const flexcan_rx_mb_config_t CAN3_rx_mb_config_0 = {
+  .id = FLEXCAN_ID_STD(0UL),
+  .format = kFLEXCAN_FrameFormatStandard,
+  .type = kFLEXCAN_FrameTypeData
+};
+
+static void CAN3_init(void) {
+  FLEXCAN_Init(CAN3_PERIPHERAL, &CAN3_config, CAN3_CLOCK_SOURCE);
+  /* Message buffer 0 initialization */
+  FLEXCAN_SetRxMbConfig(CAN3_PERIPHERAL, 0, &CAN3_rx_mb_config_0, true);
+  /* Message buffer 1 initialization */
+  FLEXCAN_SetTxMbConfig(CAN3_PERIPHERAL, 1, true);
+}
+
+/***********************************************************************************************************************
+ * IMU_SPI initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+instance:
+- name: 'IMU_SPI'
+- type: 'lpspi_cmsis'
+- mode: 'interrupt'
+- custom_name_enabled: 'true'
+- type_id: 'lpspi_cmsis_1121e92343df620ddd685f3c0d572e57'
+- functional_group: 'BOARD_InitPeripherals'
+- peripheral: 'LPSPI1'
+- config_sets:
+  - general:
+    - main_config:
+      - spi_mode_user: 'ARM_SPI_MODE_MASTER'
+      - clockSource: 'LpspiClock'
+      - clockSourceFreq: 'BOARD_BootClockRUN'
+      - clock_polarity: 'ARM_SPI_CPOL0_CPHA0'
+      - power_state: 'ARM_POWER_FULL'
+      - baudRate_Bps: '500000'
+      - data_bits: '8'
+      - bit_format: 'ARM_SPI_MSB_LSB'
+      - typeControlMaster: 'ARM_SPI_SS_MASTER_HW_OUTPUT'
+      - defaultValueInt: '0'
+      - spi_chip_select: 'PCS0'
+      - pcsToSckDelayInNanoSec: '0'
+      - lastSckToPcsDelayInNanoSec: '0'
+      - betweenTransferDelayInNanoSec: '0'
+      - signalEventFunctionId: 'LPSPI1_SignalEvent'
+      - enableGetFreqFnCustomName: 'false'
+      - getFreqFunctionCustomID: 'LPSPI1_GetFreq'
+      - enableInitPinsFnCustomName: 'false'
+      - initPinFunctionCustomID: 'LPSPI1_InitPins'
+      - enableDeinitPinsFnCustomName: 'false'
+      - deinitPinFunctionCustomID: 'LPSPI1_DeinitPins'
+  - fsl_spi:
+    - interrupt:
+      - IRQn: 'LPSPI1_IRQn'
+      - enable_priority: 'false'
+      - priority: '0'
+    - quick_selection: 'default_edma'
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+/* Get clock source frequency */
+uint32_t LPSPI1_GetFreq(void){
+  return IMU_SPI_CLOCK_SOURCE_FREQ;
+};
+
+static void IMU_SPI_init(void) {
+  /* Initialize CMSIS SPI */
+  IMU_SPI_PERIPHERAL.Initialize(LPSPI1_SignalEvent);
+  /* Power control of CMSIS SPI */
+  IMU_SPI_PERIPHERAL.PowerControl(ARM_POWER_FULL);
+  /* Control of CMSIS SPI */
+  IMU_SPI_PERIPHERAL.Control(ARM_SPI_MODE_MASTER | ARM_SPI_CPOL0_CPHA0 | ARM_SPI_DATA_BITS(8) | ARM_SPI_MSB_LSB | ARM_SPI_SS_MASTER_HW_OUTPUT, 500000);
+  /* Control of CMSIS SPI */
+  IMU_SPI_PERIPHERAL.Control(ARM_SPI_SET_DEFAULT_TX_VALUE, 0);
+}
+
+/***********************************************************************************************************************
+ * USB_I2C initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+instance:
+- name: 'USB_I2C'
+- type: 'lpi2c_cmsis'
+- mode: 'interrupt'
+- custom_name_enabled: 'true'
+- type_id: 'lpi2c_cmsis_79043f5f3bed8339a47810c2601e050a'
+- functional_group: 'BOARD_InitPeripherals'
+- peripheral: 'LPI2C1'
+- config_sets:
+  - fsl_i2c_cmsis:
+    - mode: 'kMaster'
+    - clockSource: 'Lpi2cClock'
+    - clockSourceFreq: 'ClocksTool_DefaultInit'
+    - ARM_I2C_BUS_SPEED: 'ARM_I2C_BUS_SPEED_FAST_PLUS'
+    - signalEventFunctionId: 'LPI2C1_SignalEvent'
+    - enableGetFreqFnCustomName: 'false'
+    - getFreqFunctionCustomID: 'LPI2C1_GetFreq'
+    - enableInitPinsFnCustomName: 'true'
+    - initPinFunctionCustomID: 'LPI2C1_InitPins'
+    - enableDeinitPinsFnCustomName: 'true'
+    - deinitPinFunctionCustomID: 'LPI2C1_DeinitPins'
+    - interrupt:
+      - IRQn: 'LPI2C1_IRQn'
+      - enable_priority: 'false'
+      - priority: '0'
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+/* Get clock source frequency */
+uint32_t LPI2C1_GetFreq(void){
+  return USB_I2C_CLOCK_SOURCE_FREQ;
+};
+
+static void USB_I2C_init(void) {
+  /* Initialization function */
+  USB_I2C_CMSIS_DRIVER.Initialize(LPI2C1_SignalEvent);
+  /* Power control function */
+  USB_I2C_CMSIS_DRIVER.PowerControl(ARM_POWER_FULL);
+  /* Configuration of the I2C communication speed */
+  USB_I2C_CMSIS_DRIVER.Control(ARM_I2C_BUS_SPEED, ARM_I2C_BUS_SPEED_FAST_PLUS);
+}
+
+/***********************************************************************************************************************
+ * QSPI_extFlash initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+instance:
+- name: 'QSPI_extFlash'
+- type: 'flexspi'
+- mode: 'transfer'
+- custom_name_enabled: 'true'
+- type_id: 'flexspi_cc6da638fb0490ad15096647c2b8e52a'
+- functional_group: 'BOARD_InitPeripherals'
+- peripheral: 'FLEXSPI2'
+- config_sets:
+  - fsl_flexspi:
+    - flexspiConfig:
+      - rxSampleClock: 'kFLEXSPI_ReadSampleClkLoopbackInternally'
+      - clockSource: 'FlexSpiClock'
+      - clockSourceFreq: 'ClocksTool_DefaultInit'
+      - enableSckFreeRunning: 'false'
+      - enableCombination: 'false'
+      - enableDoze: 'true'
+      - enableHalfSpeedAccess: 'false'
+      - enableSckBDiffOpt: 'false'
+      - enableSameConfigForAll: 'false'
+      - seqTimeoutCycleString: '65535'
+      - ipGrantTimeoutCycleString: '255'
+      - txWatermark: '8'
+      - rxWatermark: '8'
+      - ahbConfig:
+        - enableAHBWriteIpTxFifo: 'false'
+        - enableAHBWriteIpRxFifo: 'false'
+        - ahbGrantTimeoutCycleString: '255'
+        - ahbBusTimeoutCycleString: '65535'
+        - resumeWaitCycleString: '32'
+        - buffer:
+          - 0:
+            - priority: '0'
+            - masterIndex: '0'
+            - bufferSize: '256'
+            - enablePrefetch: 'true'
+          - 1:
+            - priority: '1'
+            - masterIndex: '0'
+            - bufferSize: '256'
+            - enablePrefetch: 'true'
+          - 2:
+            - priority: '2'
+            - masterIndex: '0'
+            - bufferSize: '256'
+            - enablePrefetch: 'true'
+          - 3:
+            - priority: '3'
+            - masterIndex: '0'
+            - bufferSize: '256'
+            - enablePrefetch: 'true'
+        - enableClearAHBBufferOpt: 'false'
+        - enableReadAddressOpt: 'false'
+        - enableAHBPrefetch: 'false'
+        - enableAHBBufferable: 'false'
+        - enableAHBCachable: 'false'
+    - flexspiInterrupt:
+      - interrupt_sel: ''
+      - interrupt_vectors:
+        - enableInterrupt: 'false'
+        - interrupt:
+          - IRQn: 'FLEXSPI2_IRQn'
+          - enable_interrrupt: 'enabled'
+          - enable_priority: 'false'
+          - priority: '0'
+          - enable_custom_name: 'false'
+    - enableCustomLUT: 'false'
+    - lutConfig:
+      - flash: 'defaultFlash'
+      - lutName: 'defaultLUT'
+    - devices_configs: []
+    - transferHandle:
+      - init_callback_transfer: 'false'
+      - callback_fcn_transfer: ''
+      - user_data_transfer: ''
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+const flexspi_config_t QSPI_extFlash_config = {
+  .rxSampleClock = kFLEXSPI_ReadSampleClkLoopbackInternally,
+  .enableSckFreeRunning = false,
+  .enableCombination = false,
+  .enableDoze = true,
+  .enableHalfSpeedAccess = false,
+  .enableSckBDiffOpt = false,
+  .enableSameConfigForAll = false,
+  .seqTimeoutCycle = 65535,
+  .ipGrantTimeoutCycle = 255,
+  .txWatermark = 8U,
+  .rxWatermark = 8U,
+  .ahbConfig = {
+    .enableAHBWriteIpTxFifo = false,
+    .enableAHBWriteIpRxFifo = false,
+    .ahbGrantTimeoutCycle = 255,
+    .ahbBusTimeoutCycle = 65535,
+    .resumeWaitCycle = 32,
+    .buffer = {
+      {
+        .priority = 0,
+        .masterIndex = 0U,
+        .bufferSize = 256U,
+        .enablePrefetch = true
+      },
+      {
+        .priority = 1,
+        .masterIndex = 0U,
+        .bufferSize = 256U,
+        .enablePrefetch = true
+      },
+      {
+        .priority = 2,
+        .masterIndex = 0U,
+        .bufferSize = 256U,
+        .enablePrefetch = true
+      },
+      {
+        .priority = 3,
+        .masterIndex = 0U,
+        .bufferSize = 256U,
+        .enablePrefetch = true
+      }
+    },
+    .enableClearAHBBufferOpt = false,
+    .enableReadAddressOpt = false,
+    .enableAHBPrefetch = false,
+    .enableAHBBufferable = false,
+    .enableAHBCachable = false
+  }
+};
+flexspi_handle_t QSPI_extFlash_handle;
+
+static void QSPI_extFlash_init(void) {
+  /* FLEXSPI2 peripheral initialization */
+  FLEXSPI_Init(QSPI_EXTFLASH_PERIPHERAL, &QSPI_extFlash_config);
+  /* Initializes the FLEXSPI handle which is used in transactional functions. */
+  FLEXSPI_TransferCreateHandle(QSPI_EXTFLASH_PERIPHERAL, &QSPI_extFlash_handle, NULL, NULL);
+}
+
+/***********************************************************************************************************************
+ * QSPI_ADC initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+instance:
+- name: 'QSPI_ADC'
+- type: 'flexspi'
+- mode: 'general'
+- custom_name_enabled: 'true'
+- type_id: 'flexspi_cc6da638fb0490ad15096647c2b8e52a'
+- functional_group: 'BOARD_InitPeripherals'
+- peripheral: 'FLEXSPI'
+- config_sets:
+  - fsl_flexspi:
+    - flexspiConfig:
+      - rxSampleClock: 'kFLEXSPI_ReadSampleClkLoopbackInternally'
+      - clockSource: 'FlexSpiClock'
+      - clockSourceFreq: 'ClocksTool_DefaultInit'
+      - enableSckFreeRunning: 'false'
+      - enableCombination: 'false'
+      - enableDoze: 'true'
+      - enableHalfSpeedAccess: 'false'
+      - enableSckBDiffOpt: 'false'
+      - enableSameConfigForAll: 'false'
+      - seqTimeoutCycleString: '65535'
+      - ipGrantTimeoutCycleString: '255'
+      - txWatermark: '8'
+      - rxWatermark: '8'
+      - ahbConfig:
+        - enableAHBWriteIpTxFifo: 'false'
+        - enableAHBWriteIpRxFifo: 'false'
+        - ahbGrantTimeoutCycleString: '255'
+        - ahbBusTimeoutCycleString: '65535'
+        - resumeWaitCycleString: '32'
+        - buffer:
+          - 0:
+            - priority: '0'
+            - masterIndex: '0'
+            - bufferSize: '256'
+            - enablePrefetch: 'true'
+          - 1:
+            - priority: '1'
+            - masterIndex: '0'
+            - bufferSize: '256'
+            - enablePrefetch: 'true'
+          - 2:
+            - priority: '2'
+            - masterIndex: '0'
+            - bufferSize: '256'
+            - enablePrefetch: 'true'
+          - 3:
+            - priority: '3'
+            - masterIndex: '0'
+            - bufferSize: '256'
+            - enablePrefetch: 'true'
+        - enableClearAHBBufferOpt: 'false'
+        - enableReadAddressOpt: 'false'
+        - enableAHBPrefetch: 'false'
+        - enableAHBBufferable: 'false'
+        - enableAHBCachable: 'false'
+    - flexspiInterrupt:
+      - interrupt_sel: ''
+      - interrupt_vectors:
+        - enableInterrupt: 'false'
+        - interrupt:
+          - IRQn: 'FLEXSPI_IRQn'
+          - enable_interrrupt: 'enabled'
+          - enable_priority: 'false'
+          - priority: '0'
+          - enable_custom_name: 'false'
+    - enableCustomLUT: 'false'
+    - lutConfig:
+      - flash: 'defaultFlash'
+      - lutName: 'defaultLUT'
+    - devices_configs: []
+    - quick_selection: 'default'
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+const flexspi_config_t QSPI_ADC_config = {
+  .rxSampleClock = kFLEXSPI_ReadSampleClkLoopbackInternally,
+  .enableSckFreeRunning = false,
+  .enableCombination = false,
+  .enableDoze = true,
+  .enableHalfSpeedAccess = false,
+  .enableSckBDiffOpt = false,
+  .enableSameConfigForAll = false,
+  .seqTimeoutCycle = 65535,
+  .ipGrantTimeoutCycle = 255,
+  .txWatermark = 8U,
+  .rxWatermark = 8U,
+  .ahbConfig = {
+    .enableAHBWriteIpTxFifo = false,
+    .enableAHBWriteIpRxFifo = false,
+    .ahbGrantTimeoutCycle = 255,
+    .ahbBusTimeoutCycle = 65535,
+    .resumeWaitCycle = 32,
+    .buffer = {
+      {
+        .priority = 0,
+        .masterIndex = 0U,
+        .bufferSize = 256U,
+        .enablePrefetch = true
+      },
+      {
+        .priority = 1,
+        .masterIndex = 0U,
+        .bufferSize = 256U,
+        .enablePrefetch = true
+      },
+      {
+        .priority = 2,
+        .masterIndex = 0U,
+        .bufferSize = 256U,
+        .enablePrefetch = true
+      },
+      {
+        .priority = 3,
+        .masterIndex = 0U,
+        .bufferSize = 256U,
+        .enablePrefetch = true
+      }
+    },
+    .enableClearAHBBufferOpt = false,
+    .enableReadAddressOpt = false,
+    .enableAHBPrefetch = false,
+    .enableAHBBufferable = false,
+    .enableAHBCachable = false
+  }
+};
+
+static void QSPI_ADC_init(void) {
+  /* FLEXSPI peripheral initialization */
+  FLEXSPI_Init(QSPI_ADC_PERIPHERAL, &QSPI_ADC_config);
+}
+
+/***********************************************************************************************************************
+ * RGB_PWM4 initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+instance:
+- name: 'RGB_PWM4'
+- type: 'pwm'
+- mode: 'general'
+- custom_name_enabled: 'true'
+- type_id: 'pwm_8b65bb514bad0e7add761f3ca35a604d'
+- functional_group: 'BOARD_InitPeripherals'
+- peripheral: 'PWM4'
+- config_sets:
+  - fsl_pwm:
+    - clockSource: 'SystemClock'
+    - clockSourceFreq: 'ClocksTool_DefaultInit'
+    - submodules:
+      - 0:
+        - sm: 'kPWM_Module_0'
+        - sm_id: 'SM0'
+        - config:
+          - clockSource: 'kPWM_BusClock'
+          - prescale: 'kPWM_Prescale_Divide_1'
+          - pwmFreq: '20 kHz'
+          - pairOperation: 'kPWM_Independent'
+          - operationMode: 'kPWM_SignedCenterAligned'
+          - initializationControl: 'kPWM_Initialize_LocalSync'
+          - reloadLogic: 'kPWM_ReloadImmediate'
+          - reloadSelect: 'kPWM_LocalReload'
+          - reloadFrequency: 'kPWM_LoadEveryOportunity'
+          - forceTrigger: 'kPWM_Force_Local'
+          - enableDebugMode: 'true'
+          - enableWait: 'true'
+          - outputTrigger_sel: ''
+          - loadOK: 'false'
+          - startCounter: 'false'
+          - interrupt_sel: ''
+        - channels:
+          - 0:
+            - channel_id: 'A'
+            - functionSel: 'pwmOutput'
+            - pwm:
+              - dutyCyclePercent: '50'
+              - level: 'kPWM_HighTrue'
+              - deadtime_input_by_force: 'kPWM_UsePwm'
+              - clockSource: 'kPWM_BusClock'
+              - deadtimeValue: '0'
+              - interrupt_sel: ''
+          - 1:
+            - channel_id: 'B'
+            - functionSel: 'notUsed'
+          - 2:
+            - channel_id: 'X'
+            - functionSel: 'notUsed'
+        - common_interruptEn: 'false'
+        - common_interrupt:
+          - IRQn: 'PWM1_0_IRQn'
+          - enable_interrrupt: 'enabled'
+          - enable_priority: 'false'
+          - priority: '0'
+          - enable_custom_name: 'false'
+    - faultChannels:
+      - 0:
+        - commonFaultSetting:
+          - clockSource: 'kPWM_BusClock'
+          - faultFilterPeriod: '1'
+          - faultFilterCount: '3'
+          - faultGlitchStretch: 'false'
+        - faults:
+          - 0:
+            - fault_id: 'Fault0'
+            - faultClearingMode: 'kPWM_Automatic'
+            - faultLevelR: 'low'
+            - enableCombinationalPathR: 'nonFiltered'
+            - recoverMode: 'kPWM_NoRecovery'
+            - fault_int_source: 'false'
+          - 1:
+            - fault_id: 'Fault1'
+            - faultClearingMode: 'kPWM_Automatic'
+            - faultLevelR: 'low'
+            - enableCombinationalPathR: 'nonFiltered'
+            - recoverMode: 'kPWM_NoRecovery'
+            - fault_int_source: 'false'
+          - 2:
+            - fault_id: 'Fault2'
+            - faultClearingMode: 'kPWM_Automatic'
+            - faultLevelR: 'low'
+            - enableCombinationalPathR: 'nonFiltered'
+            - recoverMode: 'kPWM_NoRecovery'
+            - fault_int_source: 'false'
+          - 3:
+            - fault_id: 'Fault3'
+            - faultClearingMode: 'kPWM_Automatic'
+            - faultLevelR: 'low'
+            - enableCombinationalPathR: 'nonFiltered'
+            - recoverMode: 'kPWM_NoRecovery'
+            - fault_int_source: 'false'
+    - fault_error_interruptEn: 'false'
+    - fault_error_interrupt:
+      - IRQn: 'PWM1_FAULT_IRQn'
+      - enable_interrrupt: 'enabled'
+      - enable_priority: 'false'
+      - priority: '0'
+      - enable_custom_name: 'false'
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+/* PWM main configuration */
+pwm_config_t RGB_PWM4_SM0_config = {
+  .clockSource = kPWM_BusClock,
+  .prescale = kPWM_Prescale_Divide_1,
+  .pairOperation = kPWM_Independent,
+  .initializationControl = kPWM_Initialize_LocalSync,
+  .reloadLogic = kPWM_ReloadImmediate,
+  .reloadSelect = kPWM_LocalReload,
+  .reloadFrequency = kPWM_LoadEveryOportunity,
+  .forceTrigger = kPWM_Force_Local,
+  .enableDebugMode = true,
+  .enableWait = true
+};
+
+pwm_signal_param_t RGB_PWM4_SM0_pwm_function_config[1]= {
+  {
+    .pwmChannel = kPWM_PwmA,
+    .dutyCyclePercent = 50U,
+    .level = kPWM_HighTrue,
+    .deadtimeValue = 0U
+  },
+};
+
+const pwm_fault_input_filter_param_t RGB_PWM4_faultInputFilter_config = {
+  .faultFilterPeriod = 1U,
+  .faultFilterCount = 3U,
+  .faultGlitchStretch = false
+};
+const pwm_fault_param_t RGB_PWM4_Fault0_fault_config = {
+  .faultClearingMode = kPWM_Automatic,
+  .faultLevel = false,
+  .enableCombinationalPath = false,
+  .recoverMode = kPWM_NoRecovery
+};
+const pwm_fault_param_t RGB_PWM4_Fault1_fault_config = {
+  .faultClearingMode = kPWM_Automatic,
+  .faultLevel = false,
+  .enableCombinationalPath = false,
+  .recoverMode = kPWM_NoRecovery
+};
+const pwm_fault_param_t RGB_PWM4_Fault2_fault_config = {
+  .faultClearingMode = kPWM_Automatic,
+  .faultLevel = false,
+  .enableCombinationalPath = false,
+  .recoverMode = kPWM_NoRecovery
+};
+const pwm_fault_param_t RGB_PWM4_Fault3_fault_config = {
+  .faultClearingMode = kPWM_Automatic,
+  .faultLevel = false,
+  .enableCombinationalPath = false,
+  .recoverMode = kPWM_NoRecovery
+};
+
+static void RGB_PWM4_init(void) {
+  /* Initialize PWM submodule SM0 main configuration */
+  PWM_Init(RGB_PWM4_PERIPHERAL, RGB_PWM4_SM0, &RGB_PWM4_SM0_config);
+  /* Initialize fault input filter configuration */
+  PWM_SetupFaultInputFilter(RGB_PWM4_PERIPHERAL, &RGB_PWM4_faultInputFilter_config);
+  /* Initialize fault channel 0 fault Fault0 configuration */
+  PWM_SetupFaults(RGB_PWM4_PERIPHERAL, RGB_PWM4_F0_FAULT0, &RGB_PWM4_Fault0_fault_config);
+  /* Initialize fault channel 0 fault Fault1 configuration */
+  PWM_SetupFaults(RGB_PWM4_PERIPHERAL, RGB_PWM4_F0_FAULT1, &RGB_PWM4_Fault1_fault_config);
+  /* Initialize fault channel 0 fault Fault2 configuration */
+  PWM_SetupFaults(RGB_PWM4_PERIPHERAL, RGB_PWM4_F0_FAULT2, &RGB_PWM4_Fault2_fault_config);
+  /* Initialize fault channel 0 fault Fault3 configuration */
+  PWM_SetupFaults(RGB_PWM4_PERIPHERAL, RGB_PWM4_F0_FAULT3, &RGB_PWM4_Fault3_fault_config);
+  /* Initialize deadtime logic input for the channel A */
+  PWM_SetupForceSignal(RGB_PWM4_PERIPHERAL, RGB_PWM4_SM0, RGB_PWM4_SM0_A, kPWM_UsePwm);
+  /* Setup PWM output setting for submodule SM0 */
+  PWM_SetupPwm(RGB_PWM4_PERIPHERAL, RGB_PWM4_SM0, RGB_PWM4_SM0_pwm_function_config, 1U, kPWM_SignedCenterAligned, RGB_PWM4_SM0_COUNTER_FREQ_HZ, RGB_PWM4_SM0_SM_CLK_SOURCE_FREQ_HZ);
 }
 
 /***********************************************************************************************************************
@@ -701,15 +1342,13 @@ instance:
       - DEBUG_CONSOLE_TX_RELIABLE_ENABLE: 'true'
       - DEBUG_CONSOLE_DISABLE_RTOS_SYNCHRONIZATION: 'false'
     - peripheral_config:
-      - serial_port_type: 'kSerialPort_Uart'
-      - uart_config:
-        - peripheralUART: 'LPUART1'
-        - clockSource: 'genericUartClockSource'
-        - clockSourceFreq: 'BOARD_BootClockRUN'
-        - baudRate_Bps: '115200'
-        - quick_selection: 'QuickSelection1'
+      - serial_port_type: 'kSerialPort_Swo'
+      - swo_config:
+        - peripheralSWO: 'ARM'
+        - clockSource: 'genericSWOClockSource'
+        - clockSourceFreq: 'ClocksTool_DefaultInit'
+        - baudRate_Bps: '1000000'
     - debug_console_codegenerator: []
-    - quick_selection: 'default'
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
 
@@ -828,7 +1467,7 @@ instance:
           - phy_addr: '0x0'
           - mdioConfig:
             - enetConfig:
-              - peripheralSelect: 'ENET'
+              - peripheralSelect: 'ENET2'
               - timing:
                 - globalClockConfig:
                   - clockSource: 'GlobalClock'
@@ -838,7 +1477,6 @@ instance:
                   - refClockConfig:
                     - clockSource: 'EnetRefClock'
                     - clockSourceFreq: 'BOARD_BootClockRUN'
-              - quick_selection: 'QuickSelection1'
     - lwip_codegenerator: []
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
@@ -872,7 +1510,7 @@ static void lwIP_init(void) {
   /* lwIP module initialization */
   tcpip_init(NULL, NULL);
   /* lwIP network interface initialization */
-  netifapi_netif_add(&lwIP_netif0, &lwIP_netif0_ipaddr, &lwIP_netif0_netmask, &lwIP_netif0_gw, &lwIP_netif0_enet_config, ethernetif0_init, tcpip_input);
+  netifapi_netif_add(&lwIP_netif0, &lwIP_netif0_ipaddr, &lwIP_netif0_netmask, &lwIP_netif0_gw, &lwIP_netif0_enet_config, ethernetif1_init, tcpip_input);
   netifapi_netif_set_default(&lwIP_netif0);
   netifapi_netif_set_up(&lwIP_netif0);
 }
@@ -888,9 +1526,14 @@ void BOARD_InitPeripherals(void)
   /* Initialize components */
   ADC1_init();
   CAN1_init();
-  LCDIF_init();
   SEMC_extRAM_init();
-  FLEXIO1_IMU_init();
+  CAN2_init();
+  CAN3_init();
+  IMU_SPI_init();
+  USB_I2C_init();
+  QSPI_extFlash_init();
+  QSPI_ADC_init();
+  RGB_PWM4_init();
   USB1_init();
   DebugConsole_init();
   lwIP_init();

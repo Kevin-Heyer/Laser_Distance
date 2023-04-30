@@ -1,0 +1,115 @@
+Removed Pin From Net: NetName=SWDIO Pin=J1-1
+Removed Pin From Net: NetName=GND Pin=J1-2
+Removed Pin From Net: NetName=SWO Pin=J1-3
+Removed Pin From Net: NetName=SWCLK Pin=J1-5
+Removed Pin From Net: NetName=TRACE1 Pin=J1-6
+Removed Pin From Net: NetName=nRST Pin=J1-7
+Removed Pin From Net: NetName=TRACE0 Pin=J1-8
+Removed Pin From Net: NetName=3V3 Pin=J1-9
+Removed Pin From Net: NetName=TRACE_CLK Pin=J1-10
+Removed Pin From Net: NetName=3V3 Pin=J2-1
+Removed Pin From Net: NetName=SWDIO Pin=J2-2
+Removed Pin From Net: NetName=GND Pin=J2-3
+Removed Pin From Net: NetName=SWCLK Pin=J2-4
+Removed Pin From Net: NetName=GND Pin=J2-5
+Removed Pin From Net: NetName=SWO Pin=J2-6
+Removed Pin From Net: NetName=nRST Pin=J2-10
+Removed Pin From Net: NetName=SWDIO Pin=TP1-1
+Removed Pin From Net: NetName=SWO Pin=TP2-1
+Removed Pin From Net: NetName=SWCLK Pin=TP3-1
+Removed Pin From Net: NetName=nRST Pin=TP4-1
+Removed Pin From Net: NetName=TRACE1 Pin=TP5-1
+Removed Pin From Net: NetName=TRACE0 Pin=TP6-1
+Removed Pin From Net: NetName=TRACE_CLK Pin=TP7-1
+Removed Pin From Net: NetName=3V3 Pin=TP8-1
+Change Component Footprint: Designator=J2 Old Footprint=CONN HDR PLUG 10 1.27mm JLink EDU New Footprint=CONN HDR RECPT 10 2.54 TH TAG CONNECT
+Change Component Footprint: Designator=J1 Old Footprint=CONN HDR RECPT 20 2.54 TH TAG CONNECT 10 New Footprint=CONN HDR PLUG 20 2.54 TH STLINKV2
+Change Component Comment : Designator=J2 Old Comment=20021311-00010T4LF New Comment=TAG CONN 10
+Change Component Comment : Designator=J1 Old Comment=TAG CONN 10 New Comment=SWV
+Change component parameters: Designator = "J1" ("J1"); Footprint = "CONN HDR RECPT 20 2.54 TH TAG CONNECT 10"; UniqueID = "\OMUUEYZT" ("\OMUUEYZT")
+Change component parameters (AddParameter): Name = "Category"; Value = "Headers and Wire Housings"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Color"; Value = "Black"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "https://datasheet.ciiva.com/754/sfh11-pxxc-dxx-st-xx11160-c-754558.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://datasheet.ciiva.com/754/sfh11-pxxc-dxx-st-xx11160-c-754558.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Connector Type"; Value = "Header"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Plating"; Value = "Gold"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Type"; Value = "Female Socket"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Sullins"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number"; Value = "SFH11-PBPC-D10-ST-BK"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mount"; Value = "Through Hole"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Positions"; Value = "20"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Rows"; Value = "2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Quantity"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packaging"; Value = "Tray"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pitch"; Value = "0.1inch"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pricing 1"; Value = "1=1.15000, 10=0.96800, 80=0.86925, 440=0.71118, 1000=0.63216, 5000=0.57070 (USD)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RoHS"; Value = "Yes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RoHS Compliant"; Value = "Yes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Row Spacing"; Value = "0.1inch"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Series"; Value = "SFH11"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Stock 1"; Value = "18166"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "S9197-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Termination"; Value = "Solder"; VariantName = "[No Variations]"
+Change component parameters: Designator = "J2" ("J2"); Footprint = "CONN HDR PLUG 10 1.27mm JLink EDU"; UniqueID = "\HJZKGOBI" ("\HJZKGOBI")
+Change component parameters (AddParameter): Name = "Category"; Value = "Connectors"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Color"; Value = "Black"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "https://datasheet.ciiva.com/732/302-sxxx-732946.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://datasheet.ciiva.com/732/302-sxxx-732946.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Connector Type"; Value = "Male Pin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Plating"; Value = "Gold"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Type"; Value = "Male Pin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "On-Shore Technology"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number"; Value = "302-S101"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mount"; Value = "Through Hole"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Positions"; Value = "10"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Rows"; Value = "2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packaging"; Value = "Tray"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pitch"; Value = "0.1inch"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pricing 1"; Value = "1=0.29000, 10=0.24800, 100=0.19290, 500=0.16538, 1000=0.13781, 5000=0.11812, 10000=0.11025 (USD)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RoHS"; Value = "Yes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Row Spacing"; Value = "0.1inch"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Series"; Value = "302"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Stock 1"; Value = "61558"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "ED1543-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Termination"; Value = "Solder"; VariantName = "[No Variations]"
+Added Component: Designator=TP10(TESTPOINT_SMT)
+Added Pin To Net: NetName=3V3 Pin=J1-1
+Added Pin To Net: NetName=GND Pin=J1-6
+Added Pin To Net: NetName=SWDIO Pin=J1-7
+Added Pin To Net: NetName=GND Pin=J1-8
+Added Pin To Net: NetName=SWCLK Pin=J1-9
+Added Pin To Net: NetName=GND Pin=J1-10
+Added Pin To Net: NetName=GND Pin=J1-12
+Added Pin To Net: NetName=SWO Pin=J1-13
+Added Pin To Net: NetName=GND Pin=J1-14
+Added Pin To Net: NetName=nRST Pin=J1-15
+Added Pin To Net: NetName=GND Pin=J1-16
+Added Pin To Net: NetName=GND Pin=J1-18
+Added Pin To Net: NetName=GND Pin=J1-20
+Added Pin To Net: NetName=SWDIO Pin=J2-1
+Added Pin To Net: NetName=GND Pin=J2-2
+Added Pin To Net: NetName=SWO Pin=J2-3
+Added Pin To Net: NetName=GND Pin=J2-4
+Added Pin To Net: NetName=SWCLK Pin=J2-5
+Added Pin To Net: NetName=TRACE1 Pin=J2-6
+Added Pin To Net: NetName=nRST Pin=J2-7
+Added Pin To Net: NetName=TRACE0 Pin=J2-8
+Added Pin To Net: NetName=3V3 Pin=J2-9
+Added Pin To Net: NetName=TRACE_CLK Pin=J2-10
+Added Pin To Net: NetName=3V3 Pin=TP1-1
+Added Pin To Net: NetName=SWDIO Pin=TP2-1
+Added Pin To Net: NetName=SWO Pin=TP3-1
+Added Pin To Net: NetName=SWCLK Pin=TP4-1
+Added Pin To Net: NetName=nRST Pin=TP5-1
+Added Pin To Net: NetName=TRACE1 Pin=TP6-1
+Added Pin To Net: NetName=TRACE0 Pin=TP7-1
+Added Pin To Net: NetName=TRACE_CLK Pin=TP8-1
+Added Pin To Net: NetName=NetJ1_19 Pin=J1-19
+Added Pin To Net: NetName=NetJ1_19 Pin=TP10-1
+Added Net: Name=NetJ1_19
+Change Class Name : Old Net Name=Adapter_JLink_EDU New Net Name=Adapter_JLink
+Added Member To Class: ClassName=Adapter_JLink Member=Component TP10 1mm
+Added Room: Name=Adapter_JLink

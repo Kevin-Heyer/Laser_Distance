@@ -23,7 +23,7 @@
             <file path="board/pin_mux.h" update_enabled="true"/>
          </generated_project_files>
          <pins_profile>
-            <processor_version>13.0.1</processor_version>
+            <processor_version>13.0.2</processor_version>
             <pin_labels>
                <pin_label pin_num="N3" pin_signal="GPIO_SD_B1_05" label="NC"/>
                <pin_label pin_num="B7" pin_signal="GPIO_EMC_39" label="NC" identifier="NC"/>
@@ -504,7 +504,7 @@
             <file path="board/clock_config.h" update_enabled="true"/>
          </generated_project_files>
          <clocks_profile>
-            <processor_version>13.0.1</processor_version>
+            <processor_version>13.0.2</processor_version>
          </clocks_profile>
          <clock_configurations>
             <clock_configuration name="BOARD_BootClockRUN" id_prefix="" prefix_user_defined="false">
@@ -664,7 +664,7 @@
             <file path="board/dcd.h" update_enabled="true"/>
          </generated_project_files>
          <dcdx_profile>
-            <processor_version>13.0.1</processor_version>
+            <processor_version>13.0.2</processor_version>
             <output_format>c_array</output_format>
          </dcdx_profile>
          <dcdx_configurations>
@@ -767,8 +767,19 @@
                   <data type="Version">2.2.1</data>
                </feature>
             </dependency>
+            <dependency resourceType="SWComponent" resourceId="platform.drivers.pwm" description="PWM Driver not found in the toolchain/IDE project. Project will not compile!" problem_level="2" source="Peripherals">
+               <feature name="enabled" evaluation="equal">
+                  <data type="Boolean">true</data>
+               </feature>
+            </dependency>
+            <dependency resourceType="SWComponent" resourceId="platform.drivers.pwm" description="Unsupported version of the PWM Driver in the toolchain/IDE project. Required: ${required_value}, actual: ${actual_value}. Project might not compile correctly." problem_level="1" source="Peripherals">
+               <feature name="version" evaluation="equivalent">
+                  <data type="Version">2.1.0</data>
+               </feature>
+            </dependency>
          </dependencies>
          <generated_project_files>
+            <file path="board/RTE_Device.h" update_enabled="true"/>
             <file path="board/peripherals.c" update_enabled="true"/>
             <file path="board/peripherals.h" update_enabled="true"/>
             <file path="source/generated/usb_device_composite.c" update_enabled="true"/>
@@ -781,7 +792,7 @@
             <file path="utilities/fsl_debug_console_conf.h" update_enabled="true"/>
          </generated_project_files>
          <peripherals_profile>
-            <processor_version>13.0.1</processor_version>
+            <processor_version>13.0.2</processor_version>
          </peripherals_profile>
          <functional_groups>
             <functional_group name="BOARD_InitPeripherals" uuid="82322bba-3bfe-49e9-a5b1-c80657b3b666" called_from_default_init="true" id_prefix="" core="core0">
@@ -1038,34 +1049,44 @@
                         <data type="Frequency" unit="Hz">0</data>
                      </feature>
                   </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.flexspi_edma" description="The fsl_flexspi_edma driver is missing in the project  (required for the eDMA mode)." problem_level="2" source="Peripherals:BOARD_InitPeripherals">
-                     <feature name="enabled" evaluation="equal">
-                        <data type="Boolean">true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.flexspi_edma" description="The compatible version of the fsl_flexspi_edma driver is not available in the project  (required for the eDMA mode)." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
-                     <feature name="version" evaluation="compatible">
-                        <data type="Version">2.3.2</data>
-                     </feature>
-                  </dependency>
                   <dependency resourceType="ClockOutput" resourceId="FLEXSPI2_CLK_ROOT" description="FLEXSPI2_CLK_ROOT is inactive." problem_level="2" source="Peripherals:BOARD_InitPeripherals">
                      <feature name="frequency" evaluation="greaterThan">
                         <data type="Frequency" unit="Hz">0</data>
                      </feature>
                   </dependency>
-                  <dependency resourceType="Peripheral" resourceId="DMA0" description="Missing eDMA component. Add DMA0 instance to the project into default or the same initialization functional group in which the QSPI_extFlash peripheral component is located." problem_level="2" source="Peripherals:BOARD_InitPeripherals">
-                     <feature name="initialized" evaluation="equal">
-                        <data type="Boolean">true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="Peripheral" resourceId="DMA0" description="Missing eDMA component. Add DMA0 instance to the project into default or the same initialization functional group in which the QSPI_extFlash peripheral component is located." problem_level="2" source="Peripherals:BOARD_InitPeripherals">
-                     <feature name="initialized" evaluation="equal">
-                        <data type="Boolean">true</data>
-                     </feature>
-                  </dependency>
                   <dependency resourceType="ClockOutput" resourceId="FLEXSPI_CLK_ROOT" description="FLEXSPI_CLK_ROOT is inactive." problem_level="2" source="Peripherals:BOARD_InitPeripherals">
                      <feature name="frequency" evaluation="greaterThan">
                         <data type="Frequency" unit="Hz">0</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="PWM4.pwm_a.0" description="PWM4.PWM_A, 0 pin needs to be routed" problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="equal">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="PWM4.pwm_a.0" description="PWM4.PWM_A, 0 pin needs to be routed as output" problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="direction" evaluation="equal">
+                        <data type="String">OUTPUT</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="PWM4.pwm_fault.0" description="PWM4.FAULT, 0 pin needs to be routed" problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="equal">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="PWM4.pwm_fault.1" description="PWM4.FAULT, 1 pin needs to be routed" problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="equal">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="PWM4.pwm_fault.2" description="PWM4.FAULT, 2 pin needs to be routed" problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="equal">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="PWM4.pwm_fault.3" description="PWM4.FAULT, 3 pin needs to be routed" problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="equal">
+                        <data type="Boolean">true</data>
                      </feature>
                   </dependency>
                </dependencies>
@@ -1830,8 +1851,8 @@
                         </struct>
                      </config_set>
                   </instance>
-                  <instance name="QSPI_extFlash" uuid="e14d7228-e8a4-43e9-86ec-86e5769e66d9" type="flexspi" type_id="flexspi_cc6da638fb0490ad15096647c2b8e52a" mode="edma" peripheral="FLEXSPI2" enabled="true" comment="" custom_name_enabled="true" editing_lock="false">
-                     <config_set name="fsl_flexspi" quick_selection="default">
+                  <instance name="QSPI_extFlash" uuid="e14d7228-e8a4-43e9-86ec-86e5769e66d9" type="flexspi" type_id="flexspi_cc6da638fb0490ad15096647c2b8e52a" mode="transfer" peripheral="FLEXSPI2" enabled="true" comment="" custom_name_enabled="true" editing_lock="false">
+                     <config_set name="fsl_flexspi">
                         <struct name="flexspiConfig">
                            <setting name="rxSampleClock" value="kFLEXSPI_ReadSampleClkLoopbackInternally"/>
                            <setting name="clockSource" value="FlexSpiClock"/>
@@ -1889,6 +1910,16 @@
                            <set name="interrupt_sel">
                               <selected/>
                            </set>
+                           <struct name="interrupt_vectors">
+                              <setting name="enableInterrupt" value="false"/>
+                              <struct name="interrupt">
+                                 <setting name="IRQn" value="FLEXSPI2_IRQn"/>
+                                 <setting name="enable_interrrupt" value="enabled"/>
+                                 <setting name="enable_priority" value="false"/>
+                                 <setting name="priority" value="0"/>
+                                 <setting name="enable_custom_name" value="false"/>
+                              </struct>
+                           </struct>
                         </struct>
                         <setting name="enableCustomLUT" value="false"/>
                         <struct name="lutConfig">
@@ -1896,41 +1927,10 @@
                            <setting name="lutName" value="defaultLUT"/>
                         </struct>
                         <array name="devices_configs"/>
-                        <struct name="edma_channels">
-                           <setting name="enable_rx_edma_channel" value="true"/>
-                           <struct name="edma_rx_channel">
-                              <setting name="uid" value="1679756088667"/>
-                              <setting name="eDMAn" value="0"/>
-                              <setting name="eDMA_source" value="kDmaRequestMuxFlexSPI2Rx"/>
-                              <setting name="enableTriggerPIT" value="false"/>
-                              <setting name="init_channel_priority" value="false"/>
-                              <struct name="edma_channel_Preemption">
-                                 <setting name="enableChannelPreemption" value="false"/>
-                                 <setting name="enablePreemptAbility" value="false"/>
-                                 <setting name="channelPriority" value="0"/>
-                              </struct>
-                              <setting name="enable_custom_name" value="false"/>
-                           </struct>
-                           <setting name="enable_tx_edma_channel" value="true"/>
-                           <struct name="edma_tx_channel">
-                              <setting name="uid" value="1679756088693"/>
-                              <setting name="eDMAn" value="1"/>
-                              <setting name="eDMA_source" value="kDmaRequestMuxFlexSPI2Tx"/>
-                              <setting name="enableTriggerPIT" value="false"/>
-                              <setting name="init_channel_priority" value="false"/>
-                              <struct name="edma_channel_Preemption">
-                                 <setting name="enableChannelPreemption" value="false"/>
-                                 <setting name="enablePreemptAbility" value="false"/>
-                                 <setting name="channelPriority" value="0"/>
-                              </struct>
-                              <setting name="enable_custom_name" value="false"/>
-                           </struct>
-                        </struct>
-                        <struct name="spi_dma_handle">
-                           <setting name="enable_custom_name" value="false"/>
-                           <setting name="init_callback_dma" value="false"/>
-                           <setting name="callback_fcn_dma" value=""/>
-                           <setting name="user_data_dma" value=""/>
+                        <struct name="transferHandle">
+                           <setting name="init_callback_transfer" value="false"/>
+                           <setting name="callback_fcn_transfer" value=""/>
+                           <setting name="user_data_transfer" value=""/>
                         </struct>
                      </config_set>
                   </instance>
@@ -2010,6 +2010,124 @@
                            <setting name="lutName" value="defaultLUT"/>
                         </struct>
                         <array name="devices_configs"/>
+                     </config_set>
+                  </instance>
+                  <instance name="RGB_PWM4" uuid="b1f850bf-220c-40a5-9b63-2709713083b5" type="pwm" type_id="pwm_8b65bb514bad0e7add761f3ca35a604d" mode="general" peripheral="PWM4" enabled="true" comment="" custom_name_enabled="true" editing_lock="false">
+                     <config_set name="fsl_pwm">
+                        <setting name="clockSource" value="SystemClock"/>
+                        <setting name="clockSourceFreq" value="ClocksTool_DefaultInit"/>
+                        <array name="submodules">
+                           <struct name="0">
+                              <setting name="sm" value="kPWM_Module_0"/>
+                              <setting name="sm_id" value="SM0"/>
+                              <struct name="config">
+                                 <setting name="clockSource" value="kPWM_BusClock"/>
+                                 <setting name="prescale" value="kPWM_Prescale_Divide_1"/>
+                                 <setting name="pwmFreq" value="20 kHz"/>
+                                 <setting name="pairOperation" value="kPWM_Independent"/>
+                                 <setting name="operationMode" value="kPWM_SignedCenterAligned"/>
+                                 <setting name="initializationControl" value="kPWM_Initialize_LocalSync"/>
+                                 <setting name="reloadLogic" value="kPWM_ReloadImmediate"/>
+                                 <setting name="reloadSelect" value="kPWM_LocalReload"/>
+                                 <setting name="reloadFrequency" value="kPWM_LoadEveryOportunity"/>
+                                 <setting name="forceTrigger" value="kPWM_Force_Local"/>
+                                 <setting name="enableDebugMode" value="true"/>
+                                 <setting name="enableWait" value="true"/>
+                                 <set name="outputTrigger_sel">
+                                    <selected/>
+                                 </set>
+                                 <setting name="loadOK" value="false"/>
+                                 <setting name="startCounter" value="false"/>
+                                 <set name="interrupt_sel">
+                                    <selected/>
+                                 </set>
+                              </struct>
+                              <array name="channels">
+                                 <struct name="0">
+                                    <setting name="channel_id" value="A"/>
+                                    <setting name="functionSel" value="pwmOutput"/>
+                                    <struct name="pwm">
+                                       <setting name="dutyCyclePercent" value="50"/>
+                                       <setting name="level" value="kPWM_HighTrue"/>
+                                       <setting name="deadtime_input_by_force" value="kPWM_UsePwm"/>
+                                       <setting name="clockSource" value="kPWM_BusClock"/>
+                                       <setting name="deadtimeValue" value="0"/>
+                                       <set name="interrupt_sel">
+                                          <selected/>
+                                       </set>
+                                    </struct>
+                                 </struct>
+                                 <struct name="1">
+                                    <setting name="channel_id" value="B"/>
+                                    <setting name="functionSel" value="notUsed"/>
+                                 </struct>
+                                 <struct name="2">
+                                    <setting name="channel_id" value="X"/>
+                                    <setting name="functionSel" value="notUsed"/>
+                                 </struct>
+                              </array>
+                              <setting name="common_interruptEn" value="false"/>
+                              <struct name="common_interrupt">
+                                 <setting name="IRQn" value="PWM1_0_IRQn"/>
+                                 <setting name="enable_interrrupt" value="enabled"/>
+                                 <setting name="enable_priority" value="false"/>
+                                 <setting name="priority" value="0"/>
+                                 <setting name="enable_custom_name" value="false"/>
+                              </struct>
+                           </struct>
+                        </array>
+                        <array name="faultChannels">
+                           <struct name="0">
+                              <struct name="commonFaultSetting">
+                                 <setting name="clockSource" value="kPWM_BusClock"/>
+                                 <setting name="faultFilterPeriod" value="1"/>
+                                 <setting name="faultFilterCount" value="3"/>
+                                 <setting name="faultGlitchStretch" value="false"/>
+                              </struct>
+                              <array name="faults">
+                                 <struct name="0">
+                                    <setting name="fault_id" value="Fault0"/>
+                                    <setting name="faultClearingMode" value="kPWM_Automatic"/>
+                                    <setting name="faultLevelR" value="low"/>
+                                    <setting name="enableCombinationalPathR" value="nonFiltered"/>
+                                    <setting name="recoverMode" value="kPWM_NoRecovery"/>
+                                    <setting name="fault_int_source" value="false"/>
+                                 </struct>
+                                 <struct name="1">
+                                    <setting name="fault_id" value="Fault1"/>
+                                    <setting name="faultClearingMode" value="kPWM_Automatic"/>
+                                    <setting name="faultLevelR" value="low"/>
+                                    <setting name="enableCombinationalPathR" value="nonFiltered"/>
+                                    <setting name="recoverMode" value="kPWM_NoRecovery"/>
+                                    <setting name="fault_int_source" value="false"/>
+                                 </struct>
+                                 <struct name="2">
+                                    <setting name="fault_id" value="Fault2"/>
+                                    <setting name="faultClearingMode" value="kPWM_Automatic"/>
+                                    <setting name="faultLevelR" value="low"/>
+                                    <setting name="enableCombinationalPathR" value="nonFiltered"/>
+                                    <setting name="recoverMode" value="kPWM_NoRecovery"/>
+                                    <setting name="fault_int_source" value="false"/>
+                                 </struct>
+                                 <struct name="3">
+                                    <setting name="fault_id" value="Fault3"/>
+                                    <setting name="faultClearingMode" value="kPWM_Automatic"/>
+                                    <setting name="faultLevelR" value="low"/>
+                                    <setting name="enableCombinationalPathR" value="nonFiltered"/>
+                                    <setting name="recoverMode" value="kPWM_NoRecovery"/>
+                                    <setting name="fault_int_source" value="false"/>
+                                 </struct>
+                              </array>
+                           </struct>
+                        </array>
+                        <setting name="fault_error_interruptEn" value="false"/>
+                        <struct name="fault_error_interrupt">
+                           <setting name="IRQn" value="PWM1_FAULT_IRQn"/>
+                           <setting name="enable_interrrupt" value="enabled"/>
+                           <setting name="enable_priority" value="false"/>
+                           <setting name="priority" value="0"/>
+                           <setting name="enable_custom_name" value="false"/>
+                        </struct>
                      </config_set>
                   </instance>
                </instances>

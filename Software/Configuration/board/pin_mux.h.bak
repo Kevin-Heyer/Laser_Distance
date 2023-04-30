@@ -37,6 +37,39 @@ extern "C" {
  */
 void BOARD_InitBootPins(void);
 
+/* GPIO_SD_B0_00 (coord J4), IMU_SCK */
+/* Routed pin properties */
+#define BOARD_INITPINS_IMU_SCK_PERIPHERAL                                 LPSPI1   /*!< Peripheral name */
+#define BOARD_INITPINS_IMU_SCK_SIGNAL                                        SCK   /*!< Signal name */
+
+/* GPIO_SD_B0_03 (coord K1), IMU_MISO */
+/* Routed pin properties */
+#define BOARD_INITPINS_IMU_MISO_PERIPHERAL                                LPSPI1   /*!< Peripheral name */
+#define BOARD_INITPINS_IMU_MISO_SIGNAL                                       SDI   /*!< Signal name */
+
+/* GPIO_SD_B0_02 (coord J1), IMU_MOSI */
+/* Routed pin properties */
+#define BOARD_INITPINS_IMU_MOSI_PERIPHERAL                                LPSPI1   /*!< Peripheral name */
+#define BOARD_INITPINS_IMU_MOSI_SIGNAL                                       SDO   /*!< Signal name */
+
+/* GPIO_AD_B1_08 (coord H13), RGB_R */
+/* Routed pin properties */
+#define BOARD_INITPINS_RGB_R_PERIPHERAL                                     PWM4   /*!< Peripheral name */
+#define BOARD_INITPINS_RGB_R_SIGNAL                                            A   /*!< Signal name */
+#define BOARD_INITPINS_RGB_R_CHANNEL                                          0U   /*!< Signal channel */
+
+/* GPIO_AD_B1_09 (coord M13), RGB_G */
+/* Routed pin properties */
+#define BOARD_INITPINS_RGB_G_PERIPHERAL                                     PWM4   /*!< Peripheral name */
+#define BOARD_INITPINS_RGB_G_SIGNAL                                            A   /*!< Signal name */
+#define BOARD_INITPINS_RGB_G_CHANNEL                                          1U   /*!< Signal channel */
+
+/* GPIO_B1_14 (coord C14), RGB_B */
+/* Routed pin properties */
+#define BOARD_INITPINS_RGB_B_PERIPHERAL                                     PWM4   /*!< Peripheral name */
+#define BOARD_INITPINS_RGB_B_SIGNAL                                            A   /*!< Signal name */
+#define BOARD_INITPINS_RGB_B_CHANNEL                                          2U   /*!< Signal channel */
+
 /*!
  * @brief Configures pin routing and optionally pin electrical features.
  *

@@ -1,0 +1,3 @@
+[submodule "Altium-Tools"]
+	path = Altium-Tools
+	url = https://github.com/Kevin-Heyer/Altium-Tools.git
