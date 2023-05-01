@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : D:\PersonalProjects\Self-Mixing Diode\Adapter_JLink\Adapter_JLink.PcbDoc
 Date     : 2023-04-30
-Time     : 4:17:53 PM
+Time     : 7:17:43 PM
 
 Processing Rule : Clearance Constraint (Gap=0.254mm) (All),(All)
 Rule Violations :0
@@ -46,17 +46,14 @@ Processing Rule : Board Clearance Constraint (Gap=0mm) (IsComponent)
 Rule Violations :0
 
 Processing Rule : Board Clearance Constraint (Gap=0mm) (All)
-   Violation between Board Outline Clearance(Outline Edge): (0mm < 0.254mm) Between Board Edge And Region (0 hole(s)) Top Overlay 
    Violation between Board Outline Clearance(Outline Edge): (Collision < 0.254mm) Between Board Edge And Text "1
-2" (47.348mm,26.842mm) on Bottom Overlay 
-   Violation between Board Outline Clearance(Outline Edge): (0.157mm < 0.254mm) Between Board Edge And Text "JLink Adapter 
-V0.0.X" (26.035mm,55.499mm) on Top Overlay 
-Rule Violations :3
+2" (47.541mm,26.942mm) on Bottom Overlay 
+Rule Violations :1
 
 Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
 Rule Violations :0
 
 
-Violations Detected : 3
+Violations Detected : 1
 Waived Violations : 0
 Time Elapsed        : 00:00:01

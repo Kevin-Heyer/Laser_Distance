@@ -1,0 +1,25 @@
+Altium Designer Pick and Place Locations
+D:\PersonalProjects\Self-Mixing Diode\Adapter_JLink\.\Output Files\Pick Place\Pick Place for Adapter_JLink.csv
+
+========================================================================================================================
+File Design Information:
+
+Date:       30-04-23
+Time:       19:34
+Revision:   818d9677311d1dbb9a236752a0e2327fad56f36e
+Variant:    No variations
+Units used: mm
+
+"Designator","Comment","Layer","Footprint","Center-X(mm)","Center-Y(mm)","Rotation","Description"
+"TP10","1mm","TopLayer","TESTPOINT_SMT","41.5016","27.0236","270","SMT testpoint"
+"TP9","1mm","TopLayer","TESTPOINT_SMT","38.3814","57.2496","270","SMT testpoint"
+"TP8","1mm","TopLayer","TESTPOINT_SMT","34.6710","57.2770","90","SMT testpoint"
+"TP7","1mm","TopLayer","TESTPOINT_SMT","30.8610","57.2770","270","SMT testpoint"
+"TP6","1mm","TopLayer","TESTPOINT_SMT","26.6065","57.2770","90","SMT testpoint"
+"TP5","1mm","TopLayer","TESTPOINT_SMT","40.5064","44.8310","90","SMT testpoint"
+"TP4","1mm","TopLayer","TESTPOINT_SMT","37.7173","42.2910","90","SMT testpoint"
+"TP3","1mm","TopLayer","TESTPOINT_SMT","36.9570","38.4730","90","SMT testpoint"
+"TP2","1mm","TopLayer","TESTPOINT_SMT","37.7190","46.1010","90","SMT testpoint"
+"TP1","1mm","TopLayer","TESTPOINT_SMT","38.4421","53.7214","90","SMT testpoint"
+"J1","SWV","BottomLayer","CONN_HDR_PLUG_20_2.54_TH_STLINKV2","45.2120","42.2914","0","Female, 20C, Straight .100"CC; No Mt. w/Center Polarizing Key; PBT, Brass, Gold Flash, 105 C"
+"J2","TAG CONN 10","TopLayer","CONN_HDR_RECPT_10_2.54_TH_TAG_CONNECT","30.7340","42.2910","180","Conn Shrouded Header HDR 10 POS 2.54mm Solder ST Thru-Hole"
