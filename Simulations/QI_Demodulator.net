@@ -1,0 +1,39 @@
+* D:\PersonalProjects\Self-Mixing Diode\Simulations\QI_Demodulator.asc
+V1 Vcc 0 {Vcc} Rser=0.2 Cpar=100u
+V2 Vbias 0 {Vbias} Rser=0.2 Cpar=100u
+V3 N002 0 SINE({Vbias} 1 1Meg 0 0 {phase}) Rser=0.2 Cpar=1p
+XU9 N005 N004 Vcc 0 Sig_Q level2 Avol=100Meg GBW=100Meg Slew=100Meg Ilimit=25 Rail=0 Vos=0 En=0 Enk=0 In=0 Ink=0 Rin=500Meg
+R28 N004 Signal 100
+C6 Signal Signal 1µ Rpar=1Meg
+R30 N001 Signal 100
+C14 Signal Signal 1µ Rpar=1Meg
+R32 N004 Sig_Q 200
+V5 Ref90 0 SINE({Vbias} 1 1Meg 0 0 90) Rser=0.2 Cpar=10p
+C18 Sig_Q_f 0 470n
+V4 Ref 0 SINE({Vbias} 1 1Meg 0 0 0) Rser=0.2 Cpar=10p
+V6 Vs 0 20 Rser=1m Cpar=100m
+R1 Signal N002 1m
+C1 Sig_I_f 0 470n
+A1 Ref90 0 0 0 0 0 0 0 SCHMITT Vhigh=3.3 Vt=1.65 Vh=.2 Trise=2.5n Tfall=2.5n
+XU4 Ref90 Signal N005 Vbias Vcc 0 0 Vcc ADG1519
+XU2 N003 N001 Vcc 0 Sig_I level2 Avol=100Meg GBW=100Meg Slew=100Meg Ilimit=25 Rail=0 Vos=0 En=0 Enk=0 In=0 Ink=0 Rin=500Meg
+R4 N001 Sig_I 200
+A2 Ref 0 0 0 0 N006 0 0 SCHMITT Vhigh=3.3 Vt=1.65 Vh=.2 Trise=2.5n Tfall=2.5n
+XU3 Ref Vbias N003 Signal Vcc 0 0 Vcc ADG1519
+R2 Sig_I Sig_I_f 100
+R3 Sig_Q Sig_Q_f 100
+C2 Sig_Q N004 1n
+C3 Sig_I N001 1n
+.PARAM Vbias=Vcc/2
+.param Vcc=3.3
+.tran 0 {tsim} 0.5m {ts_max}
+.param ts_max=100
+.param tsim=1m
+* Lock In Amp (IQ)
+* Signal Phase shift
+.step param phase 0 345 15
+.options cshunt = 1e-14
+.lib ADG1519.sub
+.lib UniversalOpAmp2.lib
+.backanno
+.end

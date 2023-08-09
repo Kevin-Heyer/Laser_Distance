@@ -1,0 +1,9 @@
+Circuit: * D:\PersonalProjects\Self-Mixing Diode\Simulations\QI_Demodulator.asc
+
+C6: both pins shorted together -- ignoring.
+C14: both pins shorted together -- ignoring.
+WARNING: Less than two connections to node VS.  This node is used by V6.
+WARNING: Less than two connections to node N006.  This node is used by A2.
+Direct Newton iteration for .op point succeeded.
+.step phase=0
+Heightened Def Con from 0.000787053 to 0.000787053
