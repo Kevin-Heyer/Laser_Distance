@@ -1,0 +1,29 @@
+* D:\PersonalProjects\Self-Mixing Diode\Simulations\Variable_Phase.asc
+V1 Vcc 0 {Vcc} Rser=0.2 Cpar=100u
+V2 Vbias 0 {Vbias} Rser=0.2 Cpar=100u
+V3 N002 0 SINE({Vbias} 1 1Meg 0 0 0) AC 1 Rser=0.2 Cpar=1p
+R30 N001 CLOCK 100
+C14 CLOCK CLOCK 1µ Rpar=1Meg
+V6 Vs 0 20 Rser=1m Cpar=100m
+R1 CLOCK N002 1m
+C1 PHASE_DELAY_f 0 470n
+XU2 N003 N001 Vcc 0 PHASE_DELAY level2 Avol=100Meg GBW=100Meg Slew=100Meg Ilimit=25 Rail=0 Vos=0 En=0 Enk=0 In=0 Ink=0 Rin=500Meg
+R4 N001 PHASE_DELAY 100
+R2 PHASE_DELAY PHASE_DELAY_f 100
+C2 N003 CLOCK 1p
+J1 N003 N004 Vbias 2N3819
+V4 N004 0 {phase} Rser=10m Cpar=10u
+.model NJF NJF
+.model PJF PJF
+.lib C:\Users\kevin\Documents\LTspiceXVII\lib\cmp\standard.jft
+.PARAM Vbias=Vcc/2
+.param Vcc=3.3
+* .tran 0 {tsim} 0.5m {ts_max}
+.param ts_max=100
+.param tsim=1m
+.step param phase -4 1.65 0.1
+.options cshunt = 1e-14
+.ac dec 1024 1 5G
+.lib UniversalOpAmp2.lib
+.backanno
+.end

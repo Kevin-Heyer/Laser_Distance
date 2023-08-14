@@ -84,23 +84,6 @@ GenerateClassCluster=0
 DocumentUniqueId=EIREJYLE
 
 [Document3]
-DocumentPath=LaserDiode_Driver.PcbLib
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=QCDYOMLI
-
-[Document4]
 DocumentPath=LaserDiode_Driver.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -117,8 +100,8 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=ILHUHEKC
 
-[Document5]
-DocumentPath=LaserDiode_Driver.SchLib
+[Document4]
+DocumentPath=..\Altium-Tools\Footprints.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -132,7 +115,24 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=FIGIXIGP
+DocumentUniqueId=EVYQGASO
+
+[Document5]
+DocumentPath=..\Altium-Tools\Symbols.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=REVZAMKB
 
 [ProjectVariant1]
 UniqueID=58935628-FB52-4A97-BD00-F4D466DD49A4
@@ -140,10 +140,10 @@ Description=V0.0.0
 AllowFabrication=0
 ParameterCount=0
 VariationCount=4
-Variation1=Designator=C11|UniqueId=\BSZTAYAC|Kind=1|AlternatePart= 
-Variation2=Designator=C12|UniqueId=\ZPRKARNN|Kind=1|AlternatePart= 
-Variation3=Designator=C15|UniqueId=\JAEZNYBP|Kind=1|AlternatePart= 
-Variation4=Designator=R20|UniqueId=\QPMIFLUC|Kind=1|AlternatePart= 
+Variation1=Designator=R24|UniqueId=\TQXGOUTU|Kind=1|AlternatePart= 
+Variation2=Designator=R25|UniqueId=\QDXIWWUO|Kind=1|AlternatePart= 
+Variation3=Designator=R20|UniqueId=\JDXLOQCK|Kind=1|AlternatePart= 
+Variation4=Designator=C16|UniqueId=\ZPRKARNN|Kind=1|AlternatePart= 
 ParamVariationCount=0
 
 [GeneratedDocument1]
@@ -155,86 +155,90 @@ DocumentPath=Project Outputs for LaserDiode_Driver\Design Rule Check - LaserDiod
 DItemRevisionGUID=
 
 [GeneratedDocument3]
-DocumentPath=Output Files\NC Drill\LaserDiode_Driver-NonPlated.TXT
+DocumentPath=LaserDiode_Driver 2023-08-13 7-44-52 PM.WAS
 DItemRevisionGUID=
 
 [GeneratedDocument4]
-DocumentPath=Output Files\NC Drill\LaserDiode_Driver-Plated.TXT
+DocumentPath=Output Files\NC Drill\LaserDiode_Driver-NonPlated.TXT
 DItemRevisionGUID=
 
 [GeneratedDocument5]
-DocumentPath=Output Files\NC Drill\LaserDiode_Driver.DRR
+DocumentPath=Output Files\NC Drill\LaserDiode_Driver-Plated.TXT
 DItemRevisionGUID=
 
 [GeneratedDocument6]
-DocumentPath=Output Files\Gerber\LaserDiode_Driver.EXTREP
+DocumentPath=Output Files\NC Drill\LaserDiode_Driver.DRR
 DItemRevisionGUID=
 
 [GeneratedDocument7]
-DocumentPath=Output Files\Gerber\LaserDiode_Driver.GBL
+DocumentPath=Output Files\Gerber\LaserDiode_Driver.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument8]
-DocumentPath=Output Files\Gerber\LaserDiode_Driver.GBO
+DocumentPath=Output Files\Gerber\LaserDiode_Driver.GBL
 DItemRevisionGUID=
 
 [GeneratedDocument9]
-DocumentPath=Output Files\Gerber\LaserDiode_Driver.GBP
+DocumentPath=Output Files\Gerber\LaserDiode_Driver.GBO
 DItemRevisionGUID=
 
 [GeneratedDocument10]
-DocumentPath=Output Files\Gerber\LaserDiode_Driver.GBS
+DocumentPath=Output Files\Gerber\LaserDiode_Driver.GBP
 DItemRevisionGUID=
 
 [GeneratedDocument11]
-DocumentPath=Output Files\Gerber\LaserDiode_Driver.GD1
+DocumentPath=Output Files\Gerber\LaserDiode_Driver.GBS
 DItemRevisionGUID=
 
 [GeneratedDocument12]
-DocumentPath=Output Files\Gerber\LaserDiode_Driver.GM1
+DocumentPath=Output Files\Gerber\LaserDiode_Driver.GD1
 DItemRevisionGUID=
 
 [GeneratedDocument13]
-DocumentPath=Output Files\Gerber\LaserDiode_Driver.GM2
+DocumentPath=Output Files\Gerber\LaserDiode_Driver.GM1
 DItemRevisionGUID=
 
 [GeneratedDocument14]
-DocumentPath=Output Files\Gerber\LaserDiode_Driver.GP1
+DocumentPath=Output Files\Gerber\LaserDiode_Driver.GM2
 DItemRevisionGUID=
 
 [GeneratedDocument15]
-DocumentPath=Output Files\Gerber\LaserDiode_Driver.GP2
+DocumentPath=Output Files\Gerber\LaserDiode_Driver.GP1
 DItemRevisionGUID=
 
 [GeneratedDocument16]
-DocumentPath=Output Files\Gerber\LaserDiode_Driver.GTL
+DocumentPath=Output Files\Gerber\LaserDiode_Driver.GP2
 DItemRevisionGUID=
 
 [GeneratedDocument17]
-DocumentPath=Output Files\Gerber\LaserDiode_Driver.GTO
+DocumentPath=Output Files\Gerber\LaserDiode_Driver.GTL
 DItemRevisionGUID=
 
 [GeneratedDocument18]
-DocumentPath=Output Files\Gerber\LaserDiode_Driver.GTP
+DocumentPath=Output Files\Gerber\LaserDiode_Driver.GTO
 DItemRevisionGUID=
 
 [GeneratedDocument19]
-DocumentPath=Output Files\Gerber\LaserDiode_Driver.GTS
+DocumentPath=Output Files\Gerber\LaserDiode_Driver.GTP
 DItemRevisionGUID=
 
 [GeneratedDocument20]
-DocumentPath=Output Files\NC Drill\LaserDiode_Driver.LDP
+DocumentPath=Output Files\Gerber\LaserDiode_Driver.GTS
 DItemRevisionGUID=
 
 [GeneratedDocument21]
-DocumentPath=Output Files\Gerber\LaserDiode_Driver.REP
+DocumentPath=Output Files\NC Drill\LaserDiode_Driver.LDP
 DItemRevisionGUID=
 
 [GeneratedDocument22]
-DocumentPath=Output Files\Gerber\LaserDiode_Driver.RUL
+DocumentPath=Output Files\Gerber\LaserDiode_Driver.REP
 DItemRevisionGUID=
 
 [GeneratedDocument23]
+DocumentPath=Output Files\Gerber\LaserDiode_Driver.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument24]
 DocumentPath=Output Files\Pick Place\Pick Place for LaserDiode_Driver.csv
 DItemRevisionGUID=
 
