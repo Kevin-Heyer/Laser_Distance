@@ -3,4 +3,45 @@ Circuit: * D:\PersonalProjects\Self-Mixing Diode\Simulations\QI_Demodulator.asc
 WARNING: Less than two connections to node VS.  This node is used by V6.
 Direct Newton iteration for .op point succeeded.
 .step phase=0
-Heightened Def Con from 0.000796713 to 0.000796713
+.step phase=15
+.step phase=30
+.step phase=45
+.step phase=60
+.step phase=75
+.step phase=90
+.step phase=105
+.step phase=120
+.step phase=135
+.step phase=150
+.step phase=165
+.step phase=180
+.step phase=195
+.step phase=210
+.step phase=225
+.step phase=240
+.step phase=255
+.step phase=270
+.step phase=285
+.step phase=300
+.step phase=315
+.step phase=330
+.step phase=345
+
+Date: Sun Aug 20 14:40:37 2023
+Total elapsed time: 2389.520 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 3014614
+traniter = 3014597
+tranpoints = 1286179
+accept = 1181027
+rejected = 105152
+matrix size = 55
+fillins = 60
+solver = Normal
+Thread vector: 6.3/3.4[2] 2.2/1.9[2] 0.5/0.7[1] 0.2/0.4[1]  2592/500
+Matrix Compiler1:     469 opcodes  1.3/[0.4]/0.6
+Matrix Compiler2: off  [0.3]/0.4/0.4
+

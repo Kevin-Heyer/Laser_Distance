@@ -1,29 +1,46 @@
 * D:\PersonalProjects\Self-Mixing Diode\Simulations\Variable_Phase.asc
 V1 Vcc 0 {Vcc} Rser=0.2 Cpar=100u
 V2 Vbias 0 {Vbias} Rser=0.2 Cpar=100u
-V3 N002 0 SINE({Vbias} 1 1Meg 0 0 0) AC 1 Rser=0.2 Cpar=1p
+V3 N003 0 SINE({Vbias} 1 1Meg 0 0 0) AC 1 Rser=0.2 Cpar=1p
 R30 N001 CLOCK 100
-C14 CLOCK CLOCK 1µ Rpar=1Meg
 V6 Vs 0 20 Rser=1m Cpar=100m
-R1 CLOCK N002 1m
-C1 PHASE_DELAY_f 0 470n
-XU2 N003 N001 Vcc 0 PHASE_DELAY level2 Avol=100Meg GBW=100Meg Slew=100Meg Ilimit=25 Rail=0 Vos=0 En=0 Enk=0 In=0 Ink=0 Rin=500Meg
+R1 CLOCK N003 1m
+XU2 N004 N001 Vcc 0 PHASE_DELAY level2 Avol=100Meg GBW=100Meg Slew=100Meg Ilimit=25 Rail=0 Vos=0 En=0 Enk=0 In=0 Ink=0 Rin=500Meg
 R4 N001 PHASE_DELAY 100
-R2 PHASE_DELAY PHASE_DELAY_f 100
-C2 N003 CLOCK 1p
-J1 N003 N004 Vbias 2N3819
-V4 N004 0 {phase} Rser=10m Cpar=10u
+R2 PHASE_DELAY PHASE_DELAY_f 1m
+C2 N004 CLOCK 100p
+J1 N004 Vg Vbias 2N3819
+V4 N009 0 PULSE(0.5 0.5 0 {tsim} 0 {tsim}) Rser=10m Cpar=10u
+XU1 N005 N002 Vcc 0 Sig_Q level2 Avol=100Meg GBW=100Meg Slew=100Meg Ilimit=25 Rail=0 Vos=0 En=0 Enk=0 In=0 Ink=0 Rin=500Meg
+R3 N002 PHASE_DELAY_f 100
+R5 N002 Sig_Q 200
+C4 Sig_Q_f 0 47µ
+A1 CLOCK 0 0 0 0 N008 0 0 SCHMITT Vhigh=3.3 Vt=1.65 Vh=.2 Trise=2.5n Tfall=2.5n
+XU3 N008 Vbias N005 PHASE_DELAY_f Vcc 0 0 Vcc ADG1519
+C5 Sig_Q N002 100p
+XU4 N009 N007 Vcc 0 Vg level2 Avol=100Meg GBW=100Meg Slew=100Meg Ilimit=25 Rail=0 Vos=0 En=0 Enk=0 In=0 Ink=0 Rin=500Meg
+R7 N004 Vg 10Meg
+XU5 Vbias N006 Vcc 0 N007 level2 Avol=100Meg GBW=100Meg Slew=100Meg Ilimit=25 Rail=0 Vos=0 En=0 Enk=0 In=0 Ink=0 Rin=500Meg
+R8 N007 N006 5k
+R9 N006 Sig_Q_f 1k
+C6 Vg Vbias 1n
+L1 Sig_Q_f Sig_Q 1µ Rser=4m Rpar=1k
 .model NJF NJF
 .model PJF PJF
 .lib C:\Users\kevin\Documents\LTspiceXVII\lib\cmp\standard.jft
 .PARAM Vbias=Vcc/2
 .param Vcc=3.3
-* .tran 0 {tsim} 0.5m {ts_max}
+* .tran 0 {tsim} 0 {ts_max}
 .param ts_max=100
-.param tsim=1m
-.step param phase -4 1.65 0.1
+.param tsim=20m
+* .step param phase 0 1.65 50m
 .options cshunt = 1e-14
-.ac dec 1024 1 5G
+.ac dec 1024 10k 5G
+* Phi = pi - 2atan(wRC)\nR(Phi = 90) = 1/(2pi*F*C)
+* Rds = Vp / (2 * Idss (Vgs - Vp) )
+* Vgs = Vp ( 1 + pi * C * F / ( Idss * tan( pi - phase ) ) )
+* Phase = atan( ( Q - Vbias ) / ( I - Vbias ) )
+.lib ADG1519.sub
 .lib UniversalOpAmp2.lib
 .backanno
 .end

@@ -1,0 +1,20 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: PhaseShifter.PcbDoc   2023-08-22  9:01:24 PM
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII Plated RoundHoles File : PhaseShifter-Plated.TXT
+ASCII Non-Plated RoundHoles File : PhaseShifter-NonPlated.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      0.3mm (12mil)                                             Round             360       PTH        1587.48mm (62.50inch)
+T2      1.4mm (55mil)                                             Round             3         PTH        55.79mm (2.20inch)
+T3      1.5mm (59mil)                                             Round             12        PTH        101.69mm (4.00inch)
+T4      1.4mm (55mil)                                             Round             4         NPTH       45.08mm (1.77inch)
+T5      1.73mm (68mil)                                            Round             4         NPTH       45.60mm (1.80inch)
+T6      2.6mm (102mil)                                            Round             4         NPTH       163.75mm (6.45inch)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              387
+
+Total Processing Time (hh:mm:ss) : 00:00:00

@@ -1,0 +1,10 @@
+Output: BOM
+Type  : BOM
+From  : Variant [V0.0.0] of Project [IQDemod.PrjPcb]
+   Generated File[BOM-IQDemod(V0.0.0).csv]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 9:02:49 PM On 2023-08-22

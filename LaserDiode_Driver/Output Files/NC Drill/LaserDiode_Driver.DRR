@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------------------------------------------------------
-NCDrill File Report For: LaserDiode_Driver.PcbDoc   2023-03-18  4:13:48 PM
+NCDrill File Report For: LaserDiode_Driver.PcbDoc   2023-08-22  9:08:00 PM
 ----------------------------------------------------------------------------------------------------------------------------------
 
 Layer Pair : Top Layer to Bottom Layer
@@ -8,11 +8,12 @@ ASCII Non-Plated RoundHoles File : LaserDiode_Driver-NonPlated.TXT
 
 Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
 ----------------------------------------------------------------------------------------------------------------------------------
-T1      0.3mm (12mil)                                             Round             313       PTH        1077.96mm (42.44inch)
+T1      0.3mm (12mil)                                             Round             496       PTH        1836.59mm (72.31inch)
 T2      0.6mm (24mil)                                             Round             3         PTH        3.41mm (0.13inch)
-T3      1.73mm (68mil)                                            Round             4         NPTH       45.08mm (1.77inch)
-T4      2.6mm (102mil)                                            Round             4         NPTH       192.87mm (7.59inch)
+T3      1.4mm (55mil)                                             Round             4         NPTH       45.08mm (1.77inch)
+T4      1.73mm (68mil)                                            Round             4         NPTH       45.60mm (1.80inch)
+T5      2.6mm (102mil)                                            Round             5         NPTH       194.55mm (7.66inch)
 ----------------------------------------------------------------------------------------------------------------------------------
-Totals                                                                              324
+Totals                                                                              512
 
 Total Processing Time (hh:mm:ss) : 00:00:00

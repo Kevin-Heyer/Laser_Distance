@@ -43,7 +43,6 @@ CrossRefPorts=3
 CrossRefCrossSheets=1
 CrossRefSheetEntries=0
 CrossRefFollowFromMainSettings=1
-CurrentVariant=V0.0.0
 
 [Preferences]
 PrefsVaultGUID=
@@ -136,7 +135,7 @@ DocumentUniqueId=REVZAMKB
 
 [ProjectVariant1]
 UniqueID=58935628-FB52-4A97-BD00-F4D466DD49A4
-Description=V0.0.0
+Description=V0.1.0
 AllowFabrication=0
 ParameterCount=0
 VariationCount=4
