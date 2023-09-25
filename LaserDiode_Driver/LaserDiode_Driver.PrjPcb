@@ -43,6 +43,7 @@ CrossRefPorts=3
 CrossRefCrossSheets=1
 CrossRefSheetEntries=0
 CrossRefFollowFromMainSettings=1
+CurrentVariant=V0.1.0
 
 [Preferences]
 PrefsVaultGUID=
@@ -194,50 +195,34 @@ DocumentPath=Output Files\Gerber\LaserDiode_Driver.GD1
 DItemRevisionGUID=
 
 [GeneratedDocument13]
-DocumentPath=Output Files\Gerber\LaserDiode_Driver.GM1
-DItemRevisionGUID=
-
-[GeneratedDocument14]
-DocumentPath=Output Files\Gerber\LaserDiode_Driver.GM2
-DItemRevisionGUID=
-
-[GeneratedDocument15]
 DocumentPath=Output Files\Gerber\LaserDiode_Driver.GP1
 DItemRevisionGUID=
 
-[GeneratedDocument16]
+[GeneratedDocument14]
 DocumentPath=Output Files\Gerber\LaserDiode_Driver.GP2
 DItemRevisionGUID=
 
-[GeneratedDocument17]
+[GeneratedDocument15]
 DocumentPath=Output Files\Gerber\LaserDiode_Driver.GTL
 DItemRevisionGUID=
 
-[GeneratedDocument18]
+[GeneratedDocument16]
 DocumentPath=Output Files\Gerber\LaserDiode_Driver.GTO
 DItemRevisionGUID=
 
-[GeneratedDocument19]
+[GeneratedDocument17]
 DocumentPath=Output Files\Gerber\LaserDiode_Driver.GTP
 DItemRevisionGUID=
 
-[GeneratedDocument20]
+[GeneratedDocument18]
 DocumentPath=Output Files\Gerber\LaserDiode_Driver.GTS
 DItemRevisionGUID=
 
-[GeneratedDocument21]
+[GeneratedDocument19]
 DocumentPath=Output Files\NC Drill\LaserDiode_Driver.LDP
 DItemRevisionGUID=
 
-[GeneratedDocument22]
-DocumentPath=Output Files\Gerber\LaserDiode_Driver.REP
-DItemRevisionGUID=
-
-[GeneratedDocument23]
-DocumentPath=Output Files\Gerber\LaserDiode_Driver.RUL
-DItemRevisionGUID=
-
-[GeneratedDocument24]
+[GeneratedDocument20]
 DocumentPath=Output Files\Pick Place\Pick Place for LaserDiode_Driver.csv
 DItemRevisionGUID=
 

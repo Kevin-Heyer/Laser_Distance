@@ -177,7 +177,7 @@ VariationCount=0
 ParamVariationCount=0
 
 [GeneratedDocument1]
-DocumentPath=.\Output Files\BOM\BOM-IQDemod(V0.0.0).csv
+DocumentPath=Output Files\BOM\BOM-IQDemod(V0.0.0).csv
 DItemRevisionGUID=
 
 [GeneratedDocument2]
@@ -185,83 +185,75 @@ DocumentPath=Project Outputs for IQDemod\Design Rule Check - IQDemod.html
 DItemRevisionGUID=
 
 [GeneratedDocument3]
-DocumentPath=.\Output Files\NC Drill\IQDemod-NonPlated.TXT
+DocumentPath=Output Files\NC Drill\IQDemod-NonPlated.TXT
 DItemRevisionGUID=
 
 [GeneratedDocument4]
-DocumentPath=.\Output Files\NC Drill\IQDemod-Plated.TXT
+DocumentPath=Output Files\NC Drill\IQDemod-Plated.TXT
 DItemRevisionGUID=
 
 [GeneratedDocument5]
-DocumentPath=.\Output Files\NC Drill\IQDemod.DRR
+DocumentPath=Output Files\NC Drill\IQDemod.DRR
 DItemRevisionGUID=
 
 [GeneratedDocument6]
-DocumentPath=.\Output Files\Gerber\IQDemod.EXTREP
+DocumentPath=Output Files\Gerber\IQDemod.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument7]
-DocumentPath=.\Output Files\Gerber\IQDemod.GBL
+DocumentPath=Output Files\Gerber\IQDemod.GBL
 DItemRevisionGUID=
 
 [GeneratedDocument8]
-DocumentPath=.\Output Files\Gerber\IQDemod.GBO
+DocumentPath=Output Files\Gerber\IQDemod.GBO
 DItemRevisionGUID=
 
 [GeneratedDocument9]
-DocumentPath=.\Output Files\Gerber\IQDemod.GBP
+DocumentPath=Output Files\Gerber\IQDemod.GBP
 DItemRevisionGUID=
 
 [GeneratedDocument10]
-DocumentPath=.\Output Files\Gerber\IQDemod.GBS
+DocumentPath=Output Files\Gerber\IQDemod.GBS
 DItemRevisionGUID=
 
 [GeneratedDocument11]
-DocumentPath=.\Output Files\Gerber\IQDemod.GD1
+DocumentPath=Output Files\Gerber\IQDemod.GD1
 DItemRevisionGUID=
 
 [GeneratedDocument12]
-DocumentPath=.\Output Files\Gerber\IQDemod.GM8
+DocumentPath=Output Files\Gerber\IQDemod.GM8
 DItemRevisionGUID=
 
 [GeneratedDocument13]
-DocumentPath=.\Output Files\Gerber\IQDemod.GP1
+DocumentPath=Output Files\Gerber\IQDemod.GP1
 DItemRevisionGUID=
 
 [GeneratedDocument14]
-DocumentPath=.\Output Files\Gerber\IQDemod.GP2
+DocumentPath=Output Files\Gerber\IQDemod.GP2
 DItemRevisionGUID=
 
 [GeneratedDocument15]
-DocumentPath=.\Output Files\Gerber\IQDemod.GTL
+DocumentPath=Output Files\Gerber\IQDemod.GTL
 DItemRevisionGUID=
 
 [GeneratedDocument16]
-DocumentPath=.\Output Files\Gerber\IQDemod.GTO
+DocumentPath=Output Files\Gerber\IQDemod.GTO
 DItemRevisionGUID=
 
 [GeneratedDocument17]
-DocumentPath=.\Output Files\Gerber\IQDemod.GTP
+DocumentPath=Output Files\Gerber\IQDemod.GTP
 DItemRevisionGUID=
 
 [GeneratedDocument18]
-DocumentPath=.\Output Files\Gerber\IQDemod.GTS
+DocumentPath=Output Files\Gerber\IQDemod.GTS
 DItemRevisionGUID=
 
 [GeneratedDocument19]
-DocumentPath=.\Output Files\NC Drill\IQDemod.LDP
+DocumentPath=Output Files\NC Drill\IQDemod.LDP
 DItemRevisionGUID=
 
 [GeneratedDocument20]
-DocumentPath=.\Output Files\Gerber\IQDemod.REP
-DItemRevisionGUID=
-
-[GeneratedDocument21]
-DocumentPath=.\Output Files\Gerber\IQDemod.RUL
-DItemRevisionGUID=
-
-[GeneratedDocument22]
-DocumentPath=.\Output Files\Pick Place\Pick Place for IQDemod(V0.0.0).csv
+DocumentPath=Output Files\Pick Place\Pick Place for IQDemod(V0.0.0).csv
 DItemRevisionGUID=
 
 [Configuration1]
